@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Tag;
+use App\Post;
+use App\Category;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
+
+class PostsController extends Controller
+{
+    public function index()
+    {
+        $posts = Post::all();
+
+        return view('admin.posts.index', compact('posts'));
+
+    }
+
+/*    public function create()
+    {
+        $categories = Category::all();
+        $tags = Tag::all();
+
+        return view('admin.posts.create', compact('categories','tags'));
+
+    }
+*/
+
+
+
+    public function store(Request $request)
+    {
+        $this->validate($request, ['title' => 'required|min:3 |unique:posts']);
+
+        $post = Post::create([
+            'title' => $request->get('title'),
+            'url' => str_slug($request->get('title')),            
+        ]);
+
+        return redirect()->route('admin.posts.edit', $post);
+    }
+
+    public function edit(Post $post)
+    {
+        
+        $categories = Category::all();
+        $tags = Tag::all();
+    
+        return view('admin.posts.edit', compact('categories','tags', 'post'));
+    }
+
+   
+    public function update(Post $post ,Request $request)
+    {
+
+        $this->validate($request, [
+            'title' => 'required'
+        ]);
+        //return $request->all();
+        
+        if($request->hasFile('urlimg')){
+            $file = $request->file('urlimg');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name);
+        }
+
+        $post->title = $request->get('title');
+        $post->url = str_slug($request->get('title'));
+        $post->body = $request->get('body');
+        $post->urlimg = $name;
+        $post->published_at = Carbon::parse($request->get('published_at'));
+        $post->category_id = $request->get('category');
+        $post->excerpt = $request->get('excerpt');
+
+        $post->save();
+
+        $post->tags()->sync($request->get('tags'));        
+        return redirect()->route('admin.posts.index', compact('posts'))->with('flash', 'Tu publicación a sido guardada');
+    }
+
+    public function destroy(Post $post)
+    {
+
+        $post->tags()->detach();
+
+        $post->delete();
+
+        return redirect()
+            ->route('admin.posts.index')
+            ->with('flash', 'Tu publicación a sido eliminada');
+    }
+
+
+}
