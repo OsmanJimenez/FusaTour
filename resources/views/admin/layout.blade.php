@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>FusaViajes | Administrador</title>
+  <title>FusaTour | Administrador</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../../adminlts/plugins/fontawesome-free/css/all.min.css">
@@ -92,10 +92,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="../../adminlts/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+    <a href="/admin" class="brand-link">
+      <img src="../../images/icons/icon-512x512.png" alt="FusaTour Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Fusa Viajes</span>
+      <span class="brand-text font-weight-light">Fusa Tour</span>
     </a>
 
     <!-- Sidebar -->
@@ -161,7 +161,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       :)
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="https://fusaviajes.com">FusaTour</a>.</strong> Todos los derechos Reservados.
+    <strong>Copyright &copy; 2020 <a href="https://fusatour.com">FusaTour</a>.</strong> Todos los derechos Reservados.
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -190,7 +190,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap Switch -->
 <script src="../../adminlts/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- DataTables -->
-<script src="../../adminlts/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../adminlts/plugins/datatables/jquery.dataTables.js"></script>
 <script src="../../adminlts/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="../../adminlts/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../../adminlts/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>

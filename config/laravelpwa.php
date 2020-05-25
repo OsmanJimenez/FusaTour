@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'Fusa Viajes',
+    'name' => 'FusaTour',
     'manifest' => [
-        'name' => env('APP_NAME', 'Fusa Viajes'),
-        'short_name' => 'FusaViajes',
+        'name' => env('APP_NAME', 'FusaTour'),
+        'short_name' => 'FusaTour',
         'start_url' => '/',
         'background_color' => '#ffffff',
         'theme_color' => '#37474F',
