@@ -20,7 +20,6 @@ Route::get('actividades', 'PagesController@actividades' )->name('pages.actividad
 Route::get('perfil', 'PagesController@perfil' )->name('pages.perfil')->middleware('auth');
 
 
-
 Route::get('blog/{post}', 'PostsController@show')->name('posts.show');
 Route::get('categorias/{category}', 'CategoriesController@show')->name('categories.show');
 Route::get('actividades/{tag}', 'ActividadesController@show')->name('actividades.show');

@@ -9,7 +9,7 @@ use App\Tag;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
-{
+{   //Llamo lo que voy a necesitar mostrar en cada pagina
     public function home()
     {
         $posts = Post::latest('published_at')->get();
@@ -24,7 +24,8 @@ class PagesController extends Controller
 
     public function descubrir()
     {
-        return view(' pages.descubrir ');
+        $posts = Post::latest('point')->get();
+        return view(' pages.descubrir', compact('posts'));
     }
 
     public function actividades()

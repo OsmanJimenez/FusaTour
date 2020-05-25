@@ -75,19 +75,19 @@
 
     <!-- MAIN MENU - START -->
 
-            <li class="sh-wrap"><div class="subheader">Themes</div></li>
+            <li class="sh-wrap"><div class="subheader">Temas</div></li>
                     <li class="lvl1  theme">
 
                     <div class="waves-effect appsettings active" data-type="site_mode" data-value="light">
                         <a href="#!">
                         <i class="mdi mdi-checkbox-intermediate"></i>
-                        <span class="title">Light Mode</span>  </a>
+                        <span class="title">Modo Claro</span>  </a>
                         </div></li>
                     <li class="lvl1  site_mode">
                     <div class="waves-effect appsettings " data-type="site_mode" data-value="dark">
                         <a href="#!">
                         <i class="mdi mdi-checkbox-blank-outline"></i>
-                        <span class="title">Dark Mode</span>  </a>
+                        <span class="title">Modo Oscuro</span>  </a>
                         </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Header Style</div></li>
     <!-- MAIN MENU - END -->
 
