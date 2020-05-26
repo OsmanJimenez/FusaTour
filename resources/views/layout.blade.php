@@ -33,6 +33,7 @@
     
 <!-- BEGIN BODY -->
 <body 
+  id="theme"
   class="html"  
   data-header="light" 
   data-footer="dark"  
@@ -43,7 +44,8 @@
   data-footer_type="left" 
   data-site_mode="light" 
   data-footer_menu="show" 
-  data-footer_menu_style="light" >
+  data-footer_menu_style="light"
+  href="light" >
 
   <!-- START preloader -->
     <div class="preloader-background">
@@ -62,11 +64,14 @@
         <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
           <i class="mdi mdi-chevron-left" data-page=""></i>
         </a>
-        <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
+        <a href="#" data-target="" id="theme-toggle" class="waves-effect waves-circle navicon right nav-site-mode show-on-large">
+          <i class="mdi mdi-invert-colors mdi-transition1"></i>
+        </a>
      
       </div>
     </nav>
   <!-- END navigation -->
+
 
   <ul id="slide-settings" class="sidenav sidesettings right fixed">
     <li class="menulinks">
@@ -99,6 +104,7 @@
 
   <!-- CONTENT - START -->
     @yield('content')
+    
   <!--  CONTENT - END -->
 
   <!-- BUTTONUP - START -->
@@ -182,9 +188,45 @@
     </script>
   <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
+  <script type="text/javascript">
+    // this one is jut to wait for the page to load
+    document.addEventListener('DOMContentLoaded', () => {
+
+    const themeStylesheet = document.getElementById('theme');
+    const storedTheme = localStorage.getItem('theme');
+
+    if(storedTheme){
+        themeStylesheet.href = storedTheme;
+    }
+    
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+
+      
+        // if it's light -> go dark
+        if(themeStylesheet.href.includes('dark')){
+          themeStylesheet.setAttribute('data-header', "light");
+          themeStylesheet.setAttribute('data-menu', "light");
+          themeStylesheet.setAttribute('data-site_mode', "light");
+          themeStylesheet.setAttribute('data-footer_menu_style', "light");
+          themeStylesheet.href = 'light';
+        } else {
+            // if it's dark -> go light
+            themeStylesheet.setAttribute('data-header', "dark");
+            themeStylesheet.setAttribute('data-menu', "dark");
+            themeStylesheet.setAttribute('data-site_mode', "dark");
+            themeStylesheet.setAttribute('data-footer_menu_style', "dark");
+          themeStylesheet.href = 'dark';
+        }
+        // save the preference to localStorage
+        localStorage.setItem('theme',themeStylesheet.href)  
+    })
+    })
+</script>
+
   <!-- CORE TEMPLATE JS - START --> 
     <script src="/assets/js/init.js"></script>
-    <script src="/assets/js/settings.js"></script>
     <script src="/assets/js/scripts.js"></script>
   <!-- END CORE TEMPLATE JS - END --> 
 
@@ -198,5 +240,7 @@
 
 </body>
 <!-- END BODY -->
+
+
 
 </html>
