@@ -44,9 +44,7 @@
                   <select name="category" 
                   class="form-control" style="width: 100%;" required>
                     @foreach ($categories as $category)
-                      <option value="{{ $category->id}}"
-                      {{ old('category', $post->category_id) }}
-                      >{{$category->name}} </option>  
+                      <option value="{{ old('category_id', $post->category_id) }}">{{$category->name}} </option>  
                     @endforeach
                     
                   </select>
@@ -100,7 +98,9 @@
 
                 <div class="form-group">
                   <label for="exampleInputFile">Caratula</label>
-                  <input type="file" name="urlimg">
+                  <input 
+                  value="{{ old('urlimg', $post->urlimg) }}"
+                  type="file" name="urlimg">
                 </div>
 
                 <div class="form-group">

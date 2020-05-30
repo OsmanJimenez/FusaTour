@@ -64,7 +64,7 @@
         <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
           <i class="mdi mdi-chevron-left" data-page=""></i>
         </a>
-        <a href="#" data-target="" id="theme-toggle" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
+        <a href="#" data-target="" id="theme-toggle" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-brightness-6 mdi-transition1"></i></a>
      
       </div>
     </nav>
@@ -214,7 +214,6 @@
 
   <!-- CORE TEMPLATE JS - START --> 
     <script src="/assets/js/init.js"></script>
-    <script src="/assets/js/settings.js"></script>
     <script src="/assets/js/scripts.js"></script>
   <!-- END CORE TEMPLATE JS - END --> 
 
