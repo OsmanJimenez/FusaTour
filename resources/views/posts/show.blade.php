@@ -34,13 +34,15 @@
                     <div class="col s12 pad-0">
                         <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
                         <iframe width="100%" height="280px" 
-                            src="https://poly.google.com/view/duS_-Hxto-5/embed?chrome=min" 
+                            src="{{ $post->urlvr }}" 
                             frameborder="0" 
                             style="border:none;" 
                             allowvr="yes" 
-                            allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" 
+                            allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
                             allowfullscreen mozallowfullscreen="true" 
-                            webkitallowfullscreen="true" onmousewheel="" >
+                            webkitallowfullscreen="true" 
+                            onmousewheel="" 
+                            allowfullscreen>
                         </iframe>
                     </div>
                 </div>
