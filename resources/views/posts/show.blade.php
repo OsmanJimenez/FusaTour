@@ -27,10 +27,22 @@
                         {!! $post->body !!}
                     </p>
 
-                    <div class="spacer"></div>
                 </div>
-        
                 <div class="col s12">
+                    <div class="col s12 pad-0">
+                        <h5 class="bot-20 sec-tit  ">Ubicación </h5>
+                        <iframe width="100%" height="180px" 
+                            src="{{ $post->ubicacion }}" 
+                            frameborder="0" 
+                            style="border:none;" 
+                            allowvr="yes" 
+                            allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+                            allowfullscreen mozallowfullscreen="true" 
+                            webkitallowfullscreen="true" 
+                            onmousewheel="" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                     <div class="col s12 pad-0">
                         <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
                         <iframe width="100%" height="280px" 
@@ -46,18 +58,16 @@
                         </iframe>
                     </div>
                 </div>
-
-                <div class="spacer"></div>
                 <div class="divider"></div>
 
             </div>
         </div>
 
         @if (Auth::guest())
-            <div class="input-field col s12">
-                <textarea id="textarea-normal" class="materialize-textarea validate"></textarea>
-                <label for="textarea-normal">Por favor inica Sesion</label>
-                <span class="helper-text" data-error="Please enter text" data-success=""></span>
+        <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
+            <div class="col s12 center-align">
+                <a href="{{ route('register') }}" class="waves-effect waves-light btn-large" style="background-color: #0abde3"><i class="mdi mdi-bookmark-plus mdi-transition1"></i>Registrarse</a>
+                <a href="{{ route('login') }}" class="waves-effect waves-light btn-large" style="background-color: #eb4d4b"><i class="mdi mdi-account-circle mdi-transition1"></i>Ingresar</a>
             </div>                  
         @else
             <div class="row ">
