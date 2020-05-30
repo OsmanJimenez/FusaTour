@@ -37,7 +37,8 @@
               <span class="small tags">
                 <a class="small" 
                   href="{{ route('categories.show', $post->category) }}"
-                  >{{ $post->category->name }}</a>
+                  >{{ $post->category->name }}
+                </a>
                   @foreach ($post->tags as $tag )
                     <a class="small" href="{{ route ('actividades.show', $tag) }}">#{{ $tag->name }}</a>
                   @endforeach

@@ -110,7 +110,12 @@
                     class="form-control" placeholder="">{{ old('excerpt', $post->excerpt) }}</textarea>
                 </div>
 
-
+                <div class="form-group">
+                    <label>Realidad Virtual</label>
+                    <input name="urlvr" 
+                    value="{{ old('urlvr', $post->urlvr) }}"
+                    class="form-control" placeholder="Ingresa aqui la url de la realidad virtual" required >
+                </div>
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-outline-primary float-right">Agregar</button>

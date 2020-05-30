@@ -74,6 +74,7 @@ class PostsController extends Controller
         $post->published_at = Carbon::parse($request->get('published_at'));
         $post->category_id = $request->get('category');
         $post->excerpt = $request->get('excerpt');
+        $post->urlvr = $request->get('urlvr');
 
         $post->save();
 
