@@ -24,8 +24,9 @@
   <!-- DROPZONJS CSS FRAMEWORK - STOP --> 
 
   <!-- CORE CSS TEMPLATE - START -->
-    <link href="/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style"/>
-  <!-- CORE CSS TEMPLATE - END -->
+    <link  href="/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style"/>
+    <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style"/> 
+    <!-- CORE CSS TEMPLATE - END -->
 
 <!-- END HEAD -->
 @laravelPWA
@@ -33,7 +34,6 @@
     
 <!-- BEGIN BODY -->
 <body 
-  id="theme"
   class="html"  
   data-header="light" 
   data-footer="dark"  
@@ -64,14 +64,11 @@
         <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
           <i class="mdi mdi-chevron-left" data-page=""></i>
         </a>
-        <a href="#" data-target="" id="theme-toggle" class="waves-effect waves-circle navicon right nav-site-mode show-on-large">
-          <i class="mdi mdi-invert-colors mdi-transition1"></i>
-        </a>
+        <a href="#" data-target="" id="theme-toggle" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
      
       </div>
     </nav>
   <!-- END navigation -->
-
 
   <ul id="slide-settings" class="sidenav sidesettings right fixed">
     <li class="menulinks">
@@ -202,22 +199,12 @@
     const themeToggle = document.getElementById('theme-toggle');
 
     themeToggle.addEventListener('click', () => {
-
-      
         // if it's light -> go dark
-        if(themeStylesheet.href.includes('dark')){
-          themeStylesheet.setAttribute('data-header', "light");
-          themeStylesheet.setAttribute('data-menu', "light");
-          themeStylesheet.setAttribute('data-site_mode', "light");
-          themeStylesheet.setAttribute('data-footer_menu_style', "light");
-          themeStylesheet.href = 'light';
+        if(themeStylesheet.href.includes('2')){
+            themeStylesheet.href = '/assets/css/style-dark.css';
         } else {
             // if it's dark -> go light
-            themeStylesheet.setAttribute('data-header', "dark");
-            themeStylesheet.setAttribute('data-menu', "dark");
-            themeStylesheet.setAttribute('data-site_mode', "dark");
-            themeStylesheet.setAttribute('data-footer_menu_style', "dark");
-          themeStylesheet.href = 'dark';
+            themeStylesheet.href = '/assets/css/style-2.css';
         }
         // save the preference to localStorage
         localStorage.setItem('theme',themeStylesheet.href)  
@@ -227,6 +214,7 @@
 
   <!-- CORE TEMPLATE JS - START --> 
     <script src="/assets/js/init.js"></script>
+    <script src="/assets/js/settings.js"></script>
     <script src="/assets/js/scripts.js"></script>
   <!-- END CORE TEMPLATE JS - END --> 
 
