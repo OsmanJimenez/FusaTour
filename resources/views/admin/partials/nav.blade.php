@@ -95,5 +95,33 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item has-treeview ">
+            <a  href="#" class="nav-link {{ request()->is('admin/users') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-user-friends"></i>
+              <p>
+                Usuarios
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" data-toggle="modal" data-target="#prueba2" class="nav-link {{ request()->is('admin/create') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-map-marked-alt"></i>
+                  <p>
+                    Agregar
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.users.index')}}" class="nav-link {{ request()->is('admin/users') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-map"></i>
+                  <p>
+                    Ver
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>

@@ -93,3 +93,18 @@ function(){
     Route::delete('tags/{tag}', 'TagsController@destroy' )->name('admin.tags.destroy');
 
 });
+
+Route::group([
+    'prefix' => 'admin', 
+    'namespace' => 'Admin', 
+    'middleware' => 'auth'], 
+function(){
+    Route::get('/', 'AdminController@index')->name('dashboard');
+    Route::get('users', 'UsersController@index' )->name('admin.users.index');
+    Route::get('users/create', 'UsersController@create' )->name('admin.users.create');
+    Route::post('users', 'UsersController@store' )->name('admin.users.store');
+    Route::get('users/{user}', 'UsersController@edit' )->name('admin.users.edit');
+    Route::put('users/{user}', 'UsersController@update' )->name('admin.users.update');
+    Route::delete('users/{user}', 'UsersController@destroy' )->name('admin.users.destroy');
+
+});
