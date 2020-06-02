@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
 use App\Post;
 use Carbon\Carbon;
 class UsersController extends Controller
@@ -35,7 +36,9 @@ class UsersController extends Controller
         $this->validate($request, ['name' => 'required|min:3 |unique:users']);
 
         $User = User::create([
-            'name' => $request->get('name'),         
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),        
         ]);
 
         return redirect()->route('admin.users.edit', $User);
@@ -53,12 +56,18 @@ class UsersController extends Controller
    
     public function update(User $User ,Request $request)
     {
-
-        $data = $request->validate([
+        $rules = [
             'name' => 'required',
-            'email' => ['required', Rule::unique('users')->ignore($User->id)]
-        ]);
+            'email' => ['required', Rule::unique('users')->ignore($User->id)],
+        ];
 
+        if ($request->filled('password'))
+        {
+            $rules['password'] = ['min:6'];
+        }
+
+        $data = $request->validate($rules);
+    
         $User->update($data);
         return back()->withFlash('Usuario Actualizado');
        

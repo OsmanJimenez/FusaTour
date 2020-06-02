@@ -106,7 +106,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" data-toggle="modal" data-target="#prueba2" class="nav-link {{ request()->is('admin/create') ? 'active' : '' }}">
+                <a href="#" data-toggle="modal" data-target="#prueba3" class="nav-link {{ request()->is('admin/create') ? 'active' : '' }}">
                   <i class="nav-icon fas fa-map-marked-alt"></i>
                   <p>
                     Agregar

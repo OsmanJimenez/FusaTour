@@ -39,31 +39,25 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Nombre</label>
-              <input name="name" value="{{ old('name', $User->name) }}" class="form-control" placeholder="Ingresa aqui el nombre del usuario" required>
+              <label for="name">Nombre:</label>
+              <input name="name" value="{{ old('name', $User->name) }}" class="form-control" placeholder="Ingresa aqui el nombre del usuario">
             </div>
 
             <div class="form-group">
-              <label>{{ __('Contraseña') }}</label>
-              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror " name="password" required autocomplete="new-password">
-
-              @error('password')
-              <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-              </span>
-              @enderror
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password"  class="form-control">
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="form-group">
-              <label>Correo Electronico</label>
-              <input name="email" type="email" value="{{ old('email', $User->email) }}" class="form-control" placeholder="Ingresa aqui el correo electronico" required>
+              <label for="email" >Correo Electronico:</label>
+              <input name="email" type="email" value="{{ old('email', $User->email) }}" class="form-control" placeholder="Ingresa aqui el correo electronico" >
             </div>
 
             <div class="form-group ">
-              <label>{{ __('Confirmar Contraseña') }}</label>
-              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+              <label for="password_confirmed">Confirmar Contraseña:</label>
+              <input type="password" name="password_confirmed" class="form-control" >
             </div>
           </div>
 
