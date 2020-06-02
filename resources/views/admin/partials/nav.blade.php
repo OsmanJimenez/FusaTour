@@ -51,7 +51,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" data-toggle="modal" data-target="#prueba" class="nav-link {{ request()->is('admin/create') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-map-marked-alt"></i>
+                  <i class="nav-icon fas fa-box"></i>
                   <p>
                     Agregar
                   </p>
@@ -59,7 +59,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.categorys.index')}}" class="nav-link {{ request()->is('admin/categorys') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-map"></i>
+                  <i class="nav-icon fas fa-box-open"></i>
                   <p>
                     Ver
                   </p>
@@ -79,7 +79,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" data-toggle="modal" data-target="#prueba2" class="nav-link {{ request()->is('admin/create') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-map-marked-alt"></i>
+                  <i class="nav-icon fas fa-baseball-ball"></i>
                   <p>
                     Agregar
                   </p>
@@ -87,7 +87,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.tags.index')}}" class="nav-link {{ request()->is('admin/tags') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-map"></i>
+                  <i class="nav-icon fas fa-passport"></i>
                   <p>
                     Ver
                   </p>
@@ -107,7 +107,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" data-toggle="modal" data-target="#prueba3" class="nav-link {{ request()->is('admin/create') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-map-marked-alt"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>
                     Agregar
                   </p>
@@ -115,7 +115,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.users.index')}}" class="nav-link {{ request()->is('admin/users') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-map"></i>
+                  <i class="nav-icon fas fa-users"></i>
                   <p>
                     Ver
                   </p>

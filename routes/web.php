@@ -25,6 +25,8 @@ Route::get('blog/{post}', 'PostsController@show')->name('posts.show');
 Route::get('categorias/{category}', 'CategoriesController@show')->name('categories.show');
 Route::get('actividades/{tag}', 'ActividadesController@show')->name('actividades.show');
 
+
+
 Auth::routes();
 
 

@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Post;
+use App\Tag;
+use App\User;
+use App\Comment;
+
 
 class AdminController extends Controller
 {
@@ -24,6 +29,16 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $posts = Post::all();
+        $categories = User::all();
+        $users = User::all();
+        $tags = Tag::all();
+        $comments = Comment::all();
+
+
+
+        return view('admin.dashboard', compact('posts', 'categories', 'users', 'tags', 'comments'));
     }
+
+
 }
