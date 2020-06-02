@@ -9,6 +9,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 use App\Post;
 use Carbon\Carbon;
+
 class UsersController extends Controller
 {
     public function index()
@@ -16,10 +17,9 @@ class UsersController extends Controller
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
-
     }
 
-/*    public function create()
+    /*    public function create()
     {
         $categories = User::all();
         $users = User::all();
@@ -38,7 +38,7 @@ class UsersController extends Controller
         $User = User::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'password' => Hash::make($request['password']),        
+            'password' => Hash::make($request['password']),
         ]);
 
         return redirect()->route('admin.users.edit', $User);
@@ -46,31 +46,31 @@ class UsersController extends Controller
 
     public function edit(User $User)
     {
-        
+
         $categories = User::all();
         $users = User::all();
-    
-        return view('admin.users.edit', compact('categories','users', 'User'));
+
+        return view('admin.users.edit', compact('categories', 'users', 'User'));
     }
 
-   
-    public function update(User $User ,Request $request)
+
+    public function update(User $User, Request $request)
     {
-        $rules = [
+        $this->validate($request, [
             'name' => 'required',
-            'email' => ['required', Rule::unique('users')->ignore($User->id)],
-        ];
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        //return $request->all();
 
-        if ($request->filled('password'))
-        {
-            $rules['password'] = ['min:6'];
-        }
 
-        $data = $request->validate($rules);
-    
-        $User->update($data);
-        return back()->withFlash('Usuario Actualizado');
-       
+        $User->name = $request->get('name');
+        $User->email = $request->get('email');
+        $User->password = Hash::make($request->get('password'));
+
+        $User->save();
+
+        return redirect()->route('admin.users.index', compact('users'))->with('flash', 'Tu publicación a sido guardada');
     }
 
     public function destroy(User $User)
@@ -83,5 +83,4 @@ class UsersController extends Controller
             ->route('admin.users.index')
             ->with('flash', 'Tu publicación a sido eliminada');
     }
-
 }
