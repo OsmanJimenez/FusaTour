@@ -38,4 +38,9 @@ class PagesController extends Controller
     {
         return view(' pages.perfil ');
     }
+
+    public function perfiluser()
+    {
+        return view(' pages.perfil.perfil ');
+    }
 }

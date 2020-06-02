@@ -60,11 +60,7 @@
               <input type="password" name="password_confirmed" class="form-control" >
             </div>
           </div>
-
-
-
-
-
+          
           <div class="col-md-12">
             <div class="form-group">
               <button type="submit" class="btn btn-outline-primary float-right">Agregar</button>

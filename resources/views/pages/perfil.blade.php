@@ -11,97 +11,51 @@
   </div>
 </div>
 
-
-
 <div class="container">
   <div class="section">
 
+    <ul class="subpages collection">
+      <li class="collection-item">
+        <a href="perfil/perfil" class="waves-effect">
+          <i class="mdi mdi-face-profile"></i>
+          </i>
+            <span>Editar Perfil</span>
+            <i class="arrow mdi mdi-chevron-right"></i>
+        </a>
+      </li>
 
-    <div class="editprof-img">
-      <div class="img-wrap circle">
-        <img src="assets/images/edit-profile.jpg" alt="">
-      </div>
-    </div>
+      <li class="collection-item">
+        <a href="ui-app-profile.html" class="waves-effect">
+          <i class="mdi mdi-security-home"></i>
+          </i>
+            <span>Centro de Ayuda</span>
+            <i class="arrow mdi mdi-chevron-right"></i>
+        </a>
+      </li>
 
+      <li class="collection-item">
+        <a href="ui-app-profile.html" class="waves-effect">
+          <i class="mdi mdi-file-document"></i>
+          </i>
+            <span>Terminos de Servicio</span>
+            <i class="arrow mdi mdi-chevron-right"></i>
+        </a>
+      </li>
 
+      <li class="collection-item">
+        <a href="{{url('logout')}}" class="waves-effect">
+          <i class="mdi mdi-close-box"></i>
+          </i>
+            <span>Cerrar Sesión</span>
+            <i class="arrow mdi mdi-chevron-right"></i>
+        </a>
+      </li>
+     
+    </ul>
 
-
-
-    <div class="row" style="display: none">
-      <div class="input-field col s12">
-        <i class="mdi mdi-email-outline prefix"></i>
-        <input id="id" type="id" value="{{ old('name', auth()->User()->id) }}" class="validate">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <div class="file-field input-field">
-          <div class="btn">
-            <span>Cargar Imagen</span>
-            <input type="file">
-          </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="mdi mdi-account-outline prefix"></i>
-        <input id="first_name" type="text" value="{{ old('name', auth()->User()->name) }}" class="validate">
-        <label for="first_name">Nombre</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="mdi mdi-email-outline prefix"></i>
-        <input id="email" type="email" value="{{ old('name', auth()->User()->email) }}" class="validate">
-        <label for="email">Correo</label>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="mdi mdi-lock-outline prefix"></i>
-        <input id="password" type="password" class="validate" required>
-        <label for="password">Contraseña</label>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="mdi mdi-lock-outline prefix"></i>
-        <input id="cpassword" type="password" class="validate" required>
-        <label for="cpassword">Repite la Contraseña</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="mdi mdi-circle-edit-outline prefix"></i>
-        <textarea id="textarea-prefix" class="materialize-textarea" required>{{ old('name', auth()->User()->description) }}</textarea>
-        <label for="textarea-prefix">Descripción</label>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col s12">
-        <button class="waves-effect waves-light btn-large bg-primary float-right ">Guardar Cambios</button>
-      </div>
-    </div>
 
   </div>
-</div>
 
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
+</div>
 
 @endsection
