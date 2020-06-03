@@ -15,8 +15,7 @@
 
 <div class="container">
   <div class="section">
-
-      <div class="editprof-img">
+  <div class="editprof-img">
         <div class="img-wrap circle">
           <img src="../assets/images/edit-profile.jpg" alt="">
         </div>
@@ -94,6 +93,7 @@
 
   </div>
 </div>
+
 <div class="spacer"></div>
 <div class="spacer"></div>
 <div class="spacer"></div>

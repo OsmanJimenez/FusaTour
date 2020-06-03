@@ -33,6 +33,7 @@
                 </li>
               @endforeach
           </ul>
+          
       @endif
       <form method="POST" enctype="multipart/form-data" files="true" action="{{ route('admin.users.update', $User) }}">
         {{ csrf_field() }} {{ method_field('PUT') }}

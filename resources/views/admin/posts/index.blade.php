@@ -58,7 +58,7 @@
                                     style="display: inline">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
 
-                                      <button class="btn btn-sm btn-outline-danger"
+                                      <button class="btn btn-sm btn-outline-danger" 
                                       onclick="return confirm('¿Estas seguro que deseas eliminar el lugar?')"
                                       ><i class="fas fa-trash"></i></button>
                                     </form>

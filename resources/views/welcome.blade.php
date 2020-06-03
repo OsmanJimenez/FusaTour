@@ -2,13 +2,31 @@
 
 @section('content')
 
-  <img  src="images/Fondo.jpg" style="height:250px; width: 100%;">
-      
+ <!-- <img  src="/images/Fondo.jpg" style="height:250px; width: 100%;"> -->
+ 
+ <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        @if(isset($title))
+        <h1 class="header center">{{ $title }}</h1>
+        @endif
+        <div class="row center">
+        @if(isset($phrase))
+          <h5 class="col s12 light">{{ $phrase }}</h5>
+        @endif
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    @if(isset($urlimg))
+    <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Background image"></div>
+    @endif
+  </div>
+
   <div class="container">
 
-    @if(isset($title))
-      <h3>{{ $title }}</h3>
-    @endif
 
     <div class="section">
       <h5 class="pagetitle">Lugares</h5>

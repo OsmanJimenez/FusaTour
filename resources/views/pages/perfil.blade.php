@@ -16,7 +16,7 @@
 
     <ul class="subpages collection">
       <li class="collection-item">
-        <a href="perfil/perfil" class="waves-effect">
+        <a href="perfiledit" class="waves-effect">
           <i class="mdi mdi-face-profile"></i>
           </i>
             <span>Editar Perfil</span>

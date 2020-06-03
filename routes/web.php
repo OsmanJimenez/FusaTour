@@ -18,7 +18,7 @@ Route::get('categorias', 'PagesController@categorias' )->name('pages.categorias'
 Route::get('descubrir', 'PagesController@descubrir' )->name('pages.descubrir');
 Route::get('actividades', 'PagesController@actividades' )->name('pages.actividades');
 Route::get('perfil', 'PagesController@perfil' )->name('pages.perfil')->middleware('auth');
-Route::get('perfil/perfil', 'PagesController@perfiluser' )->name('pages.perfil.perfil')->middleware('auth');
+Route::get('perfiledit', 'UsuarioController@update' )->name('pages.update');
 
 
 Route::get('blog/{post}', 'PostsController@show')->name('posts.show');
@@ -110,6 +110,5 @@ function(){
     Route::put('users/{user}', 'UsersController@update' )->name('admin.users.update');
     Route::delete('users/{user}', 'UsersController@destroy' )->name('admin.users.destroy');
 
-    Route::put('/', 'UsuarioController@update' )->name('admin.usuario.update');
 
 });

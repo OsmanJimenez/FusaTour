@@ -11,8 +11,9 @@ class CategoriesController extends Controller
     {
 
         return view('welcome', [
-            'title' => "Publicaciones de la categoria $category->name",
+            'title' => $category->name,
             'posts' => $category->posts,
+            'phrase' => "Espacios a conocer",
             'urlimg' => $category->urlimg
         ]);
     }

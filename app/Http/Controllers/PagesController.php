@@ -13,7 +13,11 @@ class PagesController extends Controller
     public function home()
     {
         $posts = Post::latest('published_at')->get();
-        return view('welcome', compact('posts'));
+        return view('welcome', compact('posts'), [
+            'title' => "Fusagasuga",
+            'phrase' => "La ciudad jardin de Colombia",
+            'urlimg' => "Fondo.jpg"
+        ]);
     }
 
     public function categorias()

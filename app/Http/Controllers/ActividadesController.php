@@ -12,6 +12,8 @@ class ActividadesController extends Controller
 
         return view('welcome', [
             'title' => "Actividades relacionadas con:  $tag->name",
-            'posts' => $tag->posts
+            'phrase' => "Que quieres practicar hoy",
+            'posts' => $tag->posts,
+            'urlimg' => $tag->urlimg
         ]);    }
 }

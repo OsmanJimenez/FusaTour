@@ -4,15 +4,17 @@
 @section('meta-description', $post->excerpt)
 
 @section('content')
+
+<img style="height:250px; width: 100%;" src="/images/{{ $post->urlimg }}">                      
+
     <div class="container">
 
         <div class="section">
             <div class="row ui-mediabox blogs bot-0">
-                
+ 
+
                 <div class="col s12">
-                    <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                        <img class="z-depth-1" style="height:200px; width: 100%;" src="/images/{{ $post->urlimg }}">                      
-                    </a>
+                    
                     <h5 class="title">{{ $post->title }}</h5>
                     <span class="small date">{{ $post->published_at->format('M d') }}</span>
                     <span class="small tags">

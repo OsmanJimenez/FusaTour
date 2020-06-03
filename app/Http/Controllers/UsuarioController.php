@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,7 +16,7 @@ class UsuarioController extends Controller
     {
         $users = User::all();
 
-        return view('admin.users.index', compact('users'));
+        return view('pages.perfiledit', compact('users'));
     }
 
     /*    public function create()
@@ -41,7 +41,7 @@ class UsuarioController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
-        return redirect()->route('pages.perfil', $User);
+        return redirect()->route('pages.perfiledit', $User);
     }
 
     public function edit(User $User)
@@ -50,7 +50,7 @@ class UsuarioController extends Controller
         $categories = User::all();
         $users = User::all();
 
-        return view('pages.perfil', compact('categories', 'users', 'User'));
+        return view('pages.perfiledit', compact('categories', 'users', 'User'));
     }
 
 
@@ -70,7 +70,7 @@ class UsuarioController extends Controller
 
         $User->save();
 
-        return redirect()->route('pages.perfil', compact('users'))->with('flash', 'Tu perfil a sido actualizado');
+        return redirect()->route('pages.perfiledit', compact('users'))->with('flash', 'Tu perfil a sido actualizado');
     }
 
     public function destroy(User $User)
@@ -80,7 +80,7 @@ class UsuarioController extends Controller
         $User->delete();
 
         return redirect()
-            ->route('pages.perfil')
+            ->route('pages.perfiledit')
             ->with('flash', 'Tu publicación a sido eliminada');
     }
 }
