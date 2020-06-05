@@ -31,7 +31,7 @@ class PostsCommentsController extends Controller
         DB::update(
             "UPDATE posts
                 SET POINT = (
-                    SELECT AVG(point)
+                    SELECT ROUND(AVG(POINT),1)
                     FROM comments
                     WHERE post_id = ?
                 )
