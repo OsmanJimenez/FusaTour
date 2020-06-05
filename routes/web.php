@@ -18,7 +18,7 @@ Route::get('categorias', 'PagesController@categorias' )->name('pages.categorias'
 Route::get('descubrir', 'PagesController@descubrir' )->name('pages.descubrir');
 Route::get('actividades', 'PagesController@actividades' )->name('pages.actividades');
 Route::get('perfil', 'PagesController@perfil' )->name('pages.perfil')->middleware('auth');
-Route::get('perfiledit', 'UsuarioController@update' )->name('pages.update');
+Route::get('perfiledit', 'PagesController@perfiledit' )->name('pages.perfiledit');
 
 
 Route::get('blog/{post}', 'PostsController@show')->name('posts.show');

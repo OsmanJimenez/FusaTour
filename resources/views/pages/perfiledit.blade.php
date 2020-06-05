@@ -86,8 +86,8 @@
 
 
       <div class="row">
-        <div class="col s12">
-          <button class="waves-effect waves-light btn-large bg-primary float-right ">Guardar Cambios</button>
+        <div class="col s12 right-align">
+          <button class="waves-effect waves-light btn-large bg-primary">Guardar Cambios</button>
         </div>
       </div>
 
