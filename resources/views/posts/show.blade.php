@@ -152,13 +152,20 @@
                                     <span class="title">{{ $comment->user->name }}</span>
                                     <p>{{ $comment->text }}</p>
                                 </a>                
-                                
+                            
+                                <div class="secondary-content">
+                                    <p>{{ $comment->point }} <label for="radio1">&#9733;</label></p>
+                                </div>
+
                                 <div class="secondary-content">
                                     <p>{{ $comment->point }} <label for="radio1">&#9733;</label></p>
                                 </div>
                             </li>
-
+                            
                         @endforeach
+
+                        
+        
                         </ul>
                     </div>
                 </div>
