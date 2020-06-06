@@ -39,6 +39,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../../adminlts/plugins/summernote/summernote-bs4.css">
   <!-- Dropzone -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/dropzone.css">
+  <!-- Tupicons -->
+  <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">

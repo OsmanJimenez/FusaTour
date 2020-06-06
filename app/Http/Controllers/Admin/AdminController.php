@@ -35,8 +35,6 @@ class AdminController extends Controller
         $tags = Tag::all();
         $comments = Comment::all();
 
-
-
         return view('admin.dashboard', compact('posts', 'categories', 'users', 'tags', 'comments'));
     }
 
