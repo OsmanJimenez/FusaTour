@@ -30,57 +30,28 @@ class UsuarioController extends Controller
 */
 
 
+public function update(Request $request)
+{
+    
+    $user = new User;
 
-    public function store(Request $request)
-    {
-        $this->validate($request, ['name' => 'required|min:3 |unique:users']);
+    $this->validate($request, [
+        'name' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+    ]);
+    //return $request->all();
 
-        $User = User::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-        ]);
-
-        return redirect()->route('pages.perfiledit', $User);
-    }
-
-    public function edit(User $User)
-    {
-
-        $categories = User::all();
-        $users = User::all();
-
-        return view('pages.perfiledit', compact('categories', 'users', 'User'));
-    }
+    $user->user_id = \Auth::user()->id;
+    $user->name = $request->get('name');
+    $user->email = $request->get('email');
+    $user->password = Hash::make($request->get('password'));
 
 
-    public function update(User $User, Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required',
-        ]);
-        //return $request->all();
+    $user->save();
+
+    return redirect()->route('pages.perfil');
+}
 
 
-        $User->name = $request->get('name');
-        $User->email = $request->get('email');
-        $User->password = Hash::make($request->get('password'));
-
-        $User->save();
-
-        return redirect()->route('pages.perfiledit', compact('users'))->with('flash', 'Tu perfil a sido actualizado');
-    }
-
-    public function destroy(User $User)
-    {
-
-
-        $User->delete();
-
-        return redirect()
-            ->route('pages.perfiledit')
-            ->with('flash', 'Tu publicación a sido eliminada');
-    }
 }

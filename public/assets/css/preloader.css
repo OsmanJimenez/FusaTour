@@ -33,7 +33,7 @@ body.ishome.ajaxurl .preloader-background{
     margin: -50px 0 0 -50px;
     border-radius: 50%;
     border: 2px solid transparent;
-    border-top-color: #B39DDB;
+    border-top-color: #e74c3c;
 
     -webkit-animation: spin 1.5s linear infinite; 
     animation: spin 1.5s linear infinite; 
@@ -49,7 +49,7 @@ body.ishome.ajaxurl .preloader-background{
         bottom: 5px;
         border-radius: 50%;
         border: 2px solid transparent;
-        border-top-color: #81D4FA;
+        border-top-color: #A3CB38;
 
         -webkit-animation: spin 2.5s linear infinite; 
         animation: spin 2.5s linear infinite; 
@@ -64,7 +64,7 @@ body.ishome.ajaxurl .preloader-background{
         bottom: 15px;
         border-radius: 50%;
         border: 2px solid transparent;
-        border-top-color: #80CBC4;
+        border-top-color: #C4E538;
         -webkit-animation: spin 2s linear infinite; 
           animation: spin 2s linear infinite; 
     }
