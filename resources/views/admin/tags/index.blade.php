@@ -21,7 +21,7 @@
     <section class="content">
       <div class="row">
         <div class="col-12">
-          <div class="card shadow p-3 mb-5 bg-white rounded border-top border-info" >
+          <div class="card shadow p-3 mb-5 bg-white rounded border-top border-primary" >
             <div class="card-header ">
               <h3 class="card-title">Listado de Actividades</h3>
               <button class="btn  btn-outline-primary float-right" data-toggle="modal" data-target="#prueba2">Crear actividad</button>
