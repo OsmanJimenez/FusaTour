@@ -160,7 +160,7 @@
                     <li class="collection-item avatar">
 
                         <a href="#" class='chatlink waves-effect'>
-                            <img src="assets/images/user-21.jpg" alt="Simona Gotto" title="Simona Gotto" class="circle">
+                            <img src="/images/{{ $comment->user->avatar }}" alt="Simona Gotto" title="Simona Gotto" class="circle">
                             <span class="title">{{ $comment->user->name }}</span>
                             <p>{{ $comment->text }}</p>
                         </a>

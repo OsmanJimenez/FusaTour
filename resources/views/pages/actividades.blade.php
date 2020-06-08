@@ -10,7 +10,7 @@
                     <h5 class="bot-20 sec-tit  ">¿Que quieres hacer hoy?</h5>                    
 
                     @foreach ($tags as $tag)                      
-                        <ul class="collection notifications z-depth-1">
+                        <ul class="collection notifications z-depth-3">
                             <li class="collection-item avatar">                           
                                 <div class="notify" >
                                     <div class="col s1 m4 l2">

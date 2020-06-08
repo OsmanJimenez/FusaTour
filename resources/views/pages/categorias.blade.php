@@ -9,7 +9,7 @@
       @foreach ($categories as $category)
         <div class="row ">
           <div class="col s12 pad-0">        
-            <div class="card">
+            <div class="z-depth-3 card">
 
               <div class="card-image">
                 <img style="height:200px;" src="/images/{{ $category->urlimg }}">
