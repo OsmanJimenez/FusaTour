@@ -38,5 +38,4 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('posts', 'categories', 'users', 'tags', 'comments'));
     }
 
-
 }

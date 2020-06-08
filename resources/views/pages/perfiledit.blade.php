@@ -16,8 +16,8 @@
 <div class="container">
   <div class="section">
   <div class="editprof-img">
-        <div class="img-wrap circle">
-          <img src="../assets/images/edit-profile.jpg" alt="">
+        <div class="circle">
+          <img src="/images/{{ auth()->user()->avatar }}" alt="">
         </div>
       </div>
 
