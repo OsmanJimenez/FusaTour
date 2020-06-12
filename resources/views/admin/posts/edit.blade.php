@@ -38,14 +38,18 @@
             </div>
 
             <div class="form-group">
-              <label>Categoria</label>
-              <select name="category" class="form-control" style="width: 100%;" required>
-                @foreach ($categories as $category)
-                <option value="{{ old('category_id', $post->category_id) }}">{{$category->name}} </option>
-                @endforeach
-
-              </select>
-            </div>
+                  <label>Categoria</label>
+                  <select name="category" 
+                  class="form-control" style="width: 100%;" required>
+                    @foreach ($categories as $category)
+                      <option value="{{ $category->id}}"
+                      {{ old('category', $post->category_id) }}
+                      >{{$category->name}} </option>  
+                    @endforeach
+                    
+                  </select>
+                </div>
+            
 
             <div class="form-group">
               <label>Información</label>
@@ -91,6 +95,7 @@
                 @endforeach
               </select>
             </div>
+            
 
             <div class="form-group">
               <label for="exampleInputFile">Caratula</label>

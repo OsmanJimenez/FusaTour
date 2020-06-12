@@ -83,7 +83,7 @@
                     }
 
                     .estrella label {
-                        font-size: 20vw;
+                        font-size: 16vw;
                         /*Tamaño de fuente cambia de acuerdo al view port*/
                     }
                 </style>
