@@ -47,4 +47,9 @@ class PagesController extends Controller
     {
         return view(' pages.perfiledit ');
     }
+
+    public function escaner()
+    {
+        return view(' pages.escaner ');
+    }
 }

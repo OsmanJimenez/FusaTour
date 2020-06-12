@@ -32,6 +32,7 @@ Auth::routes();
 Route::name('create_comment')->post('blog/{post}', 'PostsCommentsController@create');
 
 Route::get('perfiledit', 'PagesController@perfiledit' )->name('pages.perfiledit');
+Route::get('escaner', 'PagesController@escaner' )->name('pages.escaner');
 
 
 Route::auth();

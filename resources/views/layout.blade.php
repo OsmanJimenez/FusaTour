@@ -26,7 +26,8 @@
   <!-- CORE CSS TEMPLATE - START  -->
     <link  href="/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style"/> 
     <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style"/> 
-    <!-- CORE CSS TEMPLATE - END -->
+
+
 
 <!-- END HEAD -->
 @laravelPWA
@@ -64,6 +65,8 @@
         <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
           <i class="mdi mdi-chevron-left" data-page=""></i>
         </a>
+        <a href="{{ route('pages.escaner') }}" data-target="" class="waves-effect waves-circle navicon right sidenav-trigger show-on-large pulse"><i class="mdi mdi-camera"></i></a>
+
         <a href="#" data-target="" id="theme-toggle" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-brightness-6 mdi-transition1"></i></a>
      
       </div>
