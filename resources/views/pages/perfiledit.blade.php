@@ -45,7 +45,7 @@
           <div class="file-field input-field">
             <div class="btn">
               <span>Cargar Imagen</span>
-              <input type="file">
+              <input value="{{ old('urlimg', auth()->user()->avatar) }}" type="file" name="urlimg">
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">

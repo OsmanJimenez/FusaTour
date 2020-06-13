@@ -96,7 +96,6 @@
               </select>
             </div>
             
-
             <div class="form-group">
               <label for="exampleInputFile">Caratula</label>
               <input value="{{ old('urlimg', $post->urlimg) }}" type="file" name="urlimg" required>

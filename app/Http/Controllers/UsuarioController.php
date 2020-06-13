@@ -55,8 +55,14 @@ public function edit(User $User)
 
 public function editarperfil(User $User, Request $request)
 {
+    if($request->hasFile('urlimg')){
+        $file = $request->file('urlimg');
+        $name = time().$file->getClientOriginalName();
+        $file->move(public_path().'/images/', $name);
+    }
 
     $User->id = \Auth::user()->id;
+    $User->avatar = $name;
     $User->name = $request->get('name');
     $User->email = $request->get('email');
     $User->password = Hash::make($request->get('password'));
