@@ -30,28 +30,54 @@ class UsuarioController extends Controller
 */
 
 
-public function update(Request $request)
+public function store(Request $request)
 {
-    
-    $user = new User;
+    $this->validate($request, ['name' => 'required|min:3 |unique:users']);
 
-    $this->validate($request, [
-        'name' => 'required',
-        'email' => 'required',
-        'password' => 'required',
+    $User = User::create([
+        'name' => $request['name'],
+        'email' => $request['email'],
+        'password' => Hash::make($request['password']),
     ]);
-    //return $request->all();
 
-    $user->user_id = \Auth::user()->id;
-    $user->name = $request->get('name');
-    $user->email = $request->get('email');
-    $user->password = Hash::make($request->get('password'));
-
-
-    $user->save();
-
-    return redirect()->route('pages.perfil');
+    return redirect()->route('admin.users.edit', $User);
 }
 
+public function edit(User $User)
+{
+
+    $categories = User::all();
+    $users = User::all();
+
+    return view('admin.users.edit', compact('categories', 'users', 'User'));
+}
+
+
+public function editarperfil(User $User, Request $request)
+{
+
+    $User->id = \Auth::user()->id;
+    $User->name = $request->get('name');
+    $User->email = $request->get('email');
+    $User->password = Hash::make($request->get('password'));
+    $User->description = $request->get('description');
+
+    $User->save();
+
+    return redirect()
+        ->route('pages.perfil')
+        ->with('flash', 'Tu publicación a sido guardada');
+}
+
+public function destroy(User $User)
+{
+
+
+    $User->delete();
+
+    return redirect()
+        ->route('pages.perfil')
+        ->with('flash', 'Tu publicación a sido eliminada');
+}
 
 }

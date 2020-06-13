@@ -29,8 +29,6 @@ class UsersController extends Controller
     }
 */
 
-
-
     public function store(Request $request)
     {
         $this->validate($request, ['name' => 'required|min:3 |unique:users']);

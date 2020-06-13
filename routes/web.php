@@ -34,6 +34,8 @@ Route::name('create_comment')->post('blog/{post}', 'PostsCommentsController@crea
 Route::get('perfiledit', 'PagesController@perfiledit' )->name('pages.perfiledit');
 Route::get('escaner', 'PagesController@escaner' )->name('pages.escaner');
 
+Route::put('perfiledit/{user}', 'UsuarioController@editarperfil' )->name('profile.update');
+
 
 Route::auth();
 

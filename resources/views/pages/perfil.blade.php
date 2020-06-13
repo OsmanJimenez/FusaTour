@@ -16,7 +16,7 @@
 
     <ul class="subpages collection">
       <li class="collection-item">
-        <a href="perfiledit" class="waves-effect">
+        <a href="{{ route('pages.perfiledit', ['user' => auth()->user()->id ]) }}" class="waves-effect">
           <i class="mdi mdi-face-profile"></i>
           </i>
             <span>Editar Perfil</span>
