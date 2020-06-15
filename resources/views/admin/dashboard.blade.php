@@ -49,57 +49,59 @@
 
     <div class="row">
         <div class="col-12">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                google.charts.load('current', {
+                    'packages': ['bar']
+                });
+                google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Mes', 'Cantidad'],
-          ['Ene', 1000],
-          ['Feb', 1170],
-          ['Mar', 660],
-          ['Abr', 1000],
-          ['May', 1170],
-          ['Jun', 660],
-          ['Jul', 1000],
-          ['Ago', 1170],
-          ['Sep', 660],
-          ['Oct', 1000],
-          ['Nov', 1170],
-          ['Dic', 660]
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Mes', 'Cantidad'],
+                        ['Ene', 1000],
+                        ['Feb', 1170],
+                        ['Mar', 660],
+                        ['Abr', 1000],
+                        ['May', 1170],
+                        ['Jun', 660],
+                        ['Jul', 1000],
+                        ['Ago', 1170],
+                        ['Sep', 660],
+                        ['Oct', 1000],
+                        ['Nov', 1170],
+                        ['Dic', 660]
 
-        ]);
+                    ]);
 
-        var options = {
-          bars: 'vertical' // Required for Material Bar Charts.
-        };
+                    var options = {
+                        bars: 'vertical' // Required for Material Bar Charts.
+                    };
 
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+                    var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
+                    chart.draw(data, google.charts.Bar.convertOptions(options));
+                }
+            </script>
 
-<div class="card card-primary card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="far fa-chart-bar"></i>
-                  Comentarios
-                </h3>
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="far fa-chart-bar"></i>
+                        Comentarios
+                    </h3>
 
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
-                  </button>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
-              </div>
-              <div class="card-body">
-              <div id="barchart_material" style="height: 500px;"></div>
-              </div>
-              <!-- /.card-body-->
+                <div class="card-body">
+                    <div id="barchart_material" style="height: 500px;"></div>
+                </div>
+                <!-- /.card-body-->
             </div>
         </div>
     </div>
