@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*Autentificación */
+
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/callback/{provider}', 'SocialController@callback');
+
+/*Fin Autentificación */
+
 Route::get('/', 'PagesController@home' )->name('pages.inicio');
 Route::get('categorias', 'PagesController@categorias' )->name('pages.categorias');
 Route::get('descubrir', 'PagesController@descubrir' )->name('pages.descubrir');
