@@ -42,34 +42,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Tupicons -->
   <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
  
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-          },
-          bars: 'horizontal' // Required for Material Bar Charts.
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-
+  
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -192,7 +166,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       :)
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="https://fusatour.com">FusaTour</a>.</strong> Todos los derechos Reservados.
+    <strong>Copyright &copy; 2020 <a href="https://fusatour.site">FusaTour</a>.</strong> Todos los derechos Reservados.
   </footer>
 </div>
 <!-- ./wrapper -->
