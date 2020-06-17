@@ -26,7 +26,6 @@
                                 <p>{{ $post->point }} <label for="radio1">&#9733;</label></p>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 @endforeach
