@@ -69,4 +69,27 @@ class AdminController extends Controller
         , 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'
         , 'ene_2', 'feb_2', 'mar_2', 'abr_2', 'may_2', 'jun_2', 'jul_2', 'ago_2', 'sep_2', 'oct_2', 'nov_2', 'dic_2'));
     }
+
+    public function destroy(Comment $Comment)
+    {
+
+        $Comment->delete();
+
+        DB::update(
+            "UPDATE posts
+                SET POINT = (
+                    SELECT ROUND(AVG(POINT),1)
+                    FROM comments
+                    WHERE post_id = ?
+                )
+                WHERE id = ?",
+            [
+                $Comment->post_id, $Comment->post_id
+            ]
+        );
+
+        return redirect()
+            ->route('dashboard')
+            ->with('flash', 'Comentario Eliminado');
+    }
 }

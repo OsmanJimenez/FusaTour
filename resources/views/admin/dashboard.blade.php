@@ -152,7 +152,18 @@
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
                         {{ $comment->text }}
+                        
                         </div>
+                        
+                        <form method="POST" 
+                                    action="{{ route('admin.admin.destroy', $comment) }}" 
+                                    style="display: inline">
+                                    {{ csrf_field() }} {{ method_field('DELETE') }}
+
+                                      <button class="btn p-1 float-right" 
+                                      onclick="return confirm('¿Estas seguro que deseas eliminar este comentario?')"
+                                      ><i class="fas fa-minus-circle" style="color: red;"></i></button>
+                                    </form>
                         <!-- /.direct-chat-text -->
                       </div>
                       <!-- /.direct-chat-msg -->

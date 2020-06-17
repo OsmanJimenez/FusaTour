@@ -74,6 +74,8 @@ function(){
     Route::delete('posts/{post}', 'PostsController@destroy' )->name('admin.posts.destroy');
     
     Route::post('posts/{post}/photos', 'PhotosController@store' )->name('admin.posts.photos.store');
+    Route::delete('comments/{comment}', 'AdminController@destroy' )->name('admin.admin.destroy');
+
 });
 
 Route::group([
