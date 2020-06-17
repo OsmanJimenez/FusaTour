@@ -35,18 +35,18 @@ class AdminController extends Controller
         $tags = Tag::all();
         $comments = Comment::all();
 
-        $ene = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-01-01" and created_at < "2020-01-31" ');
-        $feb = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-02-01" and created_at < "2020-02-29" ');
-        $mar = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-03-01" and created_at < "2020-03-31" ');
-        $abr = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-04-01" and created_at < "2020-04-30" ');
-        $may = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-05-01" and created_at < "2020-05-31" ');
-        $jun = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-06-01" and created_at < "2020-06-30" ');
-        $jul = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-07-01" and created_at < "2020-07-31" ');
-        $ago = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-08-01" and created_at < "2020-08-31" ');
-        $sep = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-09-01" and created_at < "2020-09-30" ');
-        $oct = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-10-01" and created_at < "2020-10-31" ');
-        $nov = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-11-01" and created_at < "2020-11-30" ');
-        $dic = DB::select('select count(*) AS cantidad from comments where created_at >= "2020-12-01" and created_at < "2020-12-31" ');
+        $ene = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-01-01', '2020-01-31']);
+        $feb = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-02-01', '2020-02-29']);
+        $mar = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-03-01', '2020-03-31']);
+        $abr = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-04-01', '2020-04-30']);
+        $may = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-05-01', '2020-05-31']);
+        $jun = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-06-01', '2020-06-30']);
+        $jul = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-07-01', '2020-07-31']);
+        $ago = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-08-01', '2020-08-31']);
+        $sep = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-09-01', '2020-09-30']);
+        $oct = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-10-01', '2020-10-31']);
+        $nov = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-11-01', '2020-11-30']);
+        $dic = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?',['2020-12-01', '2020-12-31']);
 
         return view('admin.dashboard', compact('posts', 'categories', 'users', 'tags', 'comments', 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'));
     }
