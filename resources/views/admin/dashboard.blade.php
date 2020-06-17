@@ -59,18 +59,18 @@
                 function drawChart() {
                     var data = google.visualization.arrayToDataTable([
                         ['Mes', 'Cantidad'],
-                        ['Ene', 1000],
-                        ['Feb', 1170],
-                        ['Mar', 660],
-                        ['Abr', 1000],
-                        ['May', 1170],
-                        ['Jun', 660],
-                        ['Jul', 1000],
-                        ['Ago', 1170],
-                        ['Sep', 660],
-                        ['Oct', 1000],
-                        ['Nov', 1170],
-                        ['Dic', 660]
+                        ['Ene', {{ $ene[0]->cantidad }} ],
+                        ['Feb', {{ $feb[0]->cantidad }}],
+                        ['Mar', {{ $mar[0]->cantidad }}],
+                        ['Abr', {{ $abr[0]->cantidad }}],
+                        ['May', {{ $may[0]->cantidad }}],
+                        ['Jun', {{ $jun[0]->cantidad }}],
+                        ['Jul', {{ $jul[0]->cantidad }}],
+                        ['Ago', {{ $ago[0]->cantidad }}],
+                        ['Sep', {{ $sep[0]->cantidad }}],
+                        ['Oct', {{ $oct[0]->cantidad }}],
+                        ['Nov', {{ $nov[0]->cantidad }}],
+                        ['Dic', {{ $dic[0]->cantidad }}]
 
                     ]);
 
