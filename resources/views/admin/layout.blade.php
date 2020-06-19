@@ -196,7 +196,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../../adminlts/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- DataTables -->
 <script src="../../adminlts/plugins/datatables/jquery.dataTables.js"></script>
-<script src="../../adminlts/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../adminlts/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <script src="../../adminlts/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../../adminlts/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -205,7 +205,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../../adminlts/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- DropZone -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/min/dropzone.min.js"></script>
-<!-- Qr Generator -->
+
 
 
 <!-- page script -->
