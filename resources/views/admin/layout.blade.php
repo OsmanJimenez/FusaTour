@@ -205,6 +205,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../../adminlts/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- DropZone -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/min/dropzone.min.js"></script>
+<!-- Qr Generator -->
+
 
 <!-- page script -->
 <script>

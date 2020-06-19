@@ -13,7 +13,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div>
-                            <img src="images/login.png" class="rounded mx-auto d-block" alt="..." style="width: 70%;" >
+                            <img src="images/login.PNG" class="rounded mx-auto d-block" alt="..." style="width: 70%;" >
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo Electronico') }}</label>
