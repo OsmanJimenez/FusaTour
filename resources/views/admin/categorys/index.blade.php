@@ -56,9 +56,29 @@
                                     style="display: inline">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
 
-                                      <button class="btn btn-sm btn-outline-danger"
-                                      onclick="return confirm('¿Estas seguro que deseas eliminar la categoria?')"
-                                      ><i class="fas fa-trash"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal{{ $category->id }}">
+                                      <i class="fas fa-trash"></i>
+                                    </button>
+
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="exampleModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header" style="border-bottom: 0px;">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              ¿Estas seguro de eliminar esta categoria?
+                                            </div>
+                                            <div class="modal-footer" style="border-top: 0px;">
+                                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                              <button class="btn btn-primary">Eliminar</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </form>
                                     
                                 
