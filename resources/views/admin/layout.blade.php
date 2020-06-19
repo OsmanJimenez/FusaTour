@@ -41,7 +41,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/dropzone.css">
   <!-- Tupicons -->
   <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
- 
+   <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="../../adminlts/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../../adminlts/plugins/toastr/toastr.min.css">
 
   
 </head>
@@ -138,10 +141,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
 
-    @if (session()->has('flash'))
-      <div class="alert alert-success">{{ session('flash') }}
-      </div>  
-    @endif  
+
 
     @yield('content')
 
@@ -205,8 +205,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../../adminlts/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- DropZone -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/min/dropzone.min.js"></script>
-
-
+<!-- SwwtAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 <!-- page script -->
 <script>
@@ -215,8 +215,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     $('.textarea').summernote()
   })
 </script>
-
-
 
 <script>
   $(function () {   
@@ -302,6 +300,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   })
 </script>
 
+@if (session()->has('flash'))
+      <script>
+        Swal.fire({
+        icon: 'success',
+        title: 'Oops...',
+        text: '{{ session('flash') }}',
+      })
+
+      </script>
+    @endif  
 
 @include('admin.posts.create')
 
