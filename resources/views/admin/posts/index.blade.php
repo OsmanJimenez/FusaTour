@@ -58,63 +58,65 @@
                                     class="btn btn-sm btn-outline-dark">
                                     <i class="fas fa-qrcode"></i></a>
 
-<!-- Modal -->
-<div class="modal fade" id="{{ $post->url }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Codigo QR</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      
-      <script src="../../adminlts/js/qrcode.js"></script>
-      <input id="text{{ $post->id }}" style="display: none;" type="text" value="{{ $post->url }}" style="width:80%" /><br />
-<div id="qrcode{{ $post->id }}" style="width:100px; height:100px; margin-top:15px;"></div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="{{ $post->url }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Codigo QR</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body" id="my-node{{ $post->id }}" style=" display: flex; align-items: center; justify-content: center;">
+                                          
+                                            <script src="../../adminlts/js/qrcode.js"></script>
+                                            <input id="text{{ $post->id }}" style="display: none;" type="text" value="{{ $post->url }}" style="width:80%" /><br />
+                                            <div id="qrcode{{ $post->id }}" ></div>
 
-<script type="text/javascript">
+                                              <script type="text/javascript">
 
-var qrcode = new QRCode(document.getElementById("qrcode{{ $post->id }}"), {
-	width : 100,
-	height : 100
-});
+                                              var qrcode = new QRCode(document.getElementById("qrcode{{ $post->id }}"), {
+                                                width : 200,
+                                                height : 200
+                                              });
 
-function makeCode () {		
-	var elText = document.getElementById("text{{ $post->id }}");
-	
-	if (!elText.value) {
-		alert("Input a text");
-		elText.focus();
-		return;
-	}
-	
-	qrcode.makeCode(elText.value);
-}
+                                              function makeCode () {		
+                                                var elText = document.getElementById("text{{ $post->id }}");
+                                                
+                                                if (!elText.value) {
+                                                  alert("Ingrese un Codigo");
+                                                  elText.focus();
+                                                  return;
+                                                }
+                                                
+                                                qrcode.makeCode(elText.value);
+                                              }
 
-makeCode();
-
-$("#text{{ $post->id }}").
-	on("blur", function () {
-		makeCode();
-	}).
-	on("keydown", function (e) {
-		if (e.keyCode == 13) {
-			makeCode();
-		}
-	});
-</script>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Descargar</button>
-      </div>
-    </div>
-  </div>
-</div>
+                                              makeCode();
+                                              </script>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                            <button type="button" id="foo{{ $post->id }}" class="btn btn-primary">Descargar</button>
+                                            <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+                                            <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+                                            <script>
+                                              var node = document.getElementById('my-node{{ $post->id }}');
+                                              var btn = document.getElementById('foo{{ $post->id }}');
+                                              btn.onclick = function() {
+                                                domtoimage.toBlob(document.getElementById('my-node{{ $post->id }}'))
+                                                  .then(function(blob) {
+                                                    window.saveAs(blob, 'FusaTour_{{ $post->url }}.png');
+                                                  });
+                                              }
+                                            </script>
 
 
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
 
                                     <form method="POST" 
                                     action="{{ route('admin.posts.destroy', $post) }}" 
