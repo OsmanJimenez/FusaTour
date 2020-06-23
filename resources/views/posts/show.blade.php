@@ -33,12 +33,34 @@
             <div class="col s12">
                 <div class="col s12 pad-0">
                     <h5 class="bot-20 sec-tit  ">Ubicación </h5>
-                    <iframe width="100%" height="180px" src="{{ $post->ubicacion }}" frameborder="0" style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
+                    <iframe 
+                        width="100%" 
+                        height="180px" 
+                        src="{{ $post->ubicacion }}" 
+                        frameborder="0" 
+                        style="border:none;" 
+                        allowvr="yes" 
+                        allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+                        allowfullscreen mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        onmousewheel="" 
+                        allowfullscreen>
                     </iframe>
                 </div>
                 <div class="col s12 pad-0">
                     <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
-                    <iframe width="100%" height="280px" src="{{ $post->urlvr }}" frameborder="0" style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
+                    <iframe 
+                        width="100%" 
+                        height="280px" 
+                        src="{{ $post->urlvr }}" 
+                        frameborder="0" 
+                        style="border:none;" 
+                        allowvr="yes" 
+                        allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+                        allowfullscreen mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        onmousewheel="" 
+                        allowfullscreen>
                     </iframe>
                 </div>
             </div>

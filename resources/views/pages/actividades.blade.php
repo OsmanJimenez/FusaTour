@@ -39,4 +39,7 @@
         </div>
     </div>
 
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
 @endsection

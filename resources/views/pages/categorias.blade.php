@@ -29,7 +29,7 @@
       @endforeach
 
       <div class="spacer"></div>
-      
+      <div class="spacer"></div>
     </div>
   </div>
 
