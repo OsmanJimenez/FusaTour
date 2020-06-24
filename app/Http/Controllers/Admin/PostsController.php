@@ -67,6 +67,28 @@ class PostsController extends Controller
             $file->move(public_path().'/images/', $name);
         }
 
+        if($request->hasFile('vrimg_1')){
+            $file = $request->file('vrimg_1');
+            $name_1 = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name_1);
+        }
+
+        if($request->hasFile('vrimg_2')){
+            $file = $request->file('vrimg_2');
+            $name_2 = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name_2);
+        }
+
+        if($request->hasFile('vrimg_3')){
+            $file = $request->file('vrimg_3');
+            $name_3 = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name_3);
+        }
+
+
+
+        
+
         $post->title = $request->get('title');
         $post->url = str_slug($request->get('title'));
         $post->body = $request->get('body');
@@ -74,7 +96,10 @@ class PostsController extends Controller
         $post->published_at = Carbon::parse($request->get('published_at'));
         $post->category_id = $request->get('category');
         $post->excerpt = $request->get('excerpt');
-        $post->urlvr = $request->get('urlvr');
+        $post->vrimg_1 = $name_1;
+        $post->vrimg_2 = $name_2;
+        $post->vrimg_3 = $name_3;
+
         $post->ubicacion = $request->get('ubicacion');
         $post->save();
 

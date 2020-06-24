@@ -307,7 +307,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         title: 'Oops...',
         text: '{{ session('flash') }}',
       })
-
       </script>
     @endif  
 
