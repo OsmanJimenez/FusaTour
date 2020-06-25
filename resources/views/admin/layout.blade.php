@@ -300,6 +300,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   })
 </script>
 
+<!-- input file -->
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  var content = "Buscar"
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
 @if (session()->has('flash'))
       <script>
         Swal.fire({

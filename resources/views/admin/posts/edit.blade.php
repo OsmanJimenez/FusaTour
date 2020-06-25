@@ -115,102 +115,123 @@
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
+
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">Formulario de Realidad Virtual</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
+
                     <div class="modal-body">
+                      <div class="container-fluid">
 
+                        <div class="row" style="margin-bottom: 20px;">
+                          <div class="col-md-4">
+                            <button class="btn btn-outline-primary" type="button" value="Botón 2" onclick="mostrarMurales()" lang="es">
+                              1 Escena
+                            </button>
+                          </div>
+                          <div class="col-md-4">
+                            <button class="btn btn-outline-primary" type="button" value="Botón 1" onclick="mostrarMonumentos()" lang="es">
+                              2 Escenas
+                            </button>
+                          </div>
+                          <div class="col-md-4">
+                            <button class="btn btn-outline-primary" type="button" value="Botón 3" onclick="mostrarEcoturismo()">
+                              3 Escenas
+                            </button>
+                          </div>
+                        </div>
 
-                      <button type="button"  value="Botón 1" onclick="mostrarMonumentos()">
-Monumentos
-                      </button>
-                      <button type="button" value="Botón 2" onclick="mostrarMurales()">
-                     Murales
-                      </button>
-                      <button type="button" value="Botón 3" onclick="mostrarEcoturismo()">
-                     Ecoturismo
-                      </button>
-                      
-                      <div class="space_small"></div>
-                      <label style="display: none;" id="label-1" for="exampleInputFile">Primera Imagen</label>
-                      <input style="display: none;" id="input-1" type="file" name="vrimg_1">
+                        <div class="row" style="margin-bottom: 20px;">
+                        <label id="title-1">Primera Escena</label>
+                          <div class="col-md-12 custom-file">
+                            <input style="display: none;" id="input-1" class="custom-file-input" type="file" name="vrimg_1" lang="es">
+                            <label style="display: none;" id="label-1" class="custom-file-label" for="exampleInputFile">Primera Imagen</label>
+                          </div>
+                        </div>
 
-                      <div class="space_small"></div>
-                      <label style="display: none;" id="label-2" for="exampleInputFile">Segunda Imagen</label>
-                      <input style="display: none;" id="input-2" type="file" name="vrimg_2">
+                        <div class="row" style="margin-bottom: 20px;">
+                          <div class="col-md-6 custom-file">
+                            <input style="display: none;" id="input-2" class="custom-file-input" type="file" name="vrimg_2">
+                            <label style="display: none;" id="label-2" class="custom-file-label" for="exampleInputFile">Segunda Imagen</label>
+                          </div>
+                          <div class="col-md-6 custom-file">
+                            <input style="display: none;" id="input-3" class="custom-file-input" type="file" name="vrimg_3">
+                            <label style="display: none;" id="label-3" class="custom-file-label" for="exampleInputFile">Tercera Imagen</label>
+                          </div>
+                        </div>
 
-                      <div class="space_small"></div>
-                      <label style="display: none;" id="label-3" for="exampleInputFile">Tercera Imagen</label>
-                      <input style="display: none;" id="input-3" type="file" name="vrimg_3">
-
-                      <div class="space_small"></div>
-                      <label style="display: none;" id="label-4" for="exampleInputFile">Cuarta Imagen</label>
-                      <input style="display: none;" id="input-4" type="file" name="vrimg_4" value="0">
-
-                      <div class="space_small"></div>
-                      <label style="display: none;" id="label-5" for="exampleInputFile">Quinta Imagen</label>
-                      <input style="display: none;" id="input-5" type="file" name="vrimg_5" value="0">
-
-                      <script>
-                        var input_1 = document.getElementById('input-1');
-                        var input_2 = document.getElementById('input-2');
-                        var input_3 = document.getElementById('input-3');
-                        var input_4 = document.getElementById('input-4');
-                        var input_5 = document.getElementById('input-5');
-
-                        var label_1 = document.getElementById('label-1');
-                        var label_2 = document.getElementById('label-2');
-                        var label_3 = document.getElementById('label-3');
-                        var label_4 = document.getElementById('label-4');
-                        var label_5 = document.getElementById('label-5');
-
-
-                        function mostrarMurales() {
-                          input_1.style.display = 'inline';
-                          input_2.style.display = 'inline';
-                          input_3.style.display = 'inline';
-                          input_4.style.display = 'none';
-                          input_5.style.display = 'none';
-
-                          label_1.style.display = 'inline';
-                          label_2.style.display = 'inline';
-                          label_3.style.display = 'inline';
-                          label_4.style.display = 'none';
-                          label_5.style.display = 'none';
-                        }
-
-                        function mostrarMonumentos() {
-                          input_1.style.display = 'inline';
-                          input_2.style.display = 'inline';
-                          input_3.style.display = 'inline';
-                          input_4.style.display = 'inline';
-                          input_5.style.display = 'none';
-
-                          label_1.style.display = 'inline';
-                          label_2.style.display = 'inline';
-                          label_3.style.display = 'inline';
-                          label_4.style.display = 'inline';
-                          label_5.style.display = 'none';
-                        }
-
-                        function mostrarEcoturismo() {
-                          input_1.style.display = 'inline';
-                          input_2.style.display = 'inline';
-                          input_3.style.display = 'inline';
-                          input_4.style.display = 'inline';
-                          input_5.style.display = 'inline';
-
-                          label_1.style.display = 'inline';
-                          label_2.style.display = 'inline';
-                          label_3.style.display = 'inline';
-                          label_4.style.display = 'inline';
-                          label_5.style.display = 'inline';
-                        }
-                      </script>
+                      </div>
                     </div>
+
+                    <div class="space_small"></div>
+                    <label style="display: none;" id="label-4" for="exampleInputFile">Cuarta Imagen</label>
+                    <input style="display: none;" id="input-4" type="file" name="vrimg_4" value="0">
+
+                    <div class="space_small"></div>
+                    <label style="display: none;" id="label-5" for="exampleInputFile">Quinta Imagen</label>
+                    <input style="display: none;" id="input-5" type="file" name="vrimg_5" value="0">
+
+                    <script>
+                      var input_1 = document.getElementById('input-1');
+                      var input_2 = document.getElementById('input-2');
+                      var input_3 = document.getElementById('input-3');
+                      var input_4 = document.getElementById('input-4');
+                      var input_5 = document.getElementById('input-5');
+
+                      var label_1 = document.getElementById('label-1');
+                      var label_2 = document.getElementById('label-2');
+                      var label_3 = document.getElementById('label-3');
+                      var label_4 = document.getElementById('label-4');
+                      var label_5 = document.getElementById('label-5');
+
+
+                      function mostrarMurales() {
+                        input_1.style.display = 'inline';
+                        input_2.style.display = 'inline';
+                        input_3.style.display = 'inline';
+                        input_4.style.display = 'none';
+                        input_5.style.display = 'none';
+
+                        label_1.style.display = 'inline';
+                        label_2.style.display = 'inline';
+                        label_3.style.display = 'inline';
+                        label_4.style.display = 'none';
+                        label_5.style.display = 'none';
+                      }
+
+                      function mostrarMonumentos() {
+                        input_1.style.display = 'inline';
+                        input_2.style.display = 'inline';
+                        input_3.style.display = 'inline';
+                        input_4.style.display = 'inline';
+                        input_5.style.display = 'none';
+
+                        label_1.style.display = 'inline';
+                        label_2.style.display = 'inline';
+                        label_3.style.display = 'inline';
+                        label_4.style.display = 'inline';
+                        label_5.style.display = 'none';
+                      }
+
+                      function mostrarEcoturismo() {
+                        input_1.style.display = 'inline';
+                        input_2.style.display = 'inline';
+                        input_3.style.display = 'inline';
+                        input_4.style.display = 'inline';
+                        input_5.style.display = 'inline';
+
+                        label_1.style.display = 'inline';
+                        label_2.style.display = 'inline';
+                        label_3.style.display = 'inline';
+                        label_4.style.display = 'inline';
+                        label_5.style.display = 'inline';
+                      }
+                    </script>
+
+
                     <div class="modal-footer">
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
                     </div>

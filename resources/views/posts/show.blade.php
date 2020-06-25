@@ -80,7 +80,7 @@
 <a-entity
   geometry="primitive: box; depth: 0.2; height:10; width: 30"
   position="0 5 10"
-  material="src: url(/images/images/wall.jpg); repeat: 30 10; metalness: 0; roughness: 1"
+  material="color : {{ $post->color_vr }}; repeat: 30 10; metalness: 0; roughness: 1"
 >
 </a-entity>
 
@@ -191,7 +191,7 @@
 <a-entity
   geometry="primitive: box; depth: 0.2; height:10; width: 30"
   position="0 5 -10"
-  material="src: url(/images/images/wall.jpg); repeat: 30 10; metalness: 0; roughness: 1"
+  material="color : {{ $post->color_vr }}; repeat: 30 10; metalness: 0; roughness: 1"
 >
 </a-entity>
 
