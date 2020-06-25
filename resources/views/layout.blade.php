@@ -28,7 +28,7 @@
     <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style"/> 
 
   <!-- AFRAME - START -->
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="/assets/js/aframe.js"></script>
   <script src="/assets/js/aframe-extras.min.js"></script>
   <!-- AFRAME - END -->
 
