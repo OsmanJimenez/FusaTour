@@ -65,47 +65,61 @@ class PostsController extends Controller
             $name = time() . $file->getClientOriginalName();
             $file->move(public_path() . '/images/', $name);
         }
-        if ($request->filled('vrimg_1')) {
-            if ($request->hasFile('vrimg_1')) {
-                $file = $request->file('vrimg_1');
-                $name_1 = time() . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/', $name_1);
-                $post->vrimg_1 = $name_1;
-            }
-        }
-        if ($request->filled('vrimg_2')) {
-            if ($request->hasFile('vrimg_2')) {
-                $file = $request->file('vrimg_2');
-                $name_2 = time() . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/', $name_2);
-                $post->vrimg_2 = $name_2;
-            }
-        }
-        if ($request->filled('vrimg_3')) {
-            if ($request->hasFile('vrimg_3')) {
-                $file = $request->file('vrimg_3');
-                $name_3 = time() . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/', $name_3);
-                $post->vrimg_3 = $name_3;
-            }
+        if ($request->hasFile('vrimg_1')) {
+            $file = $request->file('vrimg_1');
+            $name_1 = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name_1);
         }
 
-        if ($request->filled('vrimg_4')) {
+        if ($request->hasFile('vrimg_2')) {
+            $file = $request->file('vrimg_2');
+            $name_2 = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name_2);
+        }
+
+        if ($request->hasFile('vrimg_3')) {
+            $file = $request->file('vrimg_3');
+            $name_3 = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name_3);
+        }
+
+
             if ($request->hasFile('vrimg_4')) {
                 $file = $request->file('vrimg_4');
                 $name_4 = time() . $file->getClientOriginalName();
                 $file->move(public_path() . '/images/', $name_4);
-                $post->vrimg_4 = $name_4;
             }
-        }
+        
 
-        if ($request->filled('vrimg_5')) {
             if ($request->hasFile('vrimg_5')) {
                 $file = $request->file('vrimg_5');
                 $name_5 = time() . $file->getClientOriginalName();
                 $file->move(public_path() . '/images/', $name_5);
-                $post->vrimg_5 = $name_5;
             }
+        
+
+        if ($request->filled('color_vr')) {
+            $post->color_vr = $request->get('color_vr');
+        }
+
+        if ($request->hasFile('vrimg_1')) {
+            $post->vrimg_1 = $name_1;
+        }
+
+        if ($request->hasFile('vrimg_2')) {
+            $post->vrimg_2 = $name_2;
+        }
+
+        if ($request->hasFile('vrimg_3')) {
+            $post->vrimg_3 = $name_3;
+        }
+
+        if ($request->hasFile('vrimg_4')) {
+            $post->vrimg_4 = $name_4;
+        }
+
+        if ($request->has('vrimg_5')) {
+            $post->vrimg_5 = $name_5;
         }
 
         $post->title = $request->get('title');
@@ -115,8 +129,6 @@ class PostsController extends Controller
         $post->published_at = Carbon::parse($request->get('published_at'));
         $post->category_id = $request->get('category');
         $post->excerpt = $request->get('excerpt');
-
-
         $post->ubicacion = $request->get('ubicacion');
         $post->save();
 

@@ -144,11 +144,21 @@
                           </div>
                         </div>
 
-                        <div class="row" style="margin-bottom: 20px;">
-                        <label id="title-1">Primera Escena</label>
+                        <div class="row" id="color-1" style="margin-bottom: 20px; display: none;">
+                            <label >Color de las paredes:</label>
+                            <div id="color-2" class="input-group my-colorpicker2" style="margin-bottom: 20px;">
+                              <input type="text" name="color_vr" class="form-control">
+
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-square"></i></span>
+                              </div>
+                            </div>
+                            
+
                           <div class="col-md-12 custom-file">
                             <input style="display: none;" id="input-1" class="custom-file-input" type="file" name="vrimg_1" lang="es">
                             <label style="display: none;" id="label-1" class="custom-file-label" for="exampleInputFile">Primera Imagen</label>
+                          
                           </div>
                         </div>
 
@@ -187,8 +197,12 @@
                       var label_4 = document.getElementById('label-4');
                       var label_5 = document.getElementById('label-5');
 
+                      var color_1 = document.getElementById('color-1');
+
+
 
                       function mostrarMurales() {
+                        color_1.style.display = 'inline';
                         input_1.style.display = 'inline';
                         input_2.style.display = 'inline';
                         input_3.style.display = 'inline';
@@ -203,6 +217,7 @@
                       }
 
                       function mostrarMonumentos() {
+                        color_1.style.display = 'inline';
                         input_1.style.display = 'inline';
                         input_2.style.display = 'inline';
                         input_3.style.display = 'inline';
@@ -217,6 +232,7 @@
                       }
 
                       function mostrarEcoturismo() {
+                        color_1.style.display = 'inline';
                         input_1.style.display = 'inline';
                         input_2.style.display = 'inline';
                         input_3.style.display = 'inline';
