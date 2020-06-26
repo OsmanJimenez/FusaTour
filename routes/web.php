@@ -63,7 +63,8 @@ Route::get('/offline', function (){
 Route::group([
     'prefix' => 'admin', 
     'namespace' => 'Admin', 
-    'middleware' => 'auth'], 
+    'middleware' => 'role:Admin'], 
+
 function(){
     Route::get('/', 'AdminController@index')->name('dashboard');
     Route::get('posts', 'PostsController@index' )->name('admin.posts.index');
@@ -71,8 +72,7 @@ function(){
     Route::post('posts', 'PostsController@store' )->name('admin.posts.store');
     Route::get('posts/{post}', 'PostsController@edit' )->name('admin.posts.edit');
     Route::put('posts/{post}', 'PostsController@update' )->name('admin.posts.update');
-    Route::delete('posts/{post}', 'PostsController@destroy' )->name('admin.posts.destroy');
-    
+    Route::delete('posts/{post}', 'PostsController@destroy' )->name('admin.posts.destroy'); 
     Route::post('posts/{post}/photos', 'PhotosController@store' )->name('admin.posts.photos.store');
     Route::delete('comments/{comment}', 'AdminController@destroy' )->name('admin.admin.destroy');
 
@@ -81,7 +81,7 @@ function(){
 Route::group([
     'prefix' => 'admin', 
     'namespace' => 'Admin', 
-    'middleware' => 'auth'], 
+    'middleware' => 'role:Admin'], 
 function(){
     Route::get('/', 'AdminController@index')->name('dashboard');
     Route::get('categorys', 'CategorysController@index' )->name('admin.categorys.index');
@@ -99,7 +99,7 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::group([
     'prefix' => 'admin', 
     'namespace' => 'Admin', 
-    'middleware' => 'auth'], 
+    'middleware' => 'role:Admin'], 
 function(){
     Route::get('/', 'AdminController@index')->name('dashboard');
     Route::get('tags', 'TagsController@index' )->name('admin.tags.index');
@@ -114,7 +114,7 @@ function(){
 Route::group([
     'prefix' => 'admin', 
     'namespace' => 'Admin', 
-    'middleware' => 'auth'], 
+    'middleware' => 'role:Admin'], 
 function(){
     Route::get('/', 'AdminController@index')->name('dashboard');
     Route::get('users', 'UsersController@index' )->name('admin.users.index');
