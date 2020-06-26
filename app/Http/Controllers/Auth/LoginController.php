@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Spatie\Permission\Traits\HasRoles;
+
+
 
 class LoginController extends Controller
 {
@@ -50,8 +53,8 @@ class LoginController extends Controller
    
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
         {
-            if (auth()->user()->Admin) {
-                return redirect()->route('admin.post.index');
+            if (auth()->user()->hasRole('Admin')) {
+                return redirect()->route('dashboard');
             }else{
                 return redirect()->route('pages.perfil');
             }
