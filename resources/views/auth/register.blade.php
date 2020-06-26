@@ -21,7 +21,7 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror border border-success" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                                <input id="avatar" type="text" class="form-control @error('avatar') is-invalid @enderror border border-success" name="avatar" value="user.png" required autocomplete="name" style="display:none;" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

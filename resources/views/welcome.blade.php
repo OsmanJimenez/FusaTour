@@ -17,7 +17,6 @@
         @endif
         </div>
         <br><br>
-
       </div>
     </div>
     @if(isset($urlimg))

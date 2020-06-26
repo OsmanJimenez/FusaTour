@@ -122,6 +122,12 @@ class PostsController extends Controller
             $post->vrimg_5 = $name_5;
         }
 
+        if ($request->has('pintor_vr')) {
+            $post->pintor_vr = $request->get('pintor_vr');
+        }
+
+        
+
         $post->title = $request->get('title');
         $post->url = str_slug($request->get('title'));
         $post->body = $request->get('body');

@@ -153,9 +153,14 @@
                                 <span class="input-group-text"><i class="fas fa-square"></i></span>
                               </div>
                             </div>
+
+                            <label >Pintor/Escultor:</label>
+                            <div id="pintor-2" class="input-group " style="margin-bottom: 20px;">
+                              <input type="text" name="pintor_vr" class="form-control">
+                            </div>
                             
 
-                          <div class="col-md-12 custom-file">
+                          <div class="col-md-12 custom-file" style="margin-bottom: 20px;">
                             <input style="display: none;" id="input-1" class="custom-file-input" type="file" name="vrimg_1" lang="es">
                             <label style="display: none;" id="label-1" class="custom-file-label" for="exampleInputFile">Primera Imagen</label>
                           
@@ -163,11 +168,11 @@
                         </div>
 
                         <div class="row" style="margin-bottom: 20px;">
-                          <div class="col-md-6 custom-file">
+                          <div class="col-md-6 custom-file" style="margin-bottom: 20px;">
                             <input style="display: none;" id="input-2" class="custom-file-input" type="file" name="vrimg_2">
                             <label style="display: none;" id="label-2" class="custom-file-label" for="exampleInputFile">Segunda Imagen</label>
                           </div>
-                          <div class="col-md-6 custom-file">
+                          <div class="col-md-6 custom-file" style="margin-bottom: 20px;">
                             <input style="display: none;" id="input-3" class="custom-file-input" type="file" name="vrimg_3">
                             <label style="display: none;" id="label-3" class="custom-file-label" for="exampleInputFile">Tercera Imagen</label>
                           </div>
@@ -198,6 +203,8 @@
                       var label_5 = document.getElementById('label-5');
 
                       var color_1 = document.getElementById('color-1');
+                      var pintor_1 = document.getElementById('pintor-1');
+                      var pintor_vr = document.getElementById('pintor_vr');
 
 
 
