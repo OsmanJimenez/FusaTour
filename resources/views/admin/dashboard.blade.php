@@ -157,10 +157,11 @@
                                         <i class="fas fa-minus-circle" style="color: red;"></i>
                                     </button>
                             </form>
-                        </div>
-                    @endforeach
+                      </div>
+                      @endforeach
+                    </div>
+                  </div>
                 </div>
-            </div>
         </div>
 
         <div class="col-8">
@@ -208,10 +209,12 @@
                 <div class="card-body">
                     <div id="barchart_material" style="height: 300px;"></div>
                 </div>
+                <!-- /.card-body-->
             </div>
-        </div>   
+        </div>
     </div>
 
+    
 </section>
 
 

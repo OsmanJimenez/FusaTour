@@ -197,10 +197,11 @@
   <script src="../../adminlts/plugins/summernote/summernote-bs4.min.js"></script>
   <!-- DropZone -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/min/dropzone.min.js"></script>
-  <!-- SwwtAlert2 -->
+  <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-  <!-- page script -->
+  <!-- Scripts -->
+  <script src="../../adminlts/js/script.js"></script>
+  <!-- Page Script -->
   <script>
     $(function() {
       // Summernote
@@ -208,6 +209,7 @@
     })
   </script>
 
+  <!-- Google Table Script -->
   <script>
     $(function() {
       $('#post-table').DataTable({
@@ -295,7 +297,7 @@
     })
   </script>
 
-  <!-- input file -->
+  <!-- Input File -->
   <script>
     // Add the following code if you want the name of the file appear on select
     $(".custom-file-input").on("change", function() {
