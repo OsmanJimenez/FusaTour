@@ -138,7 +138,7 @@
                           </div>
                         </div>
 
-                        <input type="text" id="escena" name="escena">
+                        <input type="text" id="escena" class="ocultar" name="escena">
 
                         <div class="row margin-bottom ocultar" id="color-1">
                           <label>Color de las paredes:</label>
@@ -171,6 +171,8 @@
                           <div class="col-md-6 custom-file margin-bottom">
                             <input id="input-3" class="custom-file-input ocultar" type="file" name="vrimg_3">
                             <label id="label-3" class="custom-file-label ocultar" for="exampleInputFile">Tercera Imagen</label>
+
+                            <input id="input-6" class="form-control ocultar" name="content"  placeholder="Ingresa aqui el contenido">
                           </div>
                         </div>
 

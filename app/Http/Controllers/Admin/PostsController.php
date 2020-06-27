@@ -116,8 +116,8 @@ class PostsController extends Controller
         $post->excerpt = $request->get('excerpt');
         $post->ubicacion = $request->get('ubicacion');
         $post->escena_vr = $request->get('escena');
+        $post->content = $request->get('content');
         
- 
         $post->save();
         $post->tags()->sync($request->get('tags'));
         return redirect()->route('admin.posts.index', compact('posts'))->with('flash', 'Tu publicación a sido guardada');

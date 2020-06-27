@@ -113,6 +113,8 @@ var pintor_vr = document.getElementById('pintor_vr');
 
 var escena = document.getElementById('escena');
 
+var input_6 = document.getElementById('input-6');
+
 
 function mostrarMurales() {
     color_1.style.display = 'inline';
@@ -121,6 +123,7 @@ function mostrarMurales() {
     input_3.style.display = 'inline';
     input_4.style.display = 'none';
     input_5.style.display = 'none';
+    input_6.style.display = 'none';
 
     label_1.style.display = 'inline';
     label_2.style.display = 'inline';
@@ -133,16 +136,18 @@ function mostrarMurales() {
 
 function mostrarMonumentos() {
     color_1.style.display = 'inline';
+
     input_1.style.display = 'inline';
     input_2.style.display = 'inline';
-    input_3.style.display = 'inline';
-    input_4.style.display = 'inline';
+    input_3.style.display = 'none';
+    input_4.style.display = 'none';
     input_5.style.display = 'none';
+    input_6.style.display = 'inline';
 
     label_1.style.display = 'inline';
     label_2.style.display = 'inline';
-    label_3.style.display = 'inline';
-    label_4.style.display = 'inline';
+    label_3.style.display = 'none';
+    label_4.style.display = 'none';
     label_5.style.display = 'none';
 
     document.getElementById('escena').value = '2_Escena';
