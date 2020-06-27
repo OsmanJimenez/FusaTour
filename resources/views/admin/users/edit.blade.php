@@ -26,14 +26,14 @@
     </div>
     <div class="card-body">
       @if ($errors->any())
-          <ul class="list-group">
-              @foreach ($errors->all() as $error)
-                <li class="list-group-item list-group-item-danger">
-                    {{ $error }}
-                </li>
-              @endforeach
-          </ul>
-          
+      <ul class="list-group">
+        @foreach ($errors->all() as $error)
+        <li class="list-group-item list-group-item-danger">
+          {{ $error }}
+        </li>
+        @endforeach
+      </ul>
+
       @endif
       <form method="POST" enctype="multipart/form-data" files="true" action="{{ route('admin.users.update', $User) }}">
         {{ csrf_field() }} {{ method_field('PUT') }}
@@ -46,22 +46,22 @@
 
             <div class="form-group">
               <label for="password">Contraseña:</label>
-              <input type="password" name="password"  class="form-control">
+              <input type="password" name="password" class="form-control">
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="form-group">
-              <label for="email" >Correo Electronico:</label>
-              <input name="email" type="email" value="{{ old('email', $User->email) }}" class="form-control" placeholder="Ingresa aqui el correo electronico" >
+              <label for="email">Correo Electronico:</label>
+              <input name="email" type="email" value="{{ old('email', $User->email) }}" class="form-control" placeholder="Ingresa aqui el correo electronico">
             </div>
 
             <div class="form-group ">
               <label for="password_confirmed">Confirmar Contraseña:</label>
-              <input type="password" name="password_confirmed" class="form-control" >
+              <input type="password" name="password_confirmed" class="form-control">
             </div>
           </div>
-          
+
           <div class="col-md-12">
             <div class="form-group">
               <button type="submit" class="btn btn-outline-primary float-right">Agregar</button>

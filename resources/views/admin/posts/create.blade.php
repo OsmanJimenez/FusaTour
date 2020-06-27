@@ -1,6 +1,3 @@
-
-  
-
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <form method="POST" action="{{ route('admin.posts.store') }}">
     {{ csrf_field() }}
@@ -13,25 +10,19 @@
           </button>
         </div>
         <div class="modal-body">
-        
           <div class="form-group">
-                    {{-- <label>Nombre del Lugar</label>  --}}
-                    <input name="title" 
-                    
-                    class="form-control" placeholder="Ingresa aqui el nombre del lugar" >
-                </div>
-
+            {{-- <label>Nombre del Lugar</label>  --}}
+            <input name="title" class="form-control" placeholder="Ingresa aqui el nombre del lugar">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  class="btn btn-primary">Crear publicación</button>
+          <button class="btn btn-primary">Crear publicación</button>
         </div>
       </div>
     </div>
   </form>
 </div>
-
-
 
 <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <form method="POST" action="{{ route('admin.categorys.store') }}">
@@ -45,18 +36,14 @@
           </button>
         </div>
         <div class="modal-body">
-      
           <div class="form-group">
-                    {{-- <label>Nombre del Lugar</label> --}}
-                    <input name="name" 
-                    
-                    class="form-control" placeholder="Ingresa aqui el nombre de la categoria" >
-                </div>
-
+            {{-- <label>Nombre del Lugar</label> --}}
+            <input name="name" class="form-control" placeholder="Ingresa aqui el nombre de la categoria">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  class="btn btn-primary">Crear publicación</button>
+          <button class="btn btn-primary">Crear publicación</button>
         </div>
       </div>
     </div>
@@ -75,18 +62,14 @@
           </button>
         </div>
         <div class="modal-body">
-      
           <div class="form-group">
-                    {{-- <label>Nombre del Lugar</label> --}}
-                    <input name="name" 
-                    
-                    class="form-control" placeholder="Ingresa aqui el nombre de la actividad" >
-                </div>
-
+            {{-- <label>Nombre del Lugar</label> --}}
+            <input name="name" class="form-control" placeholder="Ingresa aqui el nombre de la actividad">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  class="btn btn-primary">Crear publicación</button>
+          <button class="btn btn-primary">Crear publicación</button>
         </div>
       </div>
     </div>
@@ -105,28 +88,22 @@
           </button>
         </div>
         <div class="modal-body">
-      
           <div class="form-group">
-                    {{-- <label>Nombre del Usuario</label> --}}
-                    <input name="name"                    
-                    class="form-control" placeholder="Ingresa aqui el nombre del usuario" >
-                </div>
-
-                <div class="form-group">
-                    {{-- <label>Correo del Usuario</label> --}}
-                    <input name="email"                    
-                    class="form-control" placeholder="Ingresa aqui el correo del usuario" >
-                </div>
-                <div class="form-group">
-                    {{-- <label>Contraseña</label> --}}
-                    <input name="password"                    
-                    class="form-control" placeholder="Ingresa aqui la contraseña del usuario" >
-                </div>
-
+            {{-- <label>Nombre del Usuario</label> --}}
+            <input name="name" class="form-control" placeholder="Ingresa aqui el nombre del usuario">
+          </div>
+          <div class="form-group">
+            {{-- <label>Correo del Usuario</label> --}}
+            <input name="email" class="form-control" placeholder="Ingresa aqui el correo del usuario">
+          </div>
+          <div class="form-group">
+            {{-- <label>Contraseña</label> --}}
+            <input name="password" class="form-control" placeholder="Ingresa aqui la contraseña del usuario">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  class="btn btn-primary">Crear usuario</button>
+          <button class="btn btn-primary">Crear usuario</button>
         </div>
       </div>
     </div>

@@ -19,16 +19,6 @@ class UsersController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
-    /*    public function create()
-    {
-        $categories = User::all();
-        $users = User::all();
-
-        return view('admin.users.create', compact('categories','users'));
-
-    }
-*/
-
     public function store(Request $request)
     {
         $this->validate($request, ['name' => 'required|min:3 |unique:users']);
@@ -44,13 +34,11 @@ class UsersController extends Controller
 
     public function edit(User $User)
     {
-
         $categories = User::all();
         $users = User::all();
 
         return view('admin.users.edit', compact('categories', 'users', 'User'));
     }
-
 
     public function update(User $User, Request $request)
     {
@@ -59,8 +47,6 @@ class UsersController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        //return $request->all();
-
 
         $User->name = $request->get('name');
         $User->email = $request->get('email');
@@ -73,8 +59,6 @@ class UsersController extends Controller
 
     public function destroy(User $User)
     {
-
-
         $User->delete();
 
         return redirect()

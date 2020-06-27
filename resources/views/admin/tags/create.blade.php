@@ -10,18 +10,14 @@
           </button>
         </div>
         <div class="modal-body">
-        
           <div class="form-group">
-                    {{-- <label>Nombre del Lugar</label> --}}
-                    <input name="title" 
-                    
-                    class="form-control" placeholder="Ingresa aqui el nombre del lugar" >
-                </div>
-
+            {{-- <label>Nombre del Lugar</label> --}}
+            <input name="title" class="form-control" placeholder="Ingresa aqui el nombre del lugar">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  class="btn btn-primary">Crear publicación</button>
+          <button class="btn btn-primary">Crear publicación</button>
         </div>
       </div>
     </div>

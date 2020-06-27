@@ -8,14 +8,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
-
 class PhotosController extends Controller
 {
-    
+
     public function store(Post $post)
     {
         $photo = request()->file('photo')->store('public');
-
 
         Photo::create([
             'url' => Storage::url($photo),
@@ -23,5 +21,3 @@ class PhotosController extends Controller
         ]);
     }
 }
-
-

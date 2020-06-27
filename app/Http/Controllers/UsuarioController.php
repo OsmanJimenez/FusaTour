@@ -19,71 +19,57 @@ class UsuarioController extends Controller
         return view('pages.perfiledit', compact('users'));
     }
 
-    /*    public function create()
+    public function store(Request $request)
     {
+        $this->validate($request, ['name' => 'required|min:3 |unique:users']);
+
+        $User = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+
+        return redirect()->route('admin.users.edit', $User);
+    }
+
+    public function edit(User $User)
+    {
+
         $categories = User::all();
         $users = User::all();
 
-        return view('admin.users.create', compact('categories','users'));
-
-    }
-*/
-
-
-public function store(Request $request)
-{
-    $this->validate($request, ['name' => 'required|min:3 |unique:users']);
-
-    $User = User::create([
-        'name' => $request['name'],
-        'email' => $request['email'],
-        'password' => Hash::make($request['password']),
-    ]);
-
-    return redirect()->route('admin.users.edit', $User);
-}
-
-public function edit(User $User)
-{
-
-    $categories = User::all();
-    $users = User::all();
-
-    return view('admin.users.edit', compact('categories', 'users', 'User'));
-}
-
-
-public function editarperfil(User $User, Request $request)
-{
-    if($request->hasFile('urlimg')){
-        $file = $request->file('urlimg');
-        $name = time().$file->getClientOriginalName();
-        $file->move(public_path().'/images/', $name);
+        return view('admin.users.edit', compact('categories', 'users', 'User'));
     }
 
-    $User->id = \Auth::user()->id;
-    $User->avatar = $name;
-    $User->name = $request->get('name');
-    $User->email = $request->get('email');
-    $User->password = Hash::make($request->get('password'));
-    $User->description = $request->get('description');
 
-    $User->save();
+    public function editarperfil(User $User, Request $request)
+    {
+        if ($request->hasFile('urlimg')) {
+            $file = $request->file('urlimg');
+            $name = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name);
+        }
 
-    return redirect()
-        ->route('pages.perfil')
-        ->with('flash', 'Tu publicación a sido guardada');
-}
+        $User->id = \Auth::user()->id;
+        $User->avatar = $name;
+        $User->name = $request->get('name');
+        $User->email = $request->get('email');
+        $User->password = Hash::make($request->get('password'));
+        $User->description = $request->get('description');
 
-public function destroy(User $User)
-{
+        $User->save();
 
+        return redirect()
+            ->route('pages.perfil')
+            ->with('flash', 'Tu publicación a sido guardada');
+    }
 
-    $User->delete();
+    public function destroy(User $User)
+    {
+        $User->delete();
 
-    return redirect()
-        ->route('pages.perfil')
-        ->with('flash', 'Tu publicación a sido eliminada');
-}
-
+        return redirect()
+            ->route('pages.perfil')
+            ->with('flash', 'Tu publicación a sido eliminada');
+    }
 }

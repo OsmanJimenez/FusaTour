@@ -18,18 +18,6 @@ class PostsController extends Controller
         return view('admin.posts.index', compact('posts'));
     }
 
-    /*    public function create()
-    {
-        $categories = Category::all();
-        $tags = Tag::all();
-
-        return view('admin.posts.create', compact('categories','tags'));
-
-    }
-*/
-
-
-
     public function store(Request $request)
     {
         $this->validate($request, ['title' => 'required|min:3 |unique:posts']);
@@ -44,13 +32,11 @@ class PostsController extends Controller
 
     public function edit(Post $post)
     {
-
         $categories = Category::all();
         $tags = Tag::all();
 
         return view('admin.posts.edit', compact('categories', 'tags', 'post'));
     }
-
 
     public function update(Post $post, Request $request)
     {
@@ -84,19 +70,19 @@ class PostsController extends Controller
         }
 
 
-            if ($request->hasFile('vrimg_4')) {
-                $file = $request->file('vrimg_4');
-                $name_4 = time() . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/', $name_4);
-            }
-        
+        if ($request->hasFile('vrimg_4')) {
+            $file = $request->file('vrimg_4');
+            $name_4 = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name_4);
+        }
 
-            if ($request->hasFile('vrimg_5')) {
-                $file = $request->file('vrimg_5');
-                $name_5 = time() . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/', $name_5);
-            }
-        
+
+        if ($request->hasFile('vrimg_5')) {
+            $file = $request->file('vrimg_5');
+            $name_5 = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name_5);
+        }
+
 
         if ($request->filled('color_vr')) {
             $post->color_vr = $request->get('color_vr');
@@ -126,8 +112,6 @@ class PostsController extends Controller
             $post->pintor_vr = $request->get('pintor_vr');
         }
 
-        
-
         $post->title = $request->get('title');
         $post->url = str_slug($request->get('title'));
         $post->body = $request->get('body');
@@ -136,15 +120,15 @@ class PostsController extends Controller
         $post->category_id = $request->get('category');
         $post->excerpt = $request->get('excerpt');
         $post->ubicacion = $request->get('ubicacion');
+ 
         $post->save();
-
         $post->tags()->sync($request->get('tags'));
         return redirect()->route('admin.posts.index', compact('posts'))->with('flash', 'Tu publicación a sido guardada');
     }
 
     public function destroy(Post $post)
     {
-        
+
 
         $post->tags()->detach();
 

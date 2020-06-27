@@ -314,7 +314,7 @@ $(".custom-file-input").on("change", function() {
         Swal.fire({
         icon: 'success',
         title: 'Oops...',
-        text: '{{ session('flash') }}',
+        text: '{{ session('flash') }}'
       })
       </script>
     @endif  

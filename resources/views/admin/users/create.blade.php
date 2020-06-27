@@ -10,18 +10,16 @@
           </button>
         </div>
         <div class="modal-body">
-        
+
           <div class="form-group">
-                    {{-- <label>Nombre del Usuario</label> --}}
-                    <input name="name" 
-                    
-                    class="form-control" placeholder="Ingresa aqui el nombre del Usuario" >
-                </div>
+            {{-- <label>Nombre del Usuario</label> --}}
+            <input name="name" class="form-control" placeholder="Ingresa aqui el nombre del Usuario">
+          </div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  class="btn btn-primary">Crear usuario</button>
+          <button class="btn btn-primary">Crear usuario</button>
         </div>
       </div>
     </div>

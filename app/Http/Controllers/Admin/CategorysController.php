@@ -16,27 +16,14 @@ class CategorysController extends Controller
         $categorys = Category::all();
 
         return view('admin.categorys.index', compact('categorys'));
-
     }
-
-/*    public function create()
-    {
-        $categories = Category::all();
-        $tags = Tag::all();
-
-        return view('admin.categorys.create', compact('categories','tags'));
-
-    }
-*/
-
-
 
     public function store(Request $request)
     {
         $this->validate($request, ['name' => 'required|min:3 |unique:categories']);
 
         $Category = Category::create([
-            'name' => $request->get('name'),      
+            'name' => $request->get('name'),
         ]);
 
         return redirect()->route('admin.categorys.edit', $Category);
@@ -44,33 +31,31 @@ class CategorysController extends Controller
 
     public function edit(Category $Category)
     {
-        
+
         $categories = Category::all();
         $tags = Tag::all();
-    
-        return view('admin.categorys.edit', compact('categories','tags', 'Category'));
+
+        return view('admin.categorys.edit', compact('categories', 'tags', 'Category'));
     }
 
-   
-    public function update(Category $Category ,Request $request)
+    public function update(Category $Category, Request $request)
     {
 
         $this->validate($request, [
             'name' => 'required'
         ]);
-        //return $request->all();
-        
-        if($request->hasFile('urlimg')){
+
+        if ($request->hasFile('urlimg')) {
             $file = $request->file('urlimg');
-            $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/', $name);
+            $name = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name);
         }
 
         $Category->name = $request->get('name');
         $Category->urlimg = $name;
 
         $Category->save();
-      
+
         return redirect()->route('admin.categorys.index', compact('categorys'))->with('flash', 'Tu publicación a sido guardada');
     }
 
@@ -83,6 +68,4 @@ class CategorysController extends Controller
             ->route('admin.categorys.index')
             ->with('flash', 'Tu publicación a sido eliminada');
     }
-
-
 }

@@ -47,7 +47,6 @@
               </select>
             </div>
 
-
             <div class="form-group">
               <label>Información</label>
               <div class="card-body pad">
@@ -145,25 +144,25 @@
                         </div>
 
                         <div class="row" id="color-1" style="margin-bottom: 20px; display: none;">
-                            <label >Color de las paredes:</label>
-                            <div id="color-2" class="input-group my-colorpicker2" style="margin-bottom: 20px;">
-                              <input type="text" name="color_vr" class="form-control">
+                          <label>Color de las paredes:</label>
+                          <div id="color-2" class="input-group my-colorpicker2" style="margin-bottom: 20px;">
+                            <input type="text" name="color_vr" class="form-control">
 
-                              <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-square"></i></span>
-                              </div>
+                            <div class="input-group-append">
+                              <span class="input-group-text"><i class="fas fa-square"></i></span>
                             </div>
+                          </div>
 
-                            <label >Pintor/Escultor:</label>
-                            <div id="pintor-2" class="input-group " style="margin-bottom: 20px;">
-                              <input type="text" name="pintor_vr" class="form-control">
-                            </div>
-                            
+                          <label>Pintor/Escultor:</label>
+                          <div id="pintor-2" class="input-group " style="margin-bottom: 20px;">
+                            <input type="text" name="pintor_vr" class="form-control">
+                          </div>
+
 
                           <div class="col-md-12 custom-file" style="margin-bottom: 20px;">
                             <input style="display: none;" id="input-1" class="custom-file-input" type="file" name="vrimg_1" lang="es">
                             <label style="display: none;" id="label-1" class="custom-file-label" for="exampleInputFile">Primera Imagen</label>
-                          
+
                           </div>
                         </div>
 

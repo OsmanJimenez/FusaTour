@@ -19,8 +19,8 @@
         <a href="{{ route('pages.perfiledit', ['user' => auth()->user()->id ]) }}" class="waves-effect">
           <i class="mdi mdi-face-profile"></i>
           </i>
-            <span>Editar Perfil</span>
-            <i class="arrow mdi mdi-chevron-right"></i>
+          <span>Editar Perfil</span>
+          <i class="arrow mdi mdi-chevron-right"></i>
         </a>
       </li>
 
@@ -28,8 +28,8 @@
         <a href="ui-app-profile.html" class="waves-effect">
           <i class="mdi mdi-security-home"></i>
           </i>
-            <span>Centro de Ayuda</span>
-            <i class="arrow mdi mdi-chevron-right"></i>
+          <span>Centro de Ayuda</span>
+          <i class="arrow mdi mdi-chevron-right"></i>
         </a>
       </li>
 
@@ -37,8 +37,8 @@
         <a href="ui-app-profile.html" class="waves-effect">
           <i class="mdi mdi-file-document"></i>
           </i>
-            <span>Terminos de Servicio</span>
-            <i class="arrow mdi mdi-chevron-right"></i>
+          <span>Terminos de Servicio</span>
+          <i class="arrow mdi mdi-chevron-right"></i>
         </a>
       </li>
 
@@ -46,11 +46,11 @@
         <a href="{{url('logout')}}" class="waves-effect">
           <i class="mdi mdi-close-box"></i>
           </i>
-            <span>Cerrar Sesión</span>
-            <i class="arrow mdi mdi-chevron-right"></i>
+          <span>Cerrar Sesión</span>
+          <i class="arrow mdi mdi-chevron-right"></i>
         </a>
       </li>
-     
+
     </ul>
 
 

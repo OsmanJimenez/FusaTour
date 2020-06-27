@@ -3,15 +3,15 @@
 @section('content')
 
 @if (session('success'))
-  <div class="alert alert-success">
-      {{ session('success')}}
-  </div>
+<div class="alert alert-success">
+  {{ session('success')}}
+</div>
 @endif
 
 @if (session('error'))
-  <div class="alert alert-danger">
-      {{ session('error')}}
-  </div>
+<div class="alert alert-danger">
+  {{ session('error')}}
+</div>
 @endif
 
 <div class="container">
@@ -24,10 +24,10 @@
 </div>
 
 <form method="POST" enctype="multipart/form-data" files="true" action="{{ route('profile.update', ['user' => auth()->user()->id ]) }}">
-        {{ csrf_field()}} {{ method_field('PUT') }}       
-<div class="container">
-  <div class="section">
-  <div class="editprof-img">
+  {{ csrf_field()}} {{ method_field('PUT') }}
+  <div class="container">
+    <div class="section">
+      <div class="editprof-img">
         <div class="circle">
           <img src="/images/{{ auth()->user()->avatar }}" alt="">
         </div>
@@ -36,7 +36,7 @@
       <div class="row" style="display: none">
         <div class="input-field col s12">
           <i class="mdi mdi-email-outline prefix"></i>
-          <input  id="id" type="id" value="{{ old('name', auth()->user()->id) }}" class="validate">
+          <input id="id" type="id" value="{{ old('name', auth()->user()->id) }}" class="validate">
         </div>
       </div>
 
@@ -102,8 +102,8 @@
           <button class="waves-effect waves-light btn-large bg-primary">Guardar Cambios</button>
         </div>
       </div>
-      </form>
-  </div>
+</form>
+</div>
 </div>
 
 <div class="spacer"></div>

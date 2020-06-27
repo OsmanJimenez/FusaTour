@@ -138,7 +138,7 @@
             </a-entity>
           </a-scene>
         </div>
-                @elseif($post->category->name =='Monumentos')
+        @elseif($post->category->name =='Monumentos')
         <h3>Monumentos</h3>
         @elseif($post->category->name =='EcoTurismo')
         <h3>EcoTurismo</h3>
