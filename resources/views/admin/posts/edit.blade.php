@@ -128,15 +128,17 @@
                           </div>
                           <div class="col-md-4">
                             <button class="btn btn-outline-primary" type="button" value="Botón 1" onclick="mostrarMonumentos()" lang="es">
-                              2 Escenas
+                              2 Escena
                             </button>
                           </div>
                           <div class="col-md-4">
                             <button class="btn btn-outline-primary" type="button" value="Botón 3" onclick="mostrarEcoturismo()">
-                              3 Escenas
+                              3 Escena
                             </button>
                           </div>
                         </div>
+
+                        <input type="text" id="escena" name="escena">
 
                         <div class="row margin-bottom ocultar" id="color-1">
                           <label>Color de las paredes:</label>

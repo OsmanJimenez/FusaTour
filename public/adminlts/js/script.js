@@ -111,6 +111,7 @@ var color_1 = document.getElementById('color-1');
 var pintor_1 = document.getElementById('pintor-1');
 var pintor_vr = document.getElementById('pintor_vr');
 
+var escena = document.getElementById('escena');
 
 
 function mostrarMurales() {
@@ -126,6 +127,8 @@ function mostrarMurales() {
     label_3.style.display = 'inline';
     label_4.style.display = 'none';
     label_5.style.display = 'none';
+
+    document.getElementById('escena').value = '1_Escena';
 }
 
 function mostrarMonumentos() {
@@ -141,6 +144,8 @@ function mostrarMonumentos() {
     label_3.style.display = 'inline';
     label_4.style.display = 'inline';
     label_5.style.display = 'none';
+
+    document.getElementById('escena').value = '2_Escena';
 }
 
 function mostrarEcoturismo() {
@@ -156,5 +161,6 @@ function mostrarEcoturismo() {
     label_3.style.display = 'inline';
     label_4.style.display = 'inline';
     label_5.style.display = 'inline';
-}
 
+    document.getElementById('escena').value = '3_Escena';
+}

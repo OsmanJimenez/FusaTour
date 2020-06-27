@@ -16,7 +16,6 @@
 
 @stop
 
-
 @section('content')
 <section class="content">
   <div class="row">

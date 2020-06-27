@@ -115,6 +115,8 @@ class PostsController extends Controller
         $post->category_id = $request->get('category');
         $post->excerpt = $request->get('excerpt');
         $post->ubicacion = $request->get('ubicacion');
+        $post->escena_vr = $request->get('escena');
+        
  
         $post->save();
         $post->tags()->sync($request->get('tags'));
