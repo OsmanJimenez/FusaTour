@@ -5,7 +5,7 @@
 
 @section('content')
 
-<img style="height:250px; width: 100%;" src="/images/{{ $post->urlimg }}">
+<img class="img_presentation" src="/images/{{ $post->urlimg }}">
 
 <div class="container">
 
@@ -32,7 +32,7 @@
       <div class="col s12">
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Ubicación </h5>
-          <iframe width="100%" height="180px" src="{{ $post->ubicacion }}" frameborder="0" style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
+          <iframe  src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
           </iframe>
         </div>
 
@@ -152,44 +152,15 @@
   @if (Auth::guest())
   <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
   <div class="col s12 center-align">
-    <a href="{{ route('register') }}" class="waves-effect waves-light btn-large" style="background-color: #0abde3"><i class="mdi mdi-bookmark-plus mdi-transition1"></i>Registrarse</a>
-    <a href="{{ route('login') }}" class="waves-effect waves-light btn-large" style="background-color: #eb4d4b"><i class="mdi mdi-account-circle mdi-transition1"></i>Ingresar</a>
+    <a href="{{ route('register') }}" class="waves-effect waves-light btn-large button-blue"><i class="mdi mdi-bookmark-plus mdi-transition1"></i>Registrarse</a>
+    <a href="{{ route('login') }}" class="waves-effect waves-light btn-large button-red"><i class="mdi mdi-account-circle mdi-transition1"></i>Ingresar</a>
   </div>
   @else
   <div class="row ">
     <div class="col s12 pad-0">
       <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
       <div class="row">
-        <style>
-          input[type="radio"] {
-            display: none;
-            /*position: absolute;top: -1000em;*/
-          }
-
-          label {
-            color: grey;
-          }
-
-          .clasificacion {
-            direction: rtl;
-            unicode-bidi: bidi-override;
-          }
-
-          label:hover,
-          label:hover~label {
-            color: orange;
-          }
-
-          input[type="radio"]:checked~label {
-            color: orange;
-          }
-
-          .estrella label {
-            font-size: 16vw;
-            /*Tamaño de fuente cambia de acuerdo al view port*/
-          }
-        </style>
-
+        
         <form action="{{ route('create_comment', ['post' => $post->url ]) }}" method="POST">
           {{ csrf_field() }}
           <div class="input-field col s12 estrella center-align">
@@ -212,7 +183,7 @@
             <label for="textarea-normal">Comentario</label>
             <span class="helper-text" data-error="Please enter text" data-success=""></span>
           </div>
-          <textarea style="display:none;" name="id_post" for="textarea-normal">{{$post->id}}</textarea>
+          <textarea class="ocultar" name="id_post" for="textarea-normal">{{$post->id}}</textarea>
 
           <button class="waves-effect waves-light btn bg-primary right">Enviar</button>
         </form>

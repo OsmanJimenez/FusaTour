@@ -34,7 +34,7 @@
       <div class="col s12">
         <div class="blog-img-wrap">
           <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="Web designing at its very best">
-            <img class="z-depth-1" style="height:200px; width: 100%;" src="/images/{{ $post->urlimg }}">
+            <img class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}">
           </a>
         </div>
 

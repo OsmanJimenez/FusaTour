@@ -8,14 +8,14 @@
 
   <title>FusaTour | Administrador</title>
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="../../adminlts/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../adminlts/css/adminlte.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tupicons -->
+  <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../../adminlts/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../../adminlts/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="../../adminlts/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="../../adminlts/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -23,26 +23,27 @@
   <link rel="stylesheet" href="../../adminlts/plugins/daterangepicker/daterangepicker.css">
   <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="../../adminlts/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Bootstrap Color Picker -->
-  <link rel="stylesheet" href="../../adminlts/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-  <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="../../adminlts/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../../adminlts/plugins/fontawesome-free/css/all.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="../../adminlts/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="../../adminlts/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <!-- Bootstrap4 Duallistbox -->
-  <link rel="stylesheet" href="../../adminlts/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../../adminlts/plugins/summernote/summernote-bs4.css">
-  <!-- Dropzone -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/dropzone.css">
-  <!-- Tupicons -->
-  <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="../../adminlts/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../../adminlts/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../../adminlts/plugins/toastr/toastr.min.css">
-
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Dropzone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/dropzone.css">
+  <!-- Style Help -->
+  <link rel="stylesheet" href="../../adminlts/css/style.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -317,4 +318,5 @@
   @include('admin.posts.create')
 
 </body>
+
 </html>

@@ -38,7 +38,7 @@
 
             <div class="form-group">
               <label>Categoria</label>
-              <select name="category" class="form-control" style="width: 100%;" required>
+              <select name="category" class="form-control width-full" required>
                 @foreach ($categories as $category)
                 <option value="{{ $category->id}}" {{ old('category', $post->category_id) }}>{{$category->name}} </option>
                 @endforeach
@@ -50,7 +50,7 @@
               <label>Información</label>
               <div class="card-body pad">
                 <div class="mb-4">
-                  <textarea name="body" class="textarea " placeholder="Información del Lugar" style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                  <textarea name="body" class="textarea informacion" placeholder="Información del Lugar">
                   {{ old('body', $post->body) }}
                   </textarea>
                 </div>
@@ -81,7 +81,7 @@
 
             <div class="form-group">
               <label>Etiquetas</label>
-              <select name="tags[]" class="form-control select2" multiple="multiple" data-placeholder="Selecciona una o mas Etiquetas" style="width: 100%;" required>
+              <select name="tags[]" class="form-control select2 width-full" multiple="multiple" data-placeholder="Selecciona una o mas Etiquetas" required>
                 @foreach ($tags as $tag )
                 <option {{ collect(old('tags')) }} value="{{ $tag->id }}">{{ $tag->name }}</option>
                 @endforeach
@@ -120,7 +120,7 @@
                     <div class="modal-body">
                       <div class="container-fluid">
 
-                        <div class="row" style="margin-bottom: 20px;">
+                        <div class="row margin-bottom">
                           <div class="col-md-4">
                             <button class="btn btn-outline-primary" type="button" value="Botón 2" onclick="mostrarMurales()" lang="es">
                               1 Escena
@@ -138,9 +138,9 @@
                           </div>
                         </div>
 
-                        <div class="row" id="color-1" style="margin-bottom: 20px; display: none;">
+                        <div class="row margin-bottom ocultar" id="color-1">
                           <label>Color de las paredes:</label>
-                          <div id="color-2" class="input-group my-colorpicker2" style="margin-bottom: 20px;">
+                          <div id="color-2" class="input-group my-colorpicker2 margin-bottom">
                             <input type="text" name="color_vr" class="form-control">
 
                             <div class="input-group-append">
@@ -149,26 +149,26 @@
                           </div>
 
                           <label>Pintor/Escultor:</label>
-                          <div id="pintor-2" class="input-group " style="margin-bottom: 20px;">
+                          <div id="pintor-2" class="input-group margin-bottom">
                             <input type="text" name="pintor_vr" class="form-control">
                           </div>
 
 
-                          <div class="col-md-12 custom-file" style="margin-bottom: 20px;">
-                            <input style="display: none;" id="input-1" class="custom-file-input" type="file" name="vrimg_1" lang="es">
-                            <label style="display: none;" id="label-1" class="custom-file-label" for="exampleInputFile">Primera Imagen</label>
+                          <div class="col-md-12 custom-file margin-bottom">
+                            <input id="input-1" class="custom-file-input ocultar" type="file" name="vrimg_1" lang="es">
+                            <label id="label-1" class="custom-file-label ocultar" for="exampleInputFile">Primera Imagen</label>
 
                           </div>
                         </div>
 
-                        <div class="row" style="margin-bottom: 20px;">
-                          <div class="col-md-6 custom-file" style="margin-bottom: 20px;">
-                            <input style="display: none;" id="input-2" class="custom-file-input" type="file" name="vrimg_2">
-                            <label style="display: none;" id="label-2" class="custom-file-label" for="exampleInputFile">Segunda Imagen</label>
+                        <div class="row margin-bottom">
+                          <div class="col-md-6 custom-file margin-bottom">
+                            <input id="input-2" class="custom-file-input ocultar" type="file" name="vrimg_2">
+                            <label id="label-2" class="custom-file-label ocultar" for="exampleInputFile">Segunda Imagen</label>
                           </div>
-                          <div class="col-md-6 custom-file" style="margin-bottom: 20px;">
-                            <input style="display: none;" id="input-3" class="custom-file-input" type="file" name="vrimg_3">
-                            <label style="display: none;" id="label-3" class="custom-file-label" for="exampleInputFile">Tercera Imagen</label>
+                          <div class="col-md-6 custom-file margin-bottom">
+                            <input id="input-3" class="custom-file-input ocultar" type="file" name="vrimg_3">
+                            <label id="label-3" class="custom-file-label ocultar" for="exampleInputFile">Tercera Imagen</label>
                           </div>
                         </div>
 
@@ -176,12 +176,12 @@
                     </div>
 
                     <div class="space_small"></div>
-                    <label style="display: none;" id="label-4" for="exampleInputFile">Cuarta Imagen</label>
-                    <input style="display: none;" id="input-4" type="file" name="vrimg_4" value="0">
+                    <label class="ocultar" id="label-4" for="exampleInputFile">Cuarta Imagen</label>
+                    <input class="ocultar" id="input-4" type="file" name="vrimg_4" value="0">
 
                     <div class="space_small"></div>
-                    <label style="display: none;" id="label-5" for="exampleInputFile">Quinta Imagen</label>
-                    <input style="display: none;" id="input-5" type="file" name="vrimg_5" value="0">
+                    <label class="ocultar" id="label-5" for="exampleInputFile">Quinta Imagen</label>
+                    <input class="ocultar" id="input-5" type="file" name="vrimg_5" value="0">
 
                     <script>
                       var input_1 = document.getElementById('input-1');

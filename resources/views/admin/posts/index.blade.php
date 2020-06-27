@@ -56,15 +56,15 @@
                   <div class="modal fade" id="{{ $post->url }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
-                        <div class="modal-header" style="border-bottom: 0px;">
+                        <div class="modal-header border-bottom">
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
-                        <div class="modal-body" id="my-node{{ $post->id }}" style=" display: flex; align-items: center; justify-content: center;">
+                        <div class="modal-body centrar" id="my-node{{ $post->id }}">
 
                           <script src="../../adminlts/js/qrcode.js"></script>
-                          <input id="text{{ $post->id }}" style="display: none;" type="text" value="{{ $post->url }}" style="width:80%" /><br />
+                          <input id="text{{ $post->id }}" class="ocultar width-medium-full" type="text" value="{{ $post->url }}" /><br />
                           <div id="qrcode{{ $post->id }}"></div>
 
                           <script type="text/javascript">
@@ -88,7 +88,7 @@
                             makeCode();
                           </script>
                         </div>
-                        <div class="modal-footer" style="border-top: 0px;">
+                        <div class="modal-footer border-top">
                           <button type="button" id="foo{{ $post->id }}" class="btn btn-primary btn-lg btn-block">Descargar</button>
                           <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
                           <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
@@ -109,7 +109,7 @@
                     </div>
                   </div>
 
-                  <form method="POST" action="{{ route('admin.posts.destroy', $post) }}" style="display: inline">
+                  <form method="POST" action="{{ route('admin.posts.destroy', $post) }}" class="display-inline">
                     {{ csrf_field() }} {{ method_field('DELETE') }}
                     <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal{{ $post->id }}">
                       <i class="fas fa-trash"></i>
@@ -118,7 +118,7 @@
                     <div class="modal fade" id="exampleModal{{ $post->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-header" style="border-bottom: 0px;">
+                          <div class="modal-header border-bottom">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -126,7 +126,7 @@
                           <div class="modal-body">
                             ¿Estas seguro de eliminar este lugar?
                           </div>
-                          <div class="modal-footer" style="border-top: 0px;">
+                          <div class="modal-footer border-top">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                             <button class="btn btn-primary">Eliminar</button>
                           </div>

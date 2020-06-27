@@ -46,7 +46,7 @@
                   <a href="{{ route('admin.users.edit', $user) }}" class="btn btn-sm btn-outline-info">
                     <i class="fas fa-pen"></i></a>
 
-                  <form method="POST" action="{{ route('admin.users.destroy', $user) }}" style="display: inline">
+                  <form method="POST" action="{{ route('admin.users.destroy', $user) }}" class="display-inline">
                     {{ csrf_field() }} {{ method_field('DELETE') }}
 
                     <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal{{ $user->id }}">
@@ -56,7 +56,7 @@
                     <div class="modal fade" id="exampleModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-header" style="border-bottom: 0px;">
+                          <div class="modal-header border-bottom">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -64,7 +64,7 @@
                           <div class="modal-body">
                             ¿Estas seguro de eliminar este usuario?
                           </div>
-                          <div class="modal-footer" style="border-top: 0px;">
+                          <div class="modal-footer border-top">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                             <button class="btn btn-primary">Eliminar</button>
                           </div>

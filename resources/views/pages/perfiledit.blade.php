@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="row" style="display: none">
+      <div class="row ocultar">
         <div class="input-field col s12">
           <i class="mdi mdi-email-outline prefix"></i>
           <input id="id" type="id" value="{{ old('name', auth()->user()->id) }}" class="validate">

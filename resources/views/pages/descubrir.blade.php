@@ -10,7 +10,7 @@
                     <div class="z-depth-2 card">
                         <div class="card-image">
                             <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="Travel in Style">
-                                <img class="z-depth-1" style="width: 100%;" src="/images/{{ $post->urlimg }}">
+                                <img class="z-depth-1 img_full" src="/images/{{ $post->urlimg }}">
                             </a>
                             <a href="/blog/{{ $post->url }}">
                                 <span class="card-title">{{ $post->title }}</span>

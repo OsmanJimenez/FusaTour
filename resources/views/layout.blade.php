@@ -21,11 +21,16 @@
 
   <!-- DROPZONJS CSS FRAMEWORK - START -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/basic.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <!-- DROPZONJS CSS FRAMEWORK - STOP -->
+  <!-- DROPZONJS CSS FRAMEWORK - END -->
 
   <!-- CORE CSS TEMPLATE - START  -->
   <link href="/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
   <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
+  <!-- CORE CSS TEMPLATE - END  -->
+
+  <!-- CORE CSS TEMPLATE - START  -->
+  <link href="/assets/css/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- CORE CSS TEMPLATE - END  -->
 
   <!-- AFRAME - START -->
   <script src="/assets/js/aframe.js"></script>
