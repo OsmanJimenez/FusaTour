@@ -34,7 +34,6 @@ class UsuarioController extends Controller
 
     public function edit(User $User)
     {
-
         $categories = User::all();
         $users = User::all();
 

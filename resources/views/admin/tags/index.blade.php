@@ -5,14 +5,14 @@
 <div class="row mb-2">
   <div class="col-sm-6">
     <h1 class="m-0 text-dark">Publicaciones</h1>
-  </div><!-- /.col -->
+  </div>
   <div class="col-sm-6">
     <ol class="breadcrumb float-sm-right">
       <li class="breadcrumb-item"><a href="#">Actividades</a></li>
       <li class="breadcrumb-item active">Ver</li>
     </ol>
-  </div><!-- /.col -->
-</div><!-- /.row -->
+  </div>
+</div>
 
 @stop
 
@@ -25,7 +25,7 @@
           <h3 class="card-title">Listado de Actividades</h3>
           <button class="btn  btn-outline-primary float-right" data-toggle="modal" data-target="#prueba2">Crear actividad</button>
         </div>
-        <!-- /.card-header -->
+
         <div class="card-body">
           <table id="post-table" class="table table-bordered table-hover">
             <thead>
@@ -37,7 +37,6 @@
             </thead>
             <tbody>
               @foreach ($tags as $tag)
-
               <tr>
                 <td>{{ $tag->id }}</td>
                 <td>{{ $tag->name }}</td>
@@ -57,7 +56,6 @@
                       <i class="fas fa-trash"></i>
                     </button>
 
-                    <!-- Modal -->
                     <div class="modal fade" id="exampleModal{{ $tag->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">

@@ -2,8 +2,6 @@
 
 @section('content')
 
-<!-- <img  src="/images/Fondo.jpg" style="height:250px; width: 100%;"> -->
-
 <div id="index-banner" class="parallax-container">
   <div class="section no-pad-bot">
     <div class="container">
@@ -25,19 +23,15 @@
 </div>
 
 <div class="container">
-
-
   <div class="section">
     <h5 class="pagetitle">Lugares</h5>
   </div>
 
   <div class="section">
-
     <div class="row ui-mediabox blogs">
 
       @foreach ($posts as $post)
       <div class="col s12">
-
         <div class="blog-img-wrap">
           <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="Web designing at its very best">
             <img class="z-depth-1" style="height:200px; width: 100%;" src="/images/{{ $post->urlimg }}">
@@ -55,7 +49,7 @@
             <a class="small" href="{{ route('categories.show', $post->category) }}">{{ $post->category->name }}
             </a>
             @foreach ($post->tags as $tag )
-            <a class="small" href="{{ route ('actividades.show', $tag) }}">#{{ $tag->name }}</a>
+              <a class="small" href="{{ route ('actividades.show', $tag) }}">#{{ $tag->name }}</a>
             @endforeach
           </span>
 
@@ -65,18 +59,11 @@
           <div class="divider"></div>
           <div class="spacer"></div>
         </div>
-
       </div>
       @endforeach
-
     </div>
-
     <div class="spacer"></div>
-
   </div>
-
 </div>
-
-
 
 @stop

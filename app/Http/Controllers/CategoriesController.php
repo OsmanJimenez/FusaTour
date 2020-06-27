@@ -9,7 +9,6 @@ class CategoriesController extends Controller
 {
     public function show(Category $category)
     {
-
         return view('welcome', [
             'title' => $category->name,
             'posts' => $category->posts,

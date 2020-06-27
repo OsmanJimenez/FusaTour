@@ -35,9 +35,9 @@ class AdminController extends Controller
         $tags = Tag::all();
         $comments = Comment::latest('updated_at')->get();
 
-        /*====================================================||
-        || Variables of graph of number of comments per month ||
-        ||====================================================*/
+        /*=====================================================||
+        || Graph variables on the number of comments per month ||
+        ||=====================================================*/
 
         $ene = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?', ['2020-01-01', '2020-01-31']);
         $feb = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?', ['2020-02-01', '2020-02-29']);
@@ -51,9 +51,11 @@ class AdminController extends Controller
         $oct = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?', ['2020-10-01', '2020-10-31']);
         $nov = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?', ['2020-11-01', '2020-11-30']);
         $dic = DB::select('SELECT count(*) AS cantidad FROM comments WHERE created_at >= ? AND created_at < ?', ['2020-12-01', '2020-12-31']);
-        /*Fin de variables de grafica de cantidad de comentarios por mes */
+        
+        /*=============================================================||
+        || Graph variables on the number of registered users per Month ||
+        ||=============================================================*/
 
-        /*Variables de grafica de cantidad de usuarios registrados por mes */
         $ene_2 = DB::select('SELECT count(*) AS cantidad FROM users WHERE created_at >= ? AND created_at < ?', ['2020-01-01', '2020-01-31']);
         $feb_2 = DB::select('SELECT count(*) AS cantidad FROM users WHERE created_at >= ? AND created_at < ?', ['2020-02-01', '2020-02-29']);
         $mar_2 = DB::select('SELECT count(*) AS cantidad FROM users WHERE created_at >= ? AND created_at < ?', ['2020-03-01', '2020-03-31']);
@@ -66,7 +68,7 @@ class AdminController extends Controller
         $oct_2 = DB::select('SELECT count(*) AS cantidad FROM users WHERE created_at >= ? AND created_at < ?', ['2020-10-01', '2020-10-31']);
         $nov_2 = DB::select('SELECT count(*) AS cantidad FROM users WHERE created_at >= ? AND created_at < ?', ['2020-11-01', '2020-11-30']);
         $dic_2 = DB::select('SELECT count(*) AS cantidad FROM users WHERE created_at >= ? AND created_at < ?', ['2020-12-01', '2020-12-31']);
-        /*Fin de variables de grafica de cantidad de usuarios registrados por mes */
+        
 
         return view('admin.dashboard', compact(
             'posts',

@@ -5,15 +5,15 @@
 <div class="row mb-2">
   <div class="col-sm-6">
     <h1 class="m-0 text-dark">Publicaciones</h1>
-  </div><!-- /.col -->
+  </div>
   <div class="col-sm-6">
     <ol class="breadcrumb float-sm-right">
       <li class="breadcrumb-item"><a href="{{ route('dashboard') }}"><i class="fas fa-home"></i>Inicio</a></li>
       <li class="breadcrumb-item"><a href="{{ route('admin.posts.index') }}"><i class="fas fa-list-ul"></i>Post</a></li>
       <li class="breadcrumb-item active"><i class="fas fa-map"></i>Crear</li>
     </ol>
-  </div><!-- /.col -->
-</div><!-- /.row -->
+  </div>
+</div>
 
 @stop
 
@@ -24,7 +24,6 @@
     <div class="card-header">
       <h3 class="card-title">Agregar un Lugar</h3>
     </div>
-    <!-- /.card-header -->
 
     <div class="card-body">
       <form method="POST" enctype="multipart/form-data" files="true" action="{{ route('admin.posts.update', $post) }}">
@@ -58,7 +57,6 @@
               </div>
             </div>
 
-
           </div>
 
           <div class="col-md-4">
@@ -74,14 +72,12 @@
                 <input name="published_at" value="{{ old('published_at', $post->published_at ? $post->published_at->format('d/m/Y') :
                     null) }}" type="date" class="form-control float-right" required>
               </div>
-              <!-- /.input group -->
             </div>
 
             <div class="form-group">
               <label>Ubicación</label>
               <input name="ubicacion" value="{{ old('ubicacion', $post->ubicacion) }}" class="form-control" placeholder="Ingresa aqui la ubicación del sitio" required>
             </div>
-
 
             <div class="form-group">
               <label>Etiquetas</label>
@@ -105,12 +101,11 @@
             <div class="form-group">
               <label>Realidad Virtual</label>
               <div class="space_small"></div>
-              <!-- Button trigger modal -->
+
               <button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#exampleModal">
                 Realidad Virtual
               </button>
 
-              <!-- Modal -->
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -265,21 +260,11 @@
             <div class="form-group">
               <button type="submit" class="btn btn-outline-primary float-right">Agregar</button>
             </div>
-            <!-- /.form-group -->
           </div>
-          <!-- /.col -->
-
         </div>
       </form>
-      <!-- /.row -->
-
-
-      <!-- /.row -->
     </div>
-    <!-- /.card-body -->
   </div>
-
-
 
 </section>
 

@@ -5,8 +5,6 @@
 <div class="container">
   <div class="section">
     <h5 class="pagetitle">Perfil</h5>
-
-
     <div class="divider"></div>
   </div>
 </div>
@@ -52,10 +50,7 @@
       </li>
 
     </ul>
-
-
   </div>
-
 </div>
 
 @endsection

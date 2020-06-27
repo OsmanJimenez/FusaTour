@@ -31,7 +31,6 @@ class CategorysController extends Controller
 
     public function edit(Category $Category)
     {
-
         $categories = Category::all();
         $tags = Tag::all();
 
@@ -40,7 +39,6 @@ class CategorysController extends Controller
 
     public function update(Category $Category, Request $request)
     {
-
         $this->validate($request, [
             'name' => 'required'
         ]);
@@ -61,7 +59,6 @@ class CategorysController extends Controller
 
     public function destroy(Category $Category)
     {
-
         $Category->delete();
 
         return redirect()

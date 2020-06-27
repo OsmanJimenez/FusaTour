@@ -41,7 +41,6 @@ class TagsController extends Controller
         $this->validate($request, [
             'name' => 'required'
         ]);
-        //return $request->all();
 
         if ($request->hasFile('urlimg')) {
             $file = $request->file('urlimg');

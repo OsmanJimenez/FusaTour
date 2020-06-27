@@ -40,11 +40,9 @@ class PostsController extends Controller
 
     public function update(Post $post, Request $request)
     {
-
         $this->validate($request, [
             'title' => 'required'
         ]);
-        //return $request->all();
 
         if ($request->hasFile('urlimg')) {
             $file = $request->file('urlimg');
@@ -69,20 +67,17 @@ class PostsController extends Controller
             $file->move(public_path() . '/images/', $name_3);
         }
 
-
         if ($request->hasFile('vrimg_4')) {
             $file = $request->file('vrimg_4');
             $name_4 = time() . $file->getClientOriginalName();
             $file->move(public_path() . '/images/', $name_4);
         }
 
-
         if ($request->hasFile('vrimg_5')) {
             $file = $request->file('vrimg_5');
             $name_5 = time() . $file->getClientOriginalName();
             $file->move(public_path() . '/images/', $name_5);
         }
-
 
         if ($request->filled('color_vr')) {
             $post->color_vr = $request->get('color_vr');
@@ -128,8 +123,6 @@ class PostsController extends Controller
 
     public function destroy(Post $post)
     {
-
-
         $post->tags()->detach();
 
         $post->delete();

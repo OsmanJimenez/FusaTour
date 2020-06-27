@@ -17,8 +17,6 @@
 <div class="container">
   <div class="section">
     <h5 class="pagetitle">Perfil</h5>
-
-
     <div class="divider"></div>
   </div>
 </div>
@@ -70,7 +68,6 @@
         </div>
       </div>
 
-
       <div class="row">
         <div class="input-field col s12">
           <i class="mdi mdi-lock-outline prefix"></i>
@@ -78,7 +75,6 @@
           <label for="password">Contraseña</label>
         </div>
       </div>
-
 
       <div class="row">
         <div class="input-field col s12">
@@ -95,7 +91,6 @@
           <label for="textarea-prefix">Descripción</label>
         </div>
       </div>
-
 
       <div class="row">
         <div class="col s12 right-align">

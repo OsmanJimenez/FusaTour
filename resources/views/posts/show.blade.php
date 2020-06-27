@@ -12,7 +12,6 @@
   <div class="section">
     <div class="row ui-mediabox blogs bot-0">
 
-
       <div class="col s12">
 
         <h5 class="title">{{ $post->title }}</h5>
@@ -144,7 +143,6 @@
         <h3>EcoTurismo</h3>
         @endif
 
-
       </div>
       <div class="divider"></div>
 
@@ -221,7 +219,6 @@
 
       </div>
 
-
     </div>
   </div>
   @endif
@@ -277,16 +274,11 @@
               <p>{{ $comment->point }} <label for="radio1">&#9733;</label></p>
             </div>
           </li>
-
-          @endforeach
-
-
-
+          @endforeach       
         </ul>
       </div>
     </div>
   </div>
-
   <div class="spacer"></div>
 
 </div>
