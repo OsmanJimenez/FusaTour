@@ -100,12 +100,21 @@ var input_2 = document.getElementById('input-2');
 var input_3 = document.getElementById('input-3');
 var input_4 = document.getElementById('input-4');
 var input_5 = document.getElementById('input-5');
+var input_7 = document.getElementById('input-7');
+
 
 var label_1 = document.getElementById('label-1');
 var label_2 = document.getElementById('label-2');
 var label_3 = document.getElementById('label-3');
 var label_4 = document.getElementById('label-4');
 var label_5 = document.getElementById('label-5');
+var label_7 = document.getElementById('label-7');
+
+var div_1 = document.getElementById('div_1');
+var div_2 = document.getElementById('div_2');
+var div_3 = document.getElementById('div_3');
+var div_4 = document.getElementById('div_4');
+
 
 var color_1 = document.getElementById('color-1');
 var pintor_1 = document.getElementById('pintor-1');
@@ -116,7 +125,7 @@ var escena = document.getElementById('escena');
 var input_6 = document.getElementById('input-6');
 
 
-function mostrarMurales() {
+function escena_1() {
     color_1.style.display = 'inline';
     input_1.style.display = 'inline';
     input_2.style.display = 'inline';
@@ -124,17 +133,24 @@ function mostrarMurales() {
     input_4.style.display = 'none';
     input_5.style.display = 'none';
     input_6.style.display = 'none';
+    input_7.style.display = 'none';
 
     label_1.style.display = 'inline';
     label_2.style.display = 'inline';
     label_3.style.display = 'inline';
     label_4.style.display = 'none';
     label_5.style.display = 'none';
+    label_7.style.display = 'none';
+
+    div_1.style.display = 'block';
+    div_2.style.display = 'block';
+    div_3.style.display = 'none';
+    div_4.style.display = 'none';
 
     document.getElementById('escena').value = '1_Escena';
 }
 
-function mostrarMonumentos() {
+function escena_2() {
     color_1.style.display = 'inline';
 
     input_1.style.display = 'inline';
@@ -143,29 +159,69 @@ function mostrarMonumentos() {
     input_4.style.display = 'none';
     input_5.style.display = 'none';
     input_6.style.display = 'inline';
+    input_7.style.display = 'none';
 
     label_1.style.display = 'inline';
     label_2.style.display = 'inline';
     label_3.style.display = 'none';
     label_4.style.display = 'none';
     label_5.style.display = 'none';
+    label_7.style.display = 'none';
+
+    div_1.style.display = 'block';
+    div_2.style.display = 'block';
+    div_3.style.display = 'none';
+    div_4.style.display = 'none';
 
     document.getElementById('escena').value = '2_Escena';
 }
 
-function mostrarEcoturismo() {
-    color_1.style.display = 'inline';
+function escena_3() {
+    color_1.style.display = 'none';
+    input_1.style.display = 'inline';
+    input_2.style.display = 'inline';
+    input_3.style.display = 'inline';
+    input_4.style.display = 'inline';
+    input_5.style.display = 'none';
+    input_6.style.display = 'none';
+    input_7.style.display = 'none';
+
+    label_1.style.display = 'inline';
+    label_2.style.display = 'inline';
+    label_3.style.display = 'inline';
+    label_4.style.display = 'inline';
+    label_5.style.display = 'none';
+    label_7.style.display = 'none';
+
+    div_1.style.display = 'block';
+    div_2.style.display = 'block';
+    div_3.style.display = 'block';
+    div_4.style.display = 'none';
+
+    document.getElementById('escena').value = '3_Escena';
+}
+
+function escena_4() {
+    color_1.style.display = 'none';
     input_1.style.display = 'inline';
     input_2.style.display = 'inline';
     input_3.style.display = 'inline';
     input_4.style.display = 'inline';
     input_5.style.display = 'inline';
+    input_6.style.display = 'none';
+    input_7.style.display = 'inline';
 
     label_1.style.display = 'inline';
     label_2.style.display = 'inline';
     label_3.style.display = 'inline';
     label_4.style.display = 'inline';
     label_5.style.display = 'inline';
+    label_7.style.display = 'inline';
 
-    document.getElementById('escena').value = '3_Escena';
+    div_1.style.display = 'block';
+    div_2.style.display = 'block';
+    div_3.style.display = 'block';
+    div_4.style.display = 'block';
+
+    document.getElementById('escena').value = '4_Escena';
 }

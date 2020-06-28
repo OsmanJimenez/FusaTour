@@ -37,8 +37,7 @@
   <script src="/assets/js/aframe-extras.min.js"></script>
   <!-- AFRAME - END -->
 
-  <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
-  <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+
   <script>
       AFRAME.registerComponent('hotspots',{
         init:function(){

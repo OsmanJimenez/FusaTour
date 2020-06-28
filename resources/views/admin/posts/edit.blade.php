@@ -90,7 +90,10 @@
 
             <div class="form-group">
               <label for="exampleInputFile">Caratula</label>
-              <input value="{{ old('urlimg', $post->urlimg) }}" type="file" name="urlimg" required>
+              <div class="col-md-12 custom-file margin-bottom">
+                <input class="custom-file-input" type="file" name="urlimg" required>
+                <label class="custom-file-label" for="exampleInputFile">Selecciona una imagen</label>
+              </div>
             </div>
 
             <div class="form-group">
@@ -119,28 +122,41 @@
 
                     <div class="modal-body">
                       <div class="container-fluid">
+                        <label id="labelus" class="custom-label">Normal</label>
 
                         <div class="row margin-bottom">
-                          <div class="col-md-4">
-                            <button class="btn btn-outline-primary" type="button" value="Botón 2" onclick="mostrarMurales()" lang="es">
+
+                          <div class="col-md-6">
+                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 2" onclick="escena_1()">
                               1 Escena
                             </button>
                           </div>
-                          <div class="col-md-4">
-                            <button class="btn btn-outline-primary" type="button" value="Botón 1" onclick="mostrarMonumentos()" lang="es">
+                          <div class="col-md-6">
+                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 1" onclick="escena_2()">
                               2 Escena
                             </button>
                           </div>
-                          <div class="col-md-4">
-                            <button class="btn btn-outline-primary" type="button" value="Botón 3" onclick="mostrarEcoturismo()">
+                        </div>
+                        <label id="labelu" class="custom-label">360</label>
+                        <div class="row margin-bottom">
+
+                          <div class="col-md-6">
+                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 3" onclick="escena_3()">
                               3 Escena
+                            </button>
+                          </div>
+
+                          <div class="col-md-6">
+                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 3" onclick="escena_4()">
+                              4 Escena
                             </button>
                           </div>
                         </div>
 
+
                         <input type="text" id="escena" class="ocultar" name="escena">
 
-                        <div class="row margin-bottom ocultar" id="color-1">
+                        <div class="row ocultar" id="color-1">
                           <label>Color de las paredes:</label>
                           <div id="color-2" class="input-group my-colorpicker2 margin-bottom">
                             <input type="text" name="color_vr" class="form-control">
@@ -155,37 +171,55 @@
                             <input type="text" name="pintor_vr" class="form-control">
                           </div>
 
+                        </div>
 
-                          <div class="col-md-12 custom-file margin-bottom">
-                            <input id="input-1" class="custom-file-input ocultar" type="file" name="vrimg_1" lang="es">
+                        <div class="row ocultar" id="div_1">
+                          <div class="col-md-12 custom-file margin-bottom ">
+                            <input id="input-1" class="custom-file-input ocultar" type="file" name="vrimg_1">
                             <label id="label-1" class="custom-file-label ocultar" for="exampleInputFile">Primera Imagen</label>
-
                           </div>
                         </div>
 
-                        <div class="row margin-bottom">
-                          <div class="col-md-6 custom-file margin-bottom">
+
+                        <div class="row ocultar" id="div_2">
+                          <div class="col-md-12 custom-file margin-bottom">
                             <input id="input-2" class="custom-file-input ocultar" type="file" name="vrimg_2">
                             <label id="label-2" class="custom-file-label ocultar" for="exampleInputFile">Segunda Imagen</label>
                           </div>
-                          <div class="col-md-6 custom-file margin-bottom">
+                          <div class="col-md-12 custom-file margin-bottom">
                             <input id="input-3" class="custom-file-input ocultar" type="file" name="vrimg_3">
                             <label id="label-3" class="custom-file-label ocultar" for="exampleInputFile">Tercera Imagen</label>
 
-                            <input id="input-6" class="form-control ocultar" name="content"  placeholder="Ingresa aqui el contenido">
+                            <input id="input-6" class="form-control ocultar" name="content" placeholder="Ingresa aqui el contenido">
+                          </div>
+                        </div>
+
+                        <div class="row ocultar" id="div_3">
+                          <div class="col-md-12 custom-file margin-bottom">
+                            <input class="custom-file-input ocultar" id="input-4" type="file" name="vrimg_4">
+                            <label class="custom-file-label ocultar" id="label-4" for="exampleInputFile">Cuarta Imagen</label>
+                          </div>
+                        </div>
+
+                        <div class="row ocultar" id="div_4">
+                          <div class="col-md-12 custom-file margin-bottom">
+                            <input class="custom-file-input ocultar" id="input-5" type="file" name="vrimg_5">
+                            <label class="custom-file-label ocultar" id="label-5" for="exampleInputFile">Quinta Imagen</label>
+                          </div>
+
+                          <div class="col-md-12 custom-file margin-bottom">
+                            <input class="custom-file-input ocultar" id="input-7" type="file" name="vrimg_6">
+                            <label class="custom-file-label ocultar" id="label-7" for="exampleInputFile">Sexta Imagen</label>
                           </div>
                         </div>
 
                       </div>
                     </div>
 
-                    <div class="space_small"></div>
-                    <label class="ocultar" id="label-4" for="exampleInputFile">Cuarta Imagen</label>
-                    <input class="ocultar" id="input-4" type="file" name="vrimg_4" value="0">
 
-                    <div class="space_small"></div>
-                    <label class="ocultar" id="label-5" for="exampleInputFile">Quinta Imagen</label>
-                    <input class="ocultar" id="input-5" type="file" name="vrimg_5" value="0">
+
+
+
 
                     <div class="modal-footer">
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>

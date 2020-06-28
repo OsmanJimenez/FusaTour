@@ -244,12 +244,12 @@
         @elseif($post->escena_vr =='3_Escena')
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
-          <a-scene background="color: #ECECEC" embedded>
+          <a-scene background="color: #ECECEC" style="height: 300px; width: 100%;" embedded>
             <a-assets>
-              <img id="point1" src="img/1.jpg" />
-              <img id="point2" src="img/2.jpg" />
-              <img id="point3" src="img/3.jpg" />
-              <img id="point4" src="img/4.jpg" />
+              <img id="point1" src="/images/{{ $post->vrimg_1 }}" />
+              <img id="point2" src="/images/{{ $post->vrimg_2 }}" />
+              <img id="point3" src="/images/{{ $post->vrimg_3 }}" />
+              <img id="point4" src="/images/{{ $post->vrimg_4 }}" />
 
               <img id="hotspot" src="https://cdn.glitch.com/2087dfa6-bd02-4451-a189-36095a66f386%2Fup-arrow.png?1545397127546" />
             </a-assets>
@@ -280,19 +280,18 @@
 
           </a-scene>
         </div>
-        @endif
 
         @elseif($post->escena_vr =='4_Escena')
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
-          <a-scene background="color: #ECECEC" embedded>
+          <a-scene background="color: #ECECEC" style="height: 300px; width: 100%;" embedded>
             <a-assets>
-              <img id="point1" src="img/1.jpg" />
-              <img id="point2" src="img/2.jpg" />
-              <img id="point3" src="img/3.jpg" />
-              <img id="point4" src="img/4.jpg" />
-              <img id="point5" src="img/5.jpg" />
-              <img id="point6" src="img/6.jpg" />
+              <img id="point1" src="/images/{{ $post->vrimg_1 }}" />
+              <img id="point2" src="/images/{{ $post->vrimg_2 }}" />
+              <img id="point3" src="/images/{{ $post->vrimg_3 }}" />
+              <img id="point4" src="/images/{{ $post->vrimg_4 }}" />
+              <img id="point5" src="/images/{{ $post->vrimg_5 }}" />
+              <img id="point6" src="/images/{{ $post->vrimg_6 }}" />
 
               <img id="hotspot" src="https://cdn.glitch.com/2087dfa6-bd02-4451-a189-36095a66f386%2Fup-arrow.png?1545397127546" />
             </a-assets>

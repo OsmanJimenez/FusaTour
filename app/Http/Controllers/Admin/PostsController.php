@@ -79,6 +79,12 @@ class PostsController extends Controller
             $file->move(public_path() . '/images/', $name_5);
         }
 
+        if ($request->hasFile('vrimg_6')) {
+            $file = $request->file('vrimg_6');
+            $name_6 = time() . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/', $name_6);
+        }
+
         if ($request->filled('color_vr')) {
             $post->color_vr = $request->get('color_vr');
         }
@@ -103,8 +109,16 @@ class PostsController extends Controller
             $post->vrimg_5 = $name_5;
         }
 
+        if ($request->has('vrimg_6')) {
+            $post->vrimg_6 = $name_6;
+        }
+
         if ($request->has('pintor_vr')) {
             $post->pintor_vr = $request->get('pintor_vr');
+        }
+
+        if ($request->has('content')) {
+            $post->content = $request->get('content');
         }
 
         $post->title = $request->get('title');
@@ -116,7 +130,6 @@ class PostsController extends Controller
         $post->excerpt = $request->get('excerpt');
         $post->ubicacion = $request->get('ubicacion');
         $post->escena_vr = $request->get('escena');
-        $post->content = $request->get('content');
         
         $post->save();
         $post->tags()->sync($request->get('tags'));
