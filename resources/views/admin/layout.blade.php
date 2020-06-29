@@ -8,8 +8,11 @@
 
   <title>FusaTour | Administrador</title>
 
+
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../adminlts/css/adminlte_dark.css">
+  <link rel="stylesheet" href="../../adminlts/css/adminlte.css">
+  <!-- Theme style -->
+  <link id="themes" rel="stylesheet" href="../../adminlts/css/adminlte-2.css">
   <!-- Tupicons -->
   <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
   <!-- Bootstrap Color Picker -->
@@ -72,6 +75,14 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
+
+        <!-- Dark Mode -->
+
+        <li class="nav-item">
+          <a href="#" data-target="" id="theme-toggle" class="nav-link">
+            <i class="fas fa-adjust"></i>
+          </a>
+        </li>
 
         <!-- Close Session Dropdown Menu -->
         <li class="nav-item dropdown">
@@ -200,6 +211,33 @@
   <script src="../../adminlts/js/qrcode.js"></script>
   <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
   <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+
+  <script type="text/javascript">
+    // this one is jut to wait for the page to load
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const themeStylesheet = document.getElementById('themes');
+      const storedTheme = localStorage.getItem('themes');
+
+      if (storedTheme) {
+        themeStylesheet.href = storedTheme;
+      }
+
+      const themeToggle = document.getElementById('theme-toggle');
+
+      themeToggle.addEventListener('click', () => {
+        // if it's light -> go dark
+        if (themeStylesheet.href.includes('2')) {
+          themeStylesheet.href = '../../adminlts/css/adminlte-dark.css';
+        } else {
+          // if it's dark -> go light
+          themeStylesheet.href = '../../adminlts/css/adminlte-2.css';
+        }
+        // save the preference to localStorage
+        localStorage.setItem('themes', themeStylesheet.href)
+      })
+    })
+  </script>
 
   @if (session()->has('flash'))
   <script>
