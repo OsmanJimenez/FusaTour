@@ -36,9 +36,11 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="exampleInputFile">Imagen</label>
-              <br>
-              <input type="file" name="urlimg">
+            <label for="exampleInputFile">Caratula</label>
+              <div class="col-md-12 custom-file margin-bottom">
+                <input class="custom-file-input" type="file" name="urlimg" required>
+                <label class="custom-file-label" for="exampleInputFile">Selecciona una imagen</label>
+              </div>
             </div>
           </div>
           <div class="col-md-12">
