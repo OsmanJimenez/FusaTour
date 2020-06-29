@@ -89,15 +89,15 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            {{-- <label>Nombre del Usuario</label> --}}
+            <label>Nombre:</label>
             <input name="name" class="form-control" placeholder="Ingresa aqui el nombre del usuario">
           </div>
           <div class="form-group">
-            {{-- <label>Correo del Usuario</label> --}}
+            <label>Correo Electronico:</label>
             <input name="email" class="form-control" placeholder="Ingresa aqui el correo del usuario">
           </div>
           <div class="form-group">
-            {{-- <label>Contraseña</label> --}}
+            <label>Contraseña:</label>
             <input name="password" class="form-control" placeholder="Ingresa aqui la contraseña del usuario">
           </div>
         </div>

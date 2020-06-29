@@ -9,7 +9,7 @@
   <title>FusaTour | Administrador</title>
 
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../adminlts/css/adminlte.css">
+  <link rel="stylesheet" href="../../adminlts/css/adminlte_dark.css">
   <!-- Tupicons -->
   <link rel='stylesheet' href='../../adminlts/css/typicons/typicons.min.css' />
   <!-- Bootstrap Color Picker -->
@@ -80,11 +80,6 @@
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <span class="dropdown-header">Configuración</span>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i> Perfil
-            </a>
-            <div class="dropdown-divider"></div>
             <a href="{{url('logout')}}" class="dropdown-item">
               <i class="fas fa-window-close mr-2"></i> Cerrar Sesión
             </a>
@@ -210,7 +205,7 @@
   <script>
     Swal.fire({
       icon: 'success',
-      title: 'Oops...',
+      title: 'Correcto...',
       text: '{{ session('
       flash ') }}'
     })

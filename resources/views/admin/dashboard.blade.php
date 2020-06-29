@@ -89,7 +89,7 @@
                         </h3>
                     </div>
                     <div class="card-body">
-                        <div id="curve_chart" style="width: 100%; height: 300px"></div>
+                        <div id="curve_chart" style="width: 100%; height: 300px;  "></div>
                     </div>
                 </div>
         </div>

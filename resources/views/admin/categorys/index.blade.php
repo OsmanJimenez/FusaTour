@@ -25,7 +25,7 @@
           <h3 class="card-title">Listado de Categorias</h3>
           <button class="btn  btn-outline-primary float-right" data-toggle="modal" data-target="#prueba">Crear categoria</button>
         </div>
-        
+
         <div class="card-body">
           <table id="post-table" class="table table-bordered table-hover">
             <thead>
@@ -56,7 +56,8 @@
                     <div class="modal fade" id="exampleModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-header border-bottom">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -64,7 +65,7 @@
                           <div class="modal-body">
                             ¿Estas seguro de eliminar esta categoria?
                           </div>
-                          <div class="modal-footer border-top">
+                          <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                             <button class="btn btn-primary">Eliminar</button>
                           </div>

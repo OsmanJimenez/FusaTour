@@ -56,7 +56,8 @@
                   <div class="modal fade" id="{{ $post->url }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
-                        <div class="modal-header border-bottom">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Codigo QR</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -88,7 +89,7 @@
                             makeCode();
                           </script>
                         </div>
-                        <div class="modal-footer border-top">
+                        <div class="modal-footer">
                           <button type="button" id="foo{{ $post->id }}" class="btn btn-primary btn-lg btn-block">Descargar</button>
                           <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
                           <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
@@ -118,7 +119,8 @@
                     <div class="modal fade" id="exampleModal{{ $post->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-header border-bottom">
+                          <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -126,7 +128,7 @@
                           <div class="modal-body">
                             ¿Estas seguro de eliminar este lugar?
                           </div>
-                          <div class="modal-footer border-top">
+                          <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                             <button class="btn btn-primary">Eliminar</button>
                           </div>
