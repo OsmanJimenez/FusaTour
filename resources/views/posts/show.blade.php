@@ -165,11 +165,11 @@
             <a-entity geometry="primitive: box; depth: 0.2; height:10; width: 30" position="0 5 10" material="color : {{ $post->color_vr }}; repeat: 30 10; metalness: 0; roughness: 1">
             </a-entity>
 
-            <a-entity position="0 6 -9.5" text="width: 30; align:center; color: white; value: 
+            <a-entity position="0 6 -9.5" text="width: 30; negate:false; font:/font/Roboto-Thin-msdf.json; align:center; color: white; value: 
               {{ $post->title }}  ">
             </a-entity>
 
-            <a-entity position="0 3.7 -9.5" text="width: 15; align:center; color: white; value: 
+            <a-entity position="0 3.7 -9.5" text="width: 15; negate:false; font:/font/Roboto-Thin-msdf.json; align:center; color: white; value: 
               Autor:{{ $post->pintor_vr}}  ">
             </a-entity>
 
@@ -236,8 +236,8 @@
             <a-entity geometry="primitive: box; depth: 7; height: 0.1; width: 6.6" position="7 5 9.9" material="src: url(/images/{{ $post->vrimg_2 }})" rotation="270 180 0">
             </a-entity>
 
-            <a-entity rotation="0 180 0" position="-2 3.5 5.8" text="width: 4.5; color: black; value: 
-              {{ $post->excerpt }}">
+            <a-entity rotation="0 180 0"  position="-2 3.5 5.8"  text="width: 4.5; negate:false; font:/font/Roboto-Thin-msdf.json; color: black; value: 
+              {{ $post->content }}">
             </a-entity>
           </a-scene>
         </div>
