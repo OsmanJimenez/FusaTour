@@ -21,7 +21,8 @@
   <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Background image"></div>
   @endif
 </div>
-
+<div class="prueba">
+</div>
 <div class="container">
   <div class="section">
     <h5 class="pagetitle">Lugares</h5>
@@ -48,15 +49,12 @@
           <span class="small tags">
             <a class="small" href="{{ route('categories.show', $post->category) }}">{{ $post->category->name }}
             </a>
-            @foreach ($post->tags as $tag )
-              <a class="small" href="{{ route ('actividades.show', $tag) }}">#{{ $tag->name }}</a>
-            @endforeach
+ 
           </span>
 
           <p class="bot-0 text">{{ $post->excerpt }} </p>
 
           <div class="spacer"></div>
-          <div class="divider"></div>
           <div class="spacer"></div>
         </div>
       </div>

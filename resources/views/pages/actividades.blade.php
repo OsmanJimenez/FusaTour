@@ -13,7 +13,7 @@
                         <div class="notify">
                             <div class="col s1 m4 l2">
                                 <span>
-                                    <img src="/images/{{ $tag->urlimg }}" alt="Dion Vitale" title="Dion Vitale" class="circle">
+                                    <img src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle">
                                 </span>
                             </div>
                             <div class="col s9 m4 l2">
@@ -21,7 +21,7 @@
                             </div>
                             <div class="col s2 m4 l2">
                                 <a href="/actividades/{{ $tag->name }}" class="btn waves-effect waves-light bg-primary" type="submit" name="action">
-                                    <i class="mdi mdi-autorenew"></i>
+                                    <i class="mdi mdi-near-me"></i>
                                 </a>
                             </div>
                         </div>

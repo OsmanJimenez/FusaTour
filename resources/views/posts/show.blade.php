@@ -17,17 +17,17 @@
         <h5 class="title">{{ $post->title }}</h5>
         <span class="small date">{{ $post->published_at->format('M d') }}</span>
         <span class="small tags">
-          <a class="small" href="#!">{{ $post->category->name }}</a>,
-          <a class="small" href="#!">
-            @foreach ($post->tags as $tag )
-            <a class="small" href="#!">#{{ $tag->name }}</a>
-            @endforeach
-          </a>
+          <a class="small" href="#!">{{ $post->category->name }}</a>
         </span>
         <p class="bot-0 text">
           {!! $post->body !!}
         </p>
-
+        <h5 class="title">Actividades a practicar:</h5>
+            @foreach ($post->tags as $tag )
+            <a class="small" href="/actividades/{{ $tag->name }}">
+              <img src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
+            </a>
+            @endforeach
       </div>
       <div class="col s12">
         <div class="col s12 pad-0">
@@ -251,7 +251,7 @@
               <img id="point3" src="/images/{{ $post->vrimg_3 }}" />
               <img id="point4" src="/images/{{ $post->vrimg_4 }}" />
 
-              <img id="hotspot" src="https://cdn.glitch.com/2087dfa6-bd02-4451-a189-36095a66f386%2Fup-arrow.png?1545397127546" />
+              <img id="hotspot" src="/images/flecha.png" />
             </a-assets>
 
             <a-entity id="spots" hotspots>
@@ -293,7 +293,7 @@
               <img id="point5" src="/images/{{ $post->vrimg_5 }}" />
               <img id="point6" src="/images/{{ $post->vrimg_6 }}" />
 
-              <img id="hotspot" src="https://cdn.glitch.com/2087dfa6-bd02-4451-a189-36095a66f386%2Fup-arrow.png?1545397127546" />
+              <img id="hotspot" src="/images/flecha.png" />
             </a-assets>
 
             <a-entity id="spots" hotspots>

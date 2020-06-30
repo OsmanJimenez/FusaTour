@@ -146,15 +146,15 @@
 
       <li>
         <a href="{{ route('pages.categorias') }}" class=" {{ request()->routeIs('pages.categorias') ? 'active' : '' }}">
-          <i class="mdi mdi-shape-outline"></i>
+          <i class="mdi mdi-cards"></i>
           <span>Categorias</span>
         </a>
       </li>
 
       <li>
         <a href="{{ route('pages.descubrir') }}" class=" {{ request()->routeIs('pages.descubrir') ? 'active' : '' }}">
-          <i class="mdi mdi-camera"></i>
-          <span>Descubrir</span>
+          <i class="mdi mdi-trophy"></i>
+          <span>Ranking</span>
         </a>
       </li>
 

@@ -1,8 +1,7 @@
-var staticCacheName = "pwa-v" + new Date().getTime();
+var staticCacheName = "pwa-v";
 var filesToCache = [
+    '/',
     '/offline',
-    '/css/app.css',
-    '/js/app.js',
     '/images/icons/icon-72x72.png',
     '/images/icons/icon-96x96.png',
     '/images/icons/icon-128x128.png',
@@ -11,6 +10,29 @@ var filesToCache = [
     '/images/icons/icon-192x192.png',
     '/images/icons/icon-384x384.png',
     '/images/icons/icon-512x512.png',
+
+    '/assets/css/preloader.css',
+    '/assets/css/materialize.min.css',
+    '/assets/fonts/mdi/materialdesignicons.min.css',
+    '/assets/plugins/perfect-scrollbar/perfect-scrollbar.css',
+    '/assets/css/style.css',
+    '/assets/css/style-2.css',
+    '/assets/css/styles.css',
+    '/assets/js/aframe.js',
+    '/assets/js/aframe-extras.min.js',
+
+    '/assets/js/jquery-2.2.4.min.js',
+    '/assets/js/materialize.js',
+    '/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js',
+    '/assets/js/init.js',
+    '/assets/js/scripts.js',
+
+    '/index.php',
+    '/categorias',
+    '/descubrir',
+    '/actividades',
+    '/escaner',
+
 ];
 
 // Cache on install
@@ -23,6 +45,7 @@ self.addEventListener("install", event => {
             })
     )
 });
+
 
 // Clear cache on activate
 self.addEventListener('activate', event => {
@@ -38,8 +61,8 @@ self.addEventListener('activate', event => {
     );
 });
 
-// Serve from Cache
-self.addEventListener("fetch", event => {
+  // Serve from Cache
+  self.addEventListener("fetch", event => {
     event.respondWith(
         caches.match(event.request)
             .then(response => {
@@ -50,3 +73,20 @@ self.addEventListener("fetch", event => {
             })
     )
 });
+
+
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      caches.open(staticCacheName).then(function(cache) {
+        return cache.match(event.request).then(function(response) {
+          var fetchPromise = fetch(event.request).then(function(networkResponse) {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          })
+          return response || fetchPromise;
+        })
+      })
+    );
+  });
+
