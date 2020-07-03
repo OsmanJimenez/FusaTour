@@ -338,13 +338,7 @@
     </div>
   </div>
 
-  @if (Auth::guest())
-  <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
-  <div class="col s12 center-align">
-    <a href="{{ route('register') }}" class="waves-effect waves-light btn-large button-blue"><i class="mdi mdi-bookmark-plus mdi-transition1"></i>Registrarse</a>
-    <a href="{{ route('login') }}" class="waves-effect waves-light btn-large button-red"><i class="mdi mdi-account-circle mdi-transition1"></i>Ingresar</a>
-  </div>
-  @else
+  @if (Auth::user())
   <div class="row ">
     <div class="col s12 pad-0">
       <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
@@ -380,6 +374,14 @@
       </div>
 
     </div>
+  </div>
+  @else
+  
+
+  <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
+  <div class="col s12 center-align">
+    <a href="{{ route('register') }}" class="waves-effect waves-light btn-large button-blue"><i class="mdi mdi-bookmark-plus mdi-transition1"></i>Registrarse</a>
+    <a href="{{ route('login') }}" class="waves-effect waves-light btn-large button-red"><i class="mdi mdi-account-circle mdi-transition1"></i>Ingresar</a>
   </div>
   @endif
   <div class="row ">

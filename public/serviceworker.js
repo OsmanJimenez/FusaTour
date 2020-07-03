@@ -33,7 +33,67 @@ var filesToCache = [
     '/actividades',
     '/escaner',
 
-];
+    '/blog/sendero-ecologico-al-cerro-fusacatan',
+    '/blog/parque-natural-san-rafael',
+    '/blog/mural-salvaje',
+    '/blog/mural-energia',
+    '/blog/mural-noche',
+    '/blog/mural-paramo',
+    '/blog/mural-raices',
+    '/blog/monumento-lucho-herrera',
+    '/blog/monumento-indio-sutagao',
+    '/blog/mural-floral',
+    '/blog/mural-cool',
+    '/blog/monumento-rumba-criolla',
+    '/blog/mural-belleza',
+    '/blog/monumento-emilio-sierra',
+    '/blog/monumento-manuel-humberto-cardenas-velez',
+    '/blog/mural-multicolor',
+    '/blog/monumento-jardinera',
+    '/blog/mural-suena',
+    '/blog/monumento-jorge-eliecer-gaitan',
+
+    '/images/1592692339Icon_Arte.jpg',
+    '/images/1592692368Icon_Avistamiento.jpg',
+    '/images/1592692388Icon_Caminar.jpg',
+    '/images/1592692408Icon_CicloPaseo.jpg',
+    '/images/1592692435Icon_Educacion.jpg',
+    '/images/1592692456Icon_Escalada.jpg',
+    '/images/1592692475Icon_Fauna.jpg',
+    '/images/1592692495Icon_Flora.jpg',
+    '/images/1592692516Icon_Fotografia.jpg',
+    '/images/1592692533Icon_Senderismo.jpg',
+
+    '/images/1593630960IMG_20200618_073715.jpg',
+    '/images/1593630670MVIMG_20200611_120801.jpg',
+    '/images/1593630239Mural_Salvaje.jpg',
+    '/images/1593629262Mural_Energia - copia.jpeg',
+    '/images/1593629839PANO_20200625_082902-01-01.jpg',
+    '/images/1593629370PANO_20200625_081702-02.jpg',
+    '/images/1593630048Mural_Raices - copia.jpg',
+    '/images/1593620779Monumento_Lucho_Herrera.jpg',
+    '/images/1593627096Monumento_Indio_Sutagao - copia.jpg',
+    '/images/1593628990Mural_Flores - copia.jpg',
+    '/images/1593629693PANO_20200625_082125-02.jpg',
+    '/images/1593627346Monumento_Rumba_Criolla - copia.jpg',
+    '/images/1593629512PANO_20200625_082322-02.jpg',
+    '/images/1593627534Monumento_Emilio_Sierra - copia.jpg',
+    '/images/1593628484Monumento_Manuel_Cardenas.jpg',
+    '/images/1593629611PANO_20200625_082451-02.jpg',
+    '/images/Monumento_Jardinera.jpg',
+    '/images/1593629929PANO_20200625_082807-01-01.jpg',
+    '/images/1593628315Monumento_Jorge_Eliecer_Gaitan-01 - copia.jpeg',
+    
+    '/images/1592768010Ecoturismo.jpg',
+    '/images/1592768030Monumentos.jpg',
+    '/images/1592766915Murales.jpg',
+
+    '/images/images/floor.jpg',
+    '/images/images/grass.jpg',
+    '/images/images/icon.png',
+    '/images/images/wall_2.jpg',
+]
+
 
 // Cache on install
 self.addEventListener("install", event => {
@@ -61,6 +121,7 @@ self.addEventListener('activate', event => {
     );
 });
 
+
   // Serve from Cache
   self.addEventListener("fetch", event => {
     event.respondWith(
@@ -73,20 +134,4 @@ self.addEventListener('activate', event => {
             })
     )
 });
-
-
-
-self.addEventListener('fetch', function(event) {
-    event.respondWith(
-      caches.open(staticCacheName).then(function(cache) {
-        return cache.match(event.request).then(function(response) {
-          var fetchPromise = fetch(event.request).then(function(networkResponse) {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
-          })
-          return response || fetchPromise;
-        })
-      })
-    );
-  });
 

@@ -25,7 +25,6 @@ Route::get('categorias/{category}', 'CategoriesController@show')->name('categori
 Route::get('actividades/{tag}', 'ActividadesController@show')->name('actividades.show');
 
 
-
 Auth::routes();
 
 
@@ -50,6 +49,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/offline', function (){
     return view('modules/laravelpwa/offline');
 });
+
 
 
 

@@ -7,7 +7,7 @@ return [
         'short_name' => 'FusaTour',
         'start_url' => '/',
         'background_color' => '#ffffff',
-        'theme_color' => '#37474F',
+        'theme_color' => '#ffffff',
         'display' => 'standalone',
         'orientation'=> 'any',
         'icons' => [
