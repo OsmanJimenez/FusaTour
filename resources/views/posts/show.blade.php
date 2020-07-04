@@ -7,6 +7,8 @@
 
 <img class="img_presentation" src="/images/{{ $post->urlimg }}">
 
+<div class="redondeado"></div>
+
 <div class="container">
 
   <div class="section">
@@ -364,7 +366,7 @@
           <div class="input-field col s12">
             <textarea name="comment" id="textarea-normal" class="materialize-textarea validate"></textarea>
             <label for="textarea-normal">Comentario</label>
-            <span class="helper-text" data-error="Please enter text" data-success=""></span>
+            <span class="helper-text" data-error="Porfavor ingrese un comentario" data-success=""></span>
           </div>
           <textarea class="ocultar" name="id_post" for="textarea-normal">{{$post->id}}</textarea>
 
@@ -423,7 +425,7 @@
           <li class="collection-item avatar">
 
             <a href="#" class='chatlink waves-effect'>
-              <img src="/images/{{ $comment->user->avatar }}" alt="Simona Gotto" title="Simona Gotto" class="circle">
+              <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="Simona Gotto" title="Simona Gotto" class="circle">
               <span class="title">{{ $comment->user->name }}</span>
               <p>{{ $comment->text }}</p>
             </a>

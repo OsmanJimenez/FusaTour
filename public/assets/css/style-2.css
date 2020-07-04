@@ -162,7 +162,7 @@ TABLE OF CONTENTS:
   General Layout
 ------------------------------------------*/
 body{
-  background: #fff;
+  background:  linear-gradient(to bottom, rgba(242,243,248,1) 0%, rgba(255,255,255,1) 100%);
   color: #455A64;
 }
 body, body *,p{
@@ -4218,11 +4218,20 @@ body[data-site_mode="dark"] .preloader-background{
 
 .prueba{
     top: -20px;
-    background: #fff;
+    background: #F2F3F8;
     display: block;
     padding: 30px 15px 0 !important;
     position: relative;
     border-radius: 30px 30px 0 0;
+}
+
+.redondeado{
+  top: -35px;
+  background: #F2F3F8;
+  display: block;
+  padding: 30px 15px 0 !important;
+  position: relative;
+  border-radius: 30px 30px 0 0;
 }
 
 .min{

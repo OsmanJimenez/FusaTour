@@ -141,7 +141,7 @@
                                 <span class="direct-chat-timestamp float-left">{{ $comment->user->name }}</span>
                             </div>
 
-                            <img class="direct-chat-img" src="/images/{{ $comment->user->avatar }}" alt="message user image">
+                            <img class="direct-chat-img" src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="message user image">
                             
                             <div class="direct-chat-text">
                                 {{ $comment->text }}

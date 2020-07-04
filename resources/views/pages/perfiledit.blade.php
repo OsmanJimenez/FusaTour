@@ -27,7 +27,7 @@
     <div class="section">
       <div class="editprof-img">
         <div class="circle">
-          <img src="/images/{{ auth()->user()->avatar }}" alt="">
+          <img src="/images/{{ auth()->user()->avatar }}" onerror="this.src='/images/user.png';" alt="">
         </div>
       </div>
 
