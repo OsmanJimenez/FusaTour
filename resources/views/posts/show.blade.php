@@ -17,13 +17,20 @@
       <div class="col s12">
 
         <h5 class="title">{{ $post->title }}</h5>
+        <a id="aumentar" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-greater-than"></i></a>
+          <a id="disminuir" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-less-than"></i></a>
+          <a id="reset" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-equal"></i></a>
         <span class="small date">{{ $post->published_at->format('M d') }}</span>
         <span class="small tags">
           <a class="small" href="#!">{{ $post->category->name }}</a>
         </span>
-        <p class="bot-0 text">
-          {!! $post->body !!}
-        </p>
+          
+          <div class="contenedor">
+            <p>
+            {!! $post->body !!}
+          </p>
+          </div>
+        
         <h5 class="title">Actividades a practicar:</h5>
             @foreach ($post->tags as $tag )
             <a class="small" href="/actividades/{{ $tag->name }}">
@@ -67,11 +74,14 @@
             <a-entity geometry="primitive: box; depth: 0.2; height:10; width: 30" position="0 5 10" material="color : {{ $post->color_vr }}; repeat: 30 10; metalness: 0; roughness: 1">
             </a-entity>
 
-            <a-text value="{{ $post->title }}" aling="center" color="#fff" position="-3.9 6 -9.5" scale="6.4 9.3 8.9">
-            </a-text>
+            <a-entity position="0 6 -9.5" text="width: 30; negate:false; font:/font/Roboto-Bold-msdf.json; align:center; color: black; value: 
+              {{ $post->title }}  ">
+            </a-entity>
 
-            <a-text value="Autor:{{ $post->pintor_vr }}" aling="center" color="#fff" position="-2.2 3.7 -9.5" scale="2.6 2.4 4.1">
-            </a-text>
+            <a-entity position="0 3.7 -9.5" text="width: 15; negate:false; font:/font/Roboto-Bold-msdf.json; align:center; color: black; value: 
+              Autor: {{ $post->pintor_vr}}  ">
+            </a-entity>
+            
 
             <!--East Wall-->
             <a-entity geometry="primitive: box; depth: 17.5; height: 1.25; width: 0.2" position="15 9.375 0" material="src: url(/images/images/wall_2.jpg); repeat: 17.5 1.25; metalness: 0; roughness: 1">
@@ -167,12 +177,12 @@
             <a-entity geometry="primitive: box; depth: 0.2; height:10; width: 30" position="0 5 10" material="color : {{ $post->color_vr }}; repeat: 30 10; metalness: 0; roughness: 1">
             </a-entity>
 
-            <a-entity position="0 6 -9.5" text="width: 30; negate:false; font:/font/Roboto-Thin-msdf.json; align:center; color: white; value: 
+            <a-entity position="0 6 -9.5" text="width: 30; negate:false; font:/font/Roboto-Bold-msdf.json; align:center; color: black; value: 
               {{ $post->title }}  ">
             </a-entity>
 
-            <a-entity position="0 3.7 -9.5" text="width: 15; negate:false; font:/font/Roboto-Thin-msdf.json; align:center; color: white; value: 
-              Autor:{{ $post->pintor_vr}}  ">
+            <a-entity position="0 3.7 -9.5" text="width: 15; negate:false; font:/font/Roboto-Bold-msdf.json; align:center; color: black; value: 
+              Autor: {{ $post->pintor_vr}}  ">
             </a-entity>
 
 
@@ -238,7 +248,7 @@
             <a-entity geometry="primitive: box; depth: 7; height: 0.1; width: 6.6" position="7 5 9.9" material="src: url(/images/{{ $post->vrimg_2 }})" rotation="270 180 0">
             </a-entity>
 
-            <a-entity rotation="0 180 0"  position="-2 3.5 5.8"  text="width: 4.5; negate:false; font:/font/Roboto-Thin-msdf.json; color: black; value: 
+            <a-entity rotation="0 180 0"  position="-2 3.5 5.8"  text="width: 4.5; negate:false; font:/font/Roboto-Bold-msdf.json; color: black; value: 
               {{ $post->content }}">
             </a-entity>
           </a-scene>

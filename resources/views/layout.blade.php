@@ -245,6 +245,26 @@
   </script>
   <!-- PRELOADER - END -->
 
+  <script type="text/javascript">
+    var fontSize = 1,
+    factor = 0.1;
+
+$('#aumentar').on('click', function() {
+  fontSize = fontSize + factor;
+  $('.contenedor').css( {"font-size": fontSize + 'em'});
+});
+
+$('#disminuir').on('click', function() {
+  fontSize = fontSize - factor;
+  $('.contenedor').css( {"font-size": fontSize + 'em'});
+});
+
+$('#reset').on('click', function() {
+  fontSize = 1;
+  $('.contenedor').css( {"font-size": fontSize + 'em'});
+});
+  </script>
+
 </body>
 <!-- END BODY -->
 </html>
