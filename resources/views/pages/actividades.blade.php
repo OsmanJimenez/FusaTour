@@ -13,7 +13,7 @@
                         <div class="notify">
                             <div class="col s1 m4 l2">
                                 <span>
-                                    <img src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle">
+                                    <img loading="lazy" src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle">
                                 </span>
                             </div>
                             <div class="col s9 m4 l2">

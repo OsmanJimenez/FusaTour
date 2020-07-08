@@ -34,14 +34,14 @@
         <h5 class="title">Actividades a practicar:</h5>
             @foreach ($post->tags as $tag )
             <a class="small" href="/actividades/{{ $tag->name }}">
-              <img src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
+              <img loading="lazy" src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
             </a>
             @endforeach
       </div>
       <div class="col s12">
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Ubicación </h5>
-          <iframe src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
+          <iframe  loading="lazy" src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
           </iframe>
         </div>
 
@@ -435,7 +435,7 @@
           <li class="collection-item avatar">
 
             <a href="#" class='chatlink waves-effect'>
-              <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="Simona Gotto" title="Simona Gotto" class="circle">
+              <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->user->avatar }}" title="/images/{{ $comment->user->avatar }}" class="circle">
               <span class="title">{{ $comment->user->name }}</span>
               <p>{{ $comment->text }}</p>
             </a>

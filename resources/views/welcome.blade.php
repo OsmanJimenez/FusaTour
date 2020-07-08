@@ -18,7 +18,7 @@
     </div>
   </div>
   @if(isset($urlimg))
-  <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Background image"></div>
+  <div class="parallax img-wrap"><img loading="lazy" src="/images/{{ $urlimg }}" alt="Background image"></div>
   @endif
 </div>
 <div class="prueba">
@@ -34,8 +34,8 @@
       @foreach ($posts as $post)
       <div class="col s12">
         <div class="blog-img-wrap">
-          <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="Web designing at its very best">
-            <img class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}">
+          <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
+            <img loading="lazy" class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}">
           </a>
         </div>
 
