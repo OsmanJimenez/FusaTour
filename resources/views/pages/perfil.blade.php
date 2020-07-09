@@ -23,24 +23,6 @@
       </li>
 
       <li class="collection-item">
-        <a href="ui-app-profile.html" class="waves-effect">
-          <i class="mdi mdi-security-home"></i>
-          </i>
-          <span>Centro de Ayuda</span>
-          <i class="arrow mdi mdi-chevron-right"></i>
-        </a>
-      </li>
-
-      <li class="collection-item">
-        <a href="ui-app-profile.html" class="waves-effect">
-          <i class="mdi mdi-file-document"></i>
-          </i>
-          <span>Terminos de Servicio</span>
-          <i class="arrow mdi mdi-chevron-right"></i>
-        </a>
-      </li>
-
-      <li class="collection-item">
         <a href="{{url('logout')}}" class="waves-effect">
           <i class="mdi mdi-close-box"></i>
           </i>
