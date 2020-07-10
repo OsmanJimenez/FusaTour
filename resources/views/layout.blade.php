@@ -56,7 +56,7 @@
       AFRAME.registerComponent('spot',{
         schema:{
           linkto:{type:"string",default:""},
-          spotgroup:{type:"string",default:""}
+          spotgroup:{type:"string",default:""},
         },
         init:function(){
           
@@ -79,6 +79,8 @@
           });
         }
       });
+
+    
     </script>
 
   <!-- END HEAD -->

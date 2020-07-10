@@ -34,14 +34,14 @@
         <h5 class="title">Actividades a practicar:</h5>
             @foreach ($post->tags as $tag )
             <a class="small" href="/actividades/{{ $tag->name }}">
-              <img loading="lazy" src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
+              <img src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
             </a>
             @endforeach
       </div>
       <div class="col s12">
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Ubicación </h5>
-          <iframe  loading="lazy" src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
+          <iframe src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
           </iframe>
         </div>
 
@@ -262,31 +262,32 @@
               <img id="point2" src="/images/{{ $post->vrimg_2 }}" />
               <img id="point3" src="/images/{{ $post->vrimg_3 }}" />
               <img id="point4" src="/images/{{ $post->vrimg_4 }}" />
-
               <img id="hotspot" src="/images/flecha.png" />
+
             </a-assets>
 
             <a-entity id="spots" hotspots>
               <a-entity id="group-point1">
-                <a-image spot="linkto:#point2;spotgroup:group-point2" position="-10.5 1.2 -1.7" rotation="-8.5 92 0"></a-image>
+                <a-image spot="linkto:#point2;spotgroup:group-point2" scale="2 2 2" color="#130f40" position="-10.5 1.2 -1.7" rotation="-8.5 92 0">
+                </a-image>
               </a-entity>
               <a-entity id="group-point2" scale="0 0 0">
-                <a-image spot="linkto:#point3;spotgroup:group-point3" position="10 0 -8"></a-image>
-                <a-image spot="linkto:#point1;spotgroup:group-point1" position="0 0 10"></a-image>
+                <a-image spot="linkto:#point3;spotgroup:group-point3" scale="2 2 2" color="#130f40" position="10 0 -8"></a-image>
+                <a-image spot="linkto:#point1;spotgroup:group-point1" scale="2 2 2" color="#eb4d4b" position="0 0 10"></a-image>
               </a-entity>
               <a-entity id="group-point3" scale="0 0 0">
-                <a-image spot="linkto:#point2;spotgroup:group-point2" position="10 0 3"></a-image>
-                <a-image spot="linkto:#point4;spotgroup:group-point4" position="-10 0 -3"></a-image>
+                <a-image spot="linkto:#point2;spotgroup:group-point2" scale="2 2 2" color="#eb4d4b" position="10 0 3"></a-image>
+                <a-image spot="linkto:#point4;spotgroup:group-point4" scale="2 2 2" color="#130f40" position="-10 0 -3"></a-image>
               </a-entity>
               <a-entity id="group-point4" scale="0 0 0">
-                <a-image spot="linkto:#point3;spotgroup:group-point3" position="0 0 -10"></a-image>
+                <a-image spot="linkto:#point3;spotgroup:group-point3" scale="2 2 2" color="#eb4d4b" position="0 0 -10"></a-image>
               </a-entity>
             </a-entity>
 
             <a-sky id="skybox" src="#point1"></a-sky>
 
             <a-entity id="cam" camera position="0 1.6 0" look-controls>
-              <a-entity cursor="fuse:true;fuseTimeout:2000" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8" material="shader:flat;color:#badc58" animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
+              <a-entity cursor="fuse:true;fuseTimeout:2000" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8" material="shader:flat;color:#6ab04c" animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
               </a-entity>
             </a-entity>
 
@@ -310,33 +311,33 @@
 
             <a-entity id="spots" hotspots>
               <a-entity id="group-point1">
-                <a-image spot="linkto:#point2;spotgroup:group-point2" position="0 1 -10" rotation="0 0 0"></a-image>
+                <a-image spot="linkto:#point2;spotgroup:group-point2" scale="2 2 2" color="#130f40" position="0 1 -10" rotation="0 0 0"></a-image>
               </a-entity>
               <a-entity id="group-point2" scale="0 0 0">
-                <a-image spot="linkto:#point3;spotgroup:group-point3" position="2.2 2.1 -11" rotation="0 0 0"></a-image>
-                <a-image spot="linkto:#point1;spotgroup:group-point1" position="0 0 10"></a-image>
+                <a-image spot="linkto:#point3;spotgroup:group-point3" scale="2 2 2" color="#130f40" position="2.2 2.1 -11" rotation="0 0 0"></a-image>
+                <a-image spot="linkto:#point1;spotgroup:group-point1" scale="2 2 2" color="#eb4d4b" position="0 0 10"></a-image>
               </a-entity>
               <a-entity id="group-point3" scale="0 0 0">
-                <a-image spot="linkto:#point2;spotgroup:group-point2" position="10 0 -10"></a-image>
-                <a-image spot="linkto:#point4;spotgroup:group-point4" position="5 0 10" rotation="19 11 0"></a-image>
+                <a-image spot="linkto:#point2;spotgroup:group-point2" scale="2 2 2" color="#eb4d4b" position="10 0 -10"></a-image>
+                <a-image spot="linkto:#point4;spotgroup:group-point4" scale="2 2 2" color="#130f40" position="5 0 10" rotation="19 11 0"></a-image>
               </a-entity>
               <a-entity id="group-point4" scale="0 0 0">
-                <a-image spot="linkto:#point3;spotgroup:group-point3" position="10 0 3"></a-image>
-                <a-image spot="linkto:#point5;spotgroup:group-point5" position="0 0 -10"></a-image>
+                <a-image spot="linkto:#point3;spotgroup:group-point3" scale="2 2 2" color="#eb4d4b" position="10 0 3"></a-image>
+                <a-image spot="linkto:#point5;spotgroup:group-point5" scale="2 2 2" color="#130f40" position="0 0 -10"></a-image>
               </a-entity>
               <a-entity id="group-point5" scale="0 0 0">
-                <a-image spot="linkto:#point4;spotgroup:group-point4" position="10 0 -6.5"></a-image>
-                <a-image spot="linkto:#point6;spotgroup:group-point6" position="-10 1 0" rotation="18.8 88.2 0.4"></a-image>
+                <a-image spot="linkto:#point4;spotgroup:group-point4" scale="2 2 2" color="#eb4d4b" position="10 0 -6.5"></a-image>
+                <a-image spot="linkto:#point6;spotgroup:group-point6" scale="2 2 2" color="#130f40" position="-10 1 0" rotation="18.8 88.2 0.4"></a-image>
               </a-entity>
               <a-entity id="group-point6" scale="0 0 0">
-                <a-image spot="linkto:#point5;spotgroup:group-point5" position="10 0 0" rotation="-96 -80 -96"></a-image>
+                <a-image spot="linkto:#point5;spotgroup:group-point5" scale="2 2 2" color="#eb4d4b" position="10 0 -6.5" ></a-image>
               </a-entity>
             </a-entity>
 
             <a-sky id="skybox" src="#point1"></a-sky>
 
             <a-entity id="cam" camera position="0 1.6 0" look-controls>
-              <a-entity cursor="fuse:true;fuseTimeout:2000" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8" material="shader:flat;color:#badc58" animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
+              <a-entity cursor="fuse:true;fuseTimeout:2000" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8" material="shader:flat;color:#6ab04c" animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
               </a-entity>
             </a-entity>
 
