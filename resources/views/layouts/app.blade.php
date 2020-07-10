@@ -75,5 +75,18 @@
             @yield('content')
         </main>
     </div>
+   <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> 
+    
+    @if (session()->has('flash'))
+  <script>
+    Swal.fire({
+      icon: 'error',
+      title: 'Fallo...',
+      text: "{{ session('flash') }}"      
+    })
+  </script>
+  @endif
+    
 </body>
 </html>

@@ -35,4 +35,22 @@
   </div>
 </div>
 
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> 
+    
+ 
+@if (session()->has('flash'))
+  <script>
+    Swal.fire({
+      position: 'bottom',
+      icon: 'success',
+      text: "{{ session('flash') }}", 
+      timer: 2500   
+    })
+  </script>
+  @endif
+
+
+
+
 @endsection

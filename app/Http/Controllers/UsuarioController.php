@@ -60,7 +60,7 @@ class UsuarioController extends Controller
 
         return redirect()
             ->route('pages.perfil')
-            ->with('flash', 'Tu publicación a sido guardada');
+            ->with('flash', 'Tu perfil a sido actualizado');
     }
 
     public function destroy(User $User)
