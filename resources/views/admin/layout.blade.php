@@ -244,8 +244,7 @@
     Swal.fire({
       icon: 'success',
       title: 'Correcto...',
-      text: '{{ session('
-      flash ') }}'
+      text: "{{ session('flash') }}", 
     })
   </script>
   @endif

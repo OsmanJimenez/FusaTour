@@ -40,7 +40,7 @@
               <label>Categoria</label>
               <select name="category" class="form-control width-full" required>
                 @foreach ($categories as $category)
-                <option value="{{ $category->id}}" {{ old('category', $post->category_id) }}>{{$category->name}} </option>
+                <option value="{{ $category->id}}" {{ $category->id === $post->category_id ? ' selected' : '' }}>{{$category->name}} </option>
                 @endforeach
 
               </select>
@@ -69,7 +69,7 @@
                     <i class="far fa-calendar-alt"></i>
                   </span>
                 </div>
-                <input name="published_at" value="{{ old('published_at', $post->published_at ? $post->published_at->format('d/m/Y') :
+                <input name="published_at" value="{{ old('published_at', $post->published_at ? $post->published_at->format('Y-m-d') :
                     null) }}" type="date" class="form-control float-right" required>
               </div>
             </div>
@@ -83,7 +83,8 @@
               <label>Etiquetas</label>
               <select name="tags[]" class="form-control select2 width-full" multiple="multiple" data-placeholder="Selecciona una o mas Etiquetas" required>
                 @foreach ($tags as $tag )
-                <option {{ collect(old('tags')) }} value="{{ $tag->id }}">{{ $tag->name }}</option>
+                <option {{ collect(old("tags")) }} value="{{ $tag->id }}">{{ $tag->name }}</option>
+
                 @endforeach
               </select>
             </div>
@@ -120,19 +121,19 @@
                       </button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body" id="tab" >
                       <div class="container-fluid">
                         <label id="labelus" class="custom-label">Normal</label>
 
                         <div class="row margin-bottom">
 
                           <div class="col-md-6">
-                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 2" onclick="escena_1()">
+                            <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="1 imagen de banner | 2 imagenes laterales" type="button" value="Botón 2" onclick="escena_1()">
                               1 Escena
                             </button>
                           </div>
                           <div class="col-md-6">
-                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 1" onclick="escena_2()">
+                            <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="1 imagen de banner | 1 imagen lateral | 1 Descripción lateral" type="button" value="Botón 1" onclick="escena_2()">
                               2 Escena
                             </button>
                           </div>
@@ -141,13 +142,13 @@
                         <div class="row margin-bottom">
 
                           <div class="col-md-6">
-                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 3" onclick="escena_3()">
+                            <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="4 imagenes 360 con indicadores" type="button" value="Botón 3" onclick="escena_3()">
                               3 Escena
                             </button>
                           </div>
 
                           <div class="col-md-6">
-                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" value="Botón 3" onclick="escena_4()">
+                            <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="6 imagenes 360 con indicadores" type="button" value="Botón 3" onclick="escena_4()">
                               4 Escena
                             </button>
                           </div>

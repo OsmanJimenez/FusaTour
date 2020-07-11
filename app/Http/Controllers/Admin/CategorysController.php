@@ -54,7 +54,7 @@ class CategorysController extends Controller
 
         $Category->save();
 
-        return redirect()->route('admin.categorys.index', compact('categorys'))->with('flash', 'Tu publicación a sido guardada');
+        return redirect()->route('admin.categorys.index', compact('categorys'))->with('flash', 'La categoria a sido guardada');
     }
 
     public function destroy(Category $Category)
@@ -63,6 +63,6 @@ class CategorysController extends Controller
 
         return redirect()
             ->route('admin.categorys.index')
-            ->with('flash', 'Tu publicación a sido eliminada');
+            ->with('flash', 'La categoria a sido eliminada');
     }
 }

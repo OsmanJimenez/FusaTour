@@ -53,7 +53,7 @@ class TagsController extends Controller
 
         $Tag->save();
 
-        return redirect()->route('admin.tags.index', compact('tags'))->with('flash', 'Tu publicación a sido guardada');
+        return redirect()->route('admin.tags.index', compact('tags'))->with('flash', 'La actividad a sido guardada');
     }
 
     public function destroy(Tag $Tag)
@@ -62,6 +62,6 @@ class TagsController extends Controller
 
         return redirect()
             ->route('admin.tags.index')
-            ->with('flash', 'Tu publicación a sido eliminada');
+            ->with('flash', 'La actividad a sido eliminada');
     }
 }

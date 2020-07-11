@@ -90,15 +90,15 @@
         <div class="modal-body">
           <div class="form-group">
             <label>Nombre:</label>
-            <input name="name" class="form-control" placeholder="Ingresa aqui el nombre del usuario">
+            <input name="name" class="form-control" placeholder="Ingresa aqui el nombre del usuario" required>
           </div>
           <div class="form-group">
             <label>Correo Electronico:</label>
-            <input name="email" class="form-control" placeholder="Ingresa aqui el correo del usuario">
+            <input name="email" class="form-control" placeholder="Ingresa aqui el correo del usuario" required>
           </div>
           <div class="form-group">
             <label>Contraseña:</label>
-            <input name="password" class="form-control" placeholder="Ingresa aqui la contraseña del usuario">
+            <input name="password" type="password" class="form-control" placeholder="Ingresa aqui la contraseña del usuario" required>
           </div>
         </div>
         <div class="modal-footer">

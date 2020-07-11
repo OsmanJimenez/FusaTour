@@ -29,7 +29,7 @@ class UsersController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
-        return redirect()->route('admin.users.edit', $User);
+        return redirect()->route('admin.users.index', $User)->with('flash', 'Se ha agregado el usuario correctamente');
     }
 
     public function edit(User $User)
@@ -54,7 +54,7 @@ class UsersController extends Controller
 
         $User->save();
 
-        return redirect()->route('admin.users.index', compact('users'))->with('flash', 'Tu publicación a sido guardada');
+        return redirect()->route('admin.users.index', compact('users'))->with('flash', 'El usuario a sido guardado');
     }
 
     public function destroy(User $User)
@@ -63,6 +63,6 @@ class UsersController extends Controller
 
         return redirect()
             ->route('admin.users.index')
-            ->with('flash', 'Tu publicación a sido eliminada');
+            ->with('flash', 'El usuario a sido eliminada');
     }
 }
