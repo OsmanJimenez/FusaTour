@@ -51,7 +51,7 @@ class CategorysController extends Controller
 
         $Category->name = $request->get('name');
         $Category->urlimg = $name;
-
+        $Category->frase = $request->get('frase');
         $Category->save();
 
         return redirect()->route('admin.categorys.index', compact('categorys'))->with('flash', 'La categoria a sido guardada');

@@ -45,6 +45,12 @@
           </div>
           <div class="col-md-12">
             <div class="form-group">
+              <label>Frase</label>
+              <input name="frase" value="{{ old('frase', $Category->frase) }}" class="form-control" placeholder="Ingresa aqui la frase de la categoria" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
               <button type="submit" class="btn btn-outline-primary float-right">Agregar</button>
             </div>
           </div>

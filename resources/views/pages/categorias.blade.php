@@ -17,7 +17,7 @@
               </a>
             </div>
             <div class="card-content">
-              <p>Donde la magia surge.</p>
+              <p>{{ $category->frase }}</p>
             </div>
           </div>
         </div>
