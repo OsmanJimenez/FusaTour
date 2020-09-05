@@ -49,8 +49,11 @@ class UsuarioController extends Controller
             $file->move(public_path() . '/images/', $name);
         }
 
+        if ($request->hasFile('urlimg')) {
+            $User->avatar = $name;
+        }
+
         $User->id = \Auth::user()->id;
-        $User->avatar = $name;
         $User->name = $request->get('name');
         $User->email = $request->get('email');
         $User->password = Hash::make($request->get('password'));

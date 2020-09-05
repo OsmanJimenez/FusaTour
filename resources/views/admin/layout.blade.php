@@ -200,7 +200,7 @@
   <!-- AdminLTE for demo purposes -->
   <script src="../../adminlts/js/demo.js"></script>
   <!-- Summernote -->
-  <script src="../../adminlts/plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="../../adminlts/plugins/summernote/summernote-bs4.js"></script>
   <!-- DropZone -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/min/dropzone.min.js"></script>
   <!-- SweetAlert2 -->

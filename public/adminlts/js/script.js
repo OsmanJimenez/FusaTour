@@ -201,6 +201,31 @@ function escena_3() {
     document.getElementById('escena').value = '3_Escena';
 }
 
+function escena_5() {
+    color_1.style.display = 'none';
+    input_1.style.display = 'inline';
+    input_2.style.display = 'none';
+    input_3.style.display = 'none';
+    input_4.style.display = 'none';
+    input_5.style.display = 'none';
+    input_6.style.display = 'none';
+    input_7.style.display = 'none';
+
+    label_1.style.display = 'inline';
+    label_2.style.display = 'none';
+    label_3.style.display = 'none';
+    label_4.style.display = 'none';
+    label_5.style.display = 'none';
+    label_7.style.display = 'none';
+
+    div_1.style.display = 'block';
+    div_2.style.display = 'none';
+    div_3.style.display = 'none';
+    div_4.style.display = 'none';
+
+    document.getElementById('escena').value = '5_Escena';
+}
+
 function escena_4() {
     color_1.style.display = 'none';
     input_1.style.display = 'inline';

@@ -54,9 +54,12 @@
                   {{ old('body', $post->body) }}
                   </textarea>
                 </div>
+
+    
+
               </div>
             </div>
-
+            
           </div>
 
           <div class="col-md-4">
@@ -141,13 +144,19 @@
                         <label id="labelu" class="custom-label">360</label>
                         <div class="row margin-bottom">
 
-                          <div class="col-md-6">
+                        <div class="col-md-4">
+                            <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="1 imagen 360" type="button" value="Botón 3" onclick="escena_5()">
+                              1 Escena
+                            </button>
+                          </div>
+
+                          <div class="col-md-4">
                             <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="4 imagenes 360 con indicadores" type="button" value="Botón 3" onclick="escena_3()">
                               3 Escena
                             </button>
                           </div>
 
-                          <div class="col-md-6">
+                          <div class="col-md-4">
                             <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="tooltip" data-html="true" title="6 imagenes 360 con indicadores" type="button" value="Botón 3" onclick="escena_4()">
                               4 Escena
                             </button>
@@ -240,6 +249,24 @@
   </div>
 
 </section>
+
+<script>
+
+$('#summernote').summernote({
+  toolbar: [
+  ['style', ['style']],
+  ['font', ['bold', 'underline', 'clear']],
+  ['fontname', ['fontname']],
+  ['color', ['color']],
+  ['para', ['ul', 'ol', 'paragraph']],
+  ['table', ['table']],
+  ['insert', ['link', 'picture', 'video']],
+  ['view', ['fullscreen', 'codeview']],
+],
+});
+
+</script>
+
 
 
 @stop

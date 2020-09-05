@@ -17,6 +17,10 @@
       <div class="col s12">
 
         <h5 class="title">{{ $post->title }}</h5>
+
+        
+
+
         <a id="aumentar" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-greater-than"></i></a>
           <a id="disminuir" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-less-than"></i></a>
           <a id="reset" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-equal"></i></a>
@@ -41,7 +45,7 @@
       <div class="col s12">
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Ubicación </h5>
-          <iframe src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" allowfullscreen>
+          <iframe src="{{ $post->ubicacion }}" frameborder="0" class="iframe" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" style="height: 300px; width: 100%;" >
           </iframe>
         </div>
 
@@ -294,6 +298,14 @@
           </a-scene>
         </div>
 
+        @elseif($post->escena_vr =='5_Escena')
+        <div class="col s12 pad-0">
+          <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
+          <a-scene background="color: #ECECEC" style="height: 300px; width: 100%;" embedded>
+            <a-sky src="/images/{{ $post->vrimg_1 }}" rotation="0 -130 0"></a-sky>
+          </a-scene>
+        </div>
+
         @elseif($post->escena_vr =='4_Escena')
         <div class="col s12 pad-0">
           <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
@@ -357,8 +369,8 @@
       <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
       <div class="row">
 
-        <form action="{{ route('create_comment', ['post' => $post->url ]) }}" method="POST">
-          {{ csrf_field() }}
+        <form enctype="multipart/form-data" files="true"  action="{{ route('create_comment', ['post' => $post->url ]) }}" method="POST">
+          {{ csrf_field() }} {{ method_field('PUT') }}
           <div class="input-field col s12 estrella center-align">
             <p class="clasificacion">
               <input name="point" id="radio5" type="radio" name="estrellas" value="5">
@@ -372,13 +384,27 @@
               <input name="point" id="radio1" type="radio" name="estrellas" value="1">
               <label for="radio1">&#9733;</label>
             </p>
-          </div>
-
-          <div class="input-field col s12">
+          </div>         
+          
+          <div class="input-field col s10">
+          
             <textarea name="comment" id="textarea-normal" class="materialize-textarea validate"></textarea>
             <label for="textarea-normal">Comentario</label>
             <span class="helper-text" data-error="Porfavor ingrese un comentario" data-success=""></span>
           </div>
+
+          <div class="file-field col s2 input-field ">
+              <div class="btn waves-effect waves-light pink bg-primary">
+                <i class="mdi mdi-camera-party-mode mdi-transition1"></i>
+                <input type="file" name="urlimg">
+              </div>
+              <div class="file-path-wrapper ocultar">
+                <input class="file-path validate ocultar" type="text">
+              </div>
+          </div>
+
+            
+    
           <textarea class="ocultar" name="id_post" for="textarea-normal">{{$post->id}}</textarea>
 
           <button class="waves-effect waves-light btn bg-primary right">Enviar</button>
@@ -435,10 +461,11 @@
 
           <li class="collection-item avatar">
 
-            <a href="#" class='chatlink waves-effect'>
+            <a class='chatlink waves-effect'>
               <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->user->avatar }}" title="/images/{{ $comment->user->avatar }}" class="circle">
               <span class="title">{{ $comment->user->name }}</span>
               <p>{{ $comment->text }}</p>
+              
             </a>
 
             <div class="secondary-content">
@@ -448,6 +475,13 @@
             <div class="secondary-content">
               <p>{{ $comment->point }} <label for="radio1">&#9733;</label></p>
             </div>
+
+            <div class="blog-img-wrap" style="padding-left: 20px; padding-right: 20px;">
+                <a class="img-wrap"  data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
+                  <img loading="lazy" class="z-depth-1 img_banner" src="/images/{{ $comment->img_comment }}" onerror="this.style.display='none';" alt="">
+                </a>
+              </div>
+
           </li>
           @endforeach
         </ul>
@@ -455,6 +489,13 @@
     </div>
   </div>
   <div class="spacer"></div>
+
+<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
+<script type="text/javascript">
+
+
+  </script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+
 
 </div>
 @endsection

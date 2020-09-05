@@ -29,7 +29,6 @@ var filesToCache = [
 
     '/index.php',
     '/categorias',
-    '/descubrir',
     '/actividades',
     '/escaner',
 
