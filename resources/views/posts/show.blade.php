@@ -18,9 +18,6 @@
 
         <h5 class="title">{{ $post->title }}</h5>
 
-        
-
-
         <a id="aumentar" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-greater-than"></i></a>
           <a id="disminuir" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-less-than"></i></a>
           <a id="reset" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-equal"></i></a>

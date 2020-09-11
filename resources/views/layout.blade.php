@@ -203,9 +203,13 @@
         height: 200,
       });
 
+      $(".modal").modal();
     });
   </script>
   <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+  
+<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
 
   <script type="text/javascript">
     // this one is jut to wait for the page to load
