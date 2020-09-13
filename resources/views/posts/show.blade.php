@@ -458,7 +458,7 @@
 
           <li class="collection-item avatar">
 
-            <a class='chatlink waves-effect'>
+            <a href="/perfil/{{$comment->user->id}}" class='chatlink waves-effect'>
               <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->user->avatar }}" title="/images/{{ $comment->user->avatar }}" class="circle">
               <span class="title">{{ $comment->user->name }}</span>
               <p>{{ $comment->text }}</p>
