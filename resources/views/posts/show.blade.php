@@ -15,8 +15,10 @@
     <div class="row ui-mediabox blogs bot-0">
 
       <div class="col s12">
-
-        <h5 class="title">{{ $post->title }}</h5>
+      
+        <h5 class="title">{{ $post->title }} 
+          
+        </h5>
 
         <a id="aumentar" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-greater-than"></i></a>
           <a id="disminuir" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-less-than"></i></a>
@@ -31,7 +33,13 @@
             {!! $post->body !!}
           </p>
           </div>
-        
+          <div class="col s12">
+          <h7 class="right">No olvides Compartir: 
+            <a id="shareButton" class=" btn-floating pulse green lighten-2 ">
+              <i class="mdi mdi-share-variant"></i>
+            </a>
+          </h7>
+          </div>
         <h5 class="title">Actividades a practicar:</h5>
             @foreach ($post->tags as $tag )
             <a class="small" href="/actividades/{{ $tag->name }}">
@@ -489,7 +497,18 @@
 
 <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
 <script type="text/javascript">
-
+/* Recuperamos el boton */
+shareButton = document.getElementById("shareButton");
+/* Capturamos el evento CLICK */
+shareButton.addEventListener('click', function(event){
+  /* Mostramos la opcion nativa de compartir si se navega desde Android */
+  if (navigator.userAgent.match(/Android/i)) {
+    /* Use the Web Share API from Chrome 61+ */
+ 		navigator.share({title: 'Descubre Fusagasugá de una manera diferente con FusaTour', url: 'https://fusatour.site/blog/{{ $post->url }} '}).then(console.log('Share successful'));
+	}
+  /* Caso contrario mostramos mensaje de alerta */
+  else { alert('Para activar la opcion nativa de compartir debes utilizar Chrome en Android') }
+});
 
   </script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
