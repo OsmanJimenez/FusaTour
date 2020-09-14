@@ -28,7 +28,7 @@ function getCurrMonth(){
   return curMonth;
 }
 var month_name = function(query){
-mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+mlist = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
   return mlist[query];
 };
 var today = new Date();

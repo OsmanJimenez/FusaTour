@@ -17,6 +17,7 @@
         "laravel/socialite": "^4.4",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "laraveles/spanish": "^1.5",
         "pragmarx/tracker": "^4.0",
         "silviolleite/laravelpwa": "^1.0",
         "spatie/laravel-permission": "^3.11"
