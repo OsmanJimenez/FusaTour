@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-  <!-- HEAD -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title> @yield('meta-title', config('app.name')) FusaTour</title>
@@ -17,18 +16,8 @@
   <link href="/assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/assets/fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <!-- CORE CSS FRAMEWORK - END -->
-
-  <!-- DROPZONJS CSS FRAMEWORK - START -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/basic.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <!-- DROPZONJS CSS FRAMEWORK - END -->
-
-  <!-- CORE CSS TEMPLATE - START  -->
   <link href="/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
   <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
-  <!-- CORE CSS TEMPLATE - END  -->
-
-  <!-- CORE CSS TEMPLATE - START  -->
   <link href="/assets/css/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <!-- CORE CSS TEMPLATE - END  -->
 
@@ -37,53 +26,6 @@
   <script src="/assets/js/aframe-extras.min.js"></script>
   <!-- AFRAME - END -->
 
-
-  <script>
-      AFRAME.registerComponent('hotspots',{
-        init:function(){
-            this.el.addEventListener('reloadspots',function(evt){
-            
-            //get the entire current spot group and scale it to 0
-            var currspotgroup=document.getElementById(evt.detail.currspots);
-            currspotgroup.setAttribute("scale","0 0 0");
-            
-            //get the entire new spot group and scale it to 1
-            var newspotgroup=document.getElementById(evt.detail.newspots);
-            newspotgroup.setAttribute("scale","1 1 1");
-          });
-        }
-      });
-      AFRAME.registerComponent('spot',{
-        schema:{
-          linkto:{type:"string",default:""},
-          spotgroup:{type:"string",default:""},
-        },
-        init:function(){
-          
-          //add image source of hotspot icon
-          this.el.setAttribute("src","#hotspot");
-          //make the icon look at the camera all the time
-          this.el.setAttribute("look-at","#cam");
-          
-          var data=this.data;
-          
-          this.el.addEventListener('click',function(){
-            //set the skybox source to the new image as per the spot
-            var sky=document.getElementById("skybox");
-            sky.setAttribute("src",data.linkto);
-            
-            var spotcomp=document.getElementById("spots");
-            var currspots=this.parentElement.getAttribute("id");
-            //create event for spots component to change the spots data
-            spotcomp.emit('reloadspots',{newspots:data.spotgroup,currspots:currspots});
-          });
-        }
-      });
-
-    
-    </script>
-
-  <!-- END HEAD -->
   @laravelPWA
 </head>
 
@@ -182,6 +124,8 @@
   <script src="/assets/js/jquery-2.2.4.min.js"></script>
   <script src="/assets/js/materialize.js"></script>
   <script src="/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="/assets/js/init.js"></script>
+  <script src="/assets/js/scripts.js"></script>
   <!-- CORE JS FRAMEWORK - END -->
 
   <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
@@ -205,70 +149,95 @@
 
       $(".modal").modal();
     });
-  </script>
-  <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
 
-  
-<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
+    AFRAME.registerComponent('hotspots',{
+          init:function(){
+              this.el.addEventListener('reloadspots',function(evt){
+              
+              //get the entire current spot group and scale it to 0
+              var currspotgroup=document.getElementById(evt.detail.currspots);
+              currspotgroup.setAttribute("scale","0 0 0");
+              
+              //get the entire new spot group and scale it to 1
+              var newspotgroup=document.getElementById(evt.detail.newspots);
+              newspotgroup.setAttribute("scale","1 1 1");
+            });
+          }
+        });
+        AFRAME.registerComponent('spot',{
+          schema:{
+            linkto:{type:"string",default:""},
+            spotgroup:{type:"string",default:""},
+          },
+          init:function(){
+            
+            //add image source of hotspot icon
+            this.el.setAttribute("src","#hotspot");
+            //make the icon look at the camera all the time
+            this.el.setAttribute("look-at","#cam");
+            
+            var data=this.data;
+            
+            this.el.addEventListener('click',function(){
+              //set the skybox source to the new image as per the spot
+              var sky=document.getElementById("skybox");
+              sky.setAttribute("src",data.linkto);
+              
+              var spotcomp=document.getElementById("spots");
+              var currspots=this.parentElement.getAttribute("id");
+              //create event for spots component to change the spots data
+              spotcomp.emit('reloadspots',{newspots:data.spotgroup,currspots:currspots});
+            });
+          }
+        });
 
-  <script type="text/javascript">
-    // this one is jut to wait for the page to load
+        // this one is jut to wait for the page to load
     document.addEventListener('DOMContentLoaded', () => {
 
-      const themeStylesheet = document.getElementById('theme');
-      const storedTheme = localStorage.getItem('theme');
+    const themeStylesheet = document.getElementById('theme');
+    const storedTheme = localStorage.getItem('theme');
 
-      if (storedTheme) {
-        themeStylesheet.href = storedTheme;
+    if (storedTheme) {
+      themeStylesheet.href = storedTheme;
+    }
+
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+      // if it's light -> go dark
+      if (themeStylesheet.href.includes('2')) {
+        themeStylesheet.href = '/assets/css/style-dark.css';
+      } else {
+        // if it's dark -> go light
+        themeStylesheet.href = '/assets/css/style-2.css';
       }
-
-      const themeToggle = document.getElementById('theme-toggle');
-
-      themeToggle.addEventListener('click', () => {
-        // if it's light -> go dark
-        if (themeStylesheet.href.includes('2')) {
-          themeStylesheet.href = '/assets/css/style-dark.css';
-        } else {
-          // if it's dark -> go light
-          themeStylesheet.href = '/assets/css/style-2.css';
-        }
-        // save the preference to localStorage
-        localStorage.setItem('theme', themeStylesheet.href)
-      })
+      // save the preference to localStorage
+      localStorage.setItem('theme', themeStylesheet.href)
     })
-  </script>
+    });
 
-  <!-- CORE TEMPLATE JS - START -->
-  <script src="/assets/js/init.js"></script>
-  <script src="/assets/js/scripts.js"></script>
-  <!-- END CORE TEMPLATE JS - END -->
-
-  <!-- PRELOADER - START -->
-  <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
       $('.preloader-background').delay(10).fadeOut('slow');
     });
-  </script>
-  <!-- PRELOADER - END -->
 
-  <script type="text/javascript">
     var fontSize = 1,
     factor = 0.1;
 
-$('#aumentar').on('click', function() {
-  fontSize = fontSize + factor;
-  $('.contenedor').css( {"font-size": fontSize + 'em'});
-});
+    $('#aumentar').on('click', function() {
+      fontSize = fontSize + factor;
+      $('.contenedor').css( {"font-size": fontSize + 'em'});
+    });
 
-$('#disminuir').on('click', function() {
-  fontSize = fontSize - factor;
-  $('.contenedor').css( {"font-size": fontSize + 'em'});
-});
+    $('#disminuir').on('click', function() {
+      fontSize = fontSize - factor;
+      $('.contenedor').css( {"font-size": fontSize + 'em'});
+    });
 
-$('#reset').on('click', function() {
-  fontSize = 1;
-  $('.contenedor').css( {"font-size": fontSize + 'em'});
-});
+    $('#reset').on('click', function() {
+      fontSize = 1;
+      $('.contenedor').css( {"font-size": fontSize + 'em'});
+    });
+
   </script>
 
 </body>

@@ -10,35 +10,27 @@
 <div class="redondeado"></div>
 
 <div class="container">
-
   <div class="section">
     <div class="row ui-mediabox blogs bot-0">
-
       <div class="col s12">
-      
-        <h5 class="title">{{ $post->title }} 
-          
-        </h5>
-
+        <h5 class="title">{{ $post->title }}</h5>
         <a id="aumentar" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-greater-than"></i></a>
-          <a id="disminuir" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-less-than"></i></a>
-          <a id="reset" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-equal"></i></a>
+        <a id="disminuir" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-less-than"></i></a>
+        <a id="reset" class="title waves-effect waves-circle navicon right  show-on-large pulse"><i class="mdi mdi-code-equal"></i></a>
         <span class="small date">{{ $post->published_at->format('M d') }}</span>
         <span class="small tags">
           <a class="small" href="#!">{{ $post->category->name }}</a>
         </span>
-          
+      
           <div class="contenedor">
-            <p>
-            {!! $post->body !!}
-          </p>
+            <p>{!! $post->body !!}</p>
           </div>
           <div class="col s12">
-          <h7 class="right">No olvides Compartir: 
-            <a id="shareButton" class=" btn-floating pulse green lighten-2 ">
-              <i class="mdi mdi-share-variant"></i>
-            </a>
-          </h7>
+            <h7 class="right">No olvides Compartir: 
+              <a id="shareButton" class=" btn-floating pulse green lighten-2 ">
+                <i class="mdi mdi-share-variant"></i>
+              </a>
+            </h7>
           </div>
         <h5 class="title">Actividades a practicar:</h5>
             @foreach ($post->tags as $tag )
@@ -361,10 +353,8 @@
           </a-scene>
         </div>
         @endif
-
       </div>
       <div class="divider"></div>
-
     </div>
   </div>
 
@@ -421,7 +411,6 @@
   </div>
   @else
   
-
   <h5 class="bot-20 sec-tit  ">Califica este Lugar </h5>
   <div class="col s12 center-align">
     <a href="{{ route('register') }}" class="waves-effect waves-light btn-large button-blue"><i class="mdi mdi-bookmark-plus mdi-transition1"></i>Registrarse</a>
@@ -431,24 +420,19 @@
   <div class="row ">
     <div class="col s12 pad-0">
       <h5 class="bot-20 sec-tit  ">Calificaciones y Reseñas </h5>
-
       <div class="row">
         <style>
           input[type="radio"] {
             display: none;
             /*position: absolute;top: -1000em;*/
           }
-
           .clasificacion2 label {
             color: #ffd32a;
           }
-
           .clasificacion {
             direction: rtl;
             unicode-bidi: bidi-override;
           }
-
-
           .estrella2 label {
             font-size: 25vw;
           }
@@ -459,34 +443,25 @@
           </p>
         </div>
 
-
         <ul class="collection contacts z-depth-1">
           @foreach ($post->comments as $comment)
-
-
           <li class="collection-item avatar">
-
             <a href="/perfil/{{$comment->user->id}}" class='chatlink waves-effect'>
               <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->user->avatar }}" title="/images/{{ $comment->user->avatar }}" class="circle">
               <span class="title">{{ $comment->user->name }}</span>
-              <p>{{ $comment->text }}</p>
-              
+              <p>{{ $comment->text }}</p>  
             </a>
-
             <div class="secondary-content">
               <p>{{ $comment->point }} <label for="radio1">&#9733;</label></p>
             </div>
-
             <div class="secondary-content">
               <p>{{ $comment->point }} <label for="radio1">&#9733;</label></p>
             </div>
-
             <div class="blog-img-wrap" style="padding-left: 20px; padding-right: 20px;">
                 <a class="img-wrap"  data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
                   <img loading="lazy" class="z-depth-1 img_banner" src="/images/{{ $comment->img_comment }}" onerror="this.style.display='none';" alt="">
                 </a>
               </div>
-
           </li>
           @endforeach
         </ul>
@@ -495,23 +470,15 @@
   </div>
   <div class="spacer"></div>
 
-<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-<script type="text/javascript">
-/* Recuperamos el boton */
-shareButton = document.getElementById("shareButton");
-/* Capturamos el evento CLICK */
-shareButton.addEventListener('click', function(event){
-  /* Mostramos la opcion nativa de compartir si se navega desde Android */
-  if (navigator.userAgent.match(/Android/i)) {
-    /* Use the Web Share API from Chrome 61+ */
- 		navigator.share({title: 'Descubre Fusagasugá de una manera diferente con FusaTour', url: 'https://fusatour.site/blog/{{ $post->url }} '}).then(console.log('Share successful'));
-	}
-  /* Caso contrario mostramos mensaje de alerta */
-  else { alert('Para activar la opcion nativa de compartir debes utilizar Chrome en Android') }
-});
-
-  </script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
-
-
+  <script type="text/javascript">
+    shareButton = document.getElementById("shareButton");
+    shareButton.addEventListener('click', function(event){
+      
+      if (navigator.userAgent.match(/Android/i)) {
+        navigator.share({title: 'Descubre Fusagasugá de una manera diferente con FusaTour', url: 'https://fusatour.site/blog/{{ $post->url }} '}).then(console.log('Share successful'));
+      }
+      else { alert('Para activar la opcion nativa de compartir debes utilizar Chrome en Android') }
+    });
+  </script>
 </div>
 @endsection

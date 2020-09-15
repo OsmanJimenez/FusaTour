@@ -18,6 +18,7 @@ var filesToCache = [
     '/assets/css/style.css',
     '/assets/css/style-2.css',
     '/assets/css/styles.css',
+    
     '/assets/js/aframe.js',
     '/assets/js/aframe-extras.min.js',
 
@@ -27,11 +28,11 @@ var filesToCache = [
     '/assets/js/init.js',
     '/assets/js/scripts.js',
 
+
     '/index.php',
     '/categorias',
     '/actividades',
     '/escaner',
-
 
     '/images/1592692339Icon_Arte.jpg',
     '/images/1592692368Icon_Avistamiento.jpg',
@@ -87,19 +88,6 @@ self.addEventListener("install", event => {
 });
 
 
-// Clear cache on activate
-self.addEventListener('activate', event => {
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames
-                    .filter(cacheName => (cacheName.startsWith("pwa-")))
-                    .filter(cacheName => (cacheName !== staticCacheName))
-                    .map(cacheName => caches.delete(cacheName))
-            );
-        })
-    );
-});
 
 
   // Serve from Cache
@@ -115,3 +103,11 @@ self.addEventListener('activate', event => {
     )
 });
 
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      fetch(event.request)
+      .catch(function() {
+        return caches.match(event.request);
+      })
+    );
+  });
