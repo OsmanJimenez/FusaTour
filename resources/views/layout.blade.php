@@ -12,14 +12,14 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- CORE CSS FRAMEWORK - START -->
-  <link href="/assets/css/preloader.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="/assets/fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
   <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
   <link href="/assets/css/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <!-- CORE CSS TEMPLATE - END  -->
+
+  <link href="/assets/fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
   <!-- AFRAME - START -->
   <script src="/assets/js/aframe.js"></script>
@@ -121,11 +121,9 @@
   <!--  TABS - END -->
 
   <!-- CORE JS FRAMEWORK - START -->
-  <script src="/assets/js/jquery-2.2.4.min.js"></script>
+  <script src="/assets/js/jquery-3.5.1.min.js"></script>
   <script src="/assets/js/materialize.js"></script>
   <script src="/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-  <script src="/assets/js/init.js"></script>
-  <script src="/assets/js/scripts.js"></script>
   <!-- CORE JS FRAMEWORK - END -->
 
   <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
