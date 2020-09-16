@@ -84,6 +84,23 @@ var filesToCache = [
     '/images/Monumento_Jardinera.webp',
     '/images/1593629929PANO_20200625_082807-01-01.webp',
     '/images/1593628315Monumento_Jorge_Eliecer_Gaitan-01 - copia.webp',
+
+    '/images/flecha.png',
+
+    '/images/15936306701.jpg',
+    '/images/15936306702.jpg',
+    '/images/15936306703.jpg',
+    '/images/15936306704.jpg',
+    '/images/15936306705.jpg',
+    '/images/15936306706.jpg',
+
+    '/images/1597154617Cultura_360.jpg',
+    '/images/1596813683Plaza_360.jpg',
+
+    '/images/15936309601.jpg',
+    '/images/15936309602.jpg',
+    '/images/15936309603.jpg',
+    '/images/15936309604.jpg',
 ]
 
 
