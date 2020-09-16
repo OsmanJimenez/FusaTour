@@ -18,7 +18,7 @@
     </div>
   </div>
   @if(isset($urlimg))
-  <div class="parallax img-wrap"><img loading="lazy" src="/images/{{ $urlimg }}" alt="Background image"></div>
+  <div class="parallax img-wrap"><img loading="lazy" src="/images/{{ $urlimg }}" alt="Fusagasugá"></div>
   @endif
 </div>
 <div class="prueba">
@@ -33,7 +33,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal1">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Datos.jpg" alt="">
+            <img class="z-depth-1" src="/images/historias/Datos.webp" alt="">
           </h2>
         </a>
       </div>
@@ -43,7 +43,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal2">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Eventos.jpg" alt="">
+            <img class="z-depth-1" src="/images/historias/Eventos.webp" alt="">
           </h2>
         </a>
       </div>
@@ -53,7 +53,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal3">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Simbolos.jpg" alt="">
+            <img class="z-depth-1" src="/images/historias/Simbolos.webp" alt="">
           </h2>
         </a>
       </div>
@@ -63,7 +63,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal4">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Comida.jpg" alt="">
+            <img class="z-depth-1" src="/images/historias/Comida.webp" alt="">
           </h2>
         </a>
       </div>
@@ -73,7 +73,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal5">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Clima.jpg" alt="">
+            <img class="z-depth-1" src="/images/historias/Clima.webp" alt="">
           </h2>
         </a>
       </div>
@@ -105,42 +105,42 @@
           <div class="row ui-mediabox blogs bot-0">
               <div class="col s12">
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Desfile_Caballos.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Desfile_Caballos.webp">
                   </a>
                   <h5 class="title">DESFILE CABALLÍSTICO</h5>
                   <span class="small date">25 May 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Expofusa.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Expofusa.webp">
                   </a>
                   <h5 class="title">EXPOFUSA</h5>
                   <span class="small date">1 Jun 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Rumba_Criolla.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Rumba_Criolla.webp">
                   </a>
                   <h5 class="title">Festival de la Rumba Criolla</h5>
                   <span class="small date">5 Sep 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/interpretes.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/interpretes.webp">
                   </a>
                   <h5 class="title">Festival Nacional de Interpretes</h5>
                   <span class="small date">10 Sep 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Agroindustrial.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Agroindustrial.webp">
                   </a>
                   <h5 class="title">Festival Floral y Agroindustrial</h5>
                   <span class="small date">7 Nov 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Navidad.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Navidad.webp">
                   </a>
                   <h5 class="title">Feria Navideña</h5>
                   <span class="small date">15 Dic 2020</span>
@@ -164,14 +164,14 @@
           <div class="row center">
             <div class="col s6 m6 l2">
               <div class="icon-block">
-                <img class="z-depth-1" src="/images/historias/Escudo.png" alt="">
+                <img class="z-depth-1" src="/images/historias/Escudo.webp" alt="">
                 <h6 class="center">Escudo</h6>
               </div>
             </div>
 
             <div class="col s6 m6 l2">
               <div class="icon-block">
-                <img class="z-depth-1" src="/images/historias/Bandera.png" alt="">
+                <img class="z-depth-1" src="/images/historias/Bandera.webp" alt="">
                 <h6 class="center">Bandera</h6>
               </div>
             </div>
@@ -190,7 +190,7 @@
           <div class="row ui-mediabox blogs bot-0">
               <div class="col s12">
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Comida_Tipica.jpg">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Comida_Tipica.webp">
                   </a>
                   <h5 class="title center">LA VARA</h5>
                   <div class="spacer"></div>                 
