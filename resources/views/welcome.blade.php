@@ -18,7 +18,7 @@
     </div>
   </div>
   @if(isset($urlimg))
-  <div class="parallax img-wrap"><img loading="lazy" src="/images/{{ $urlimg }}" alt="Fusagasugá"></div>
+  <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Fusagasugá"></div>
   @endif
 </div>
 <div class="prueba">
@@ -225,7 +225,7 @@
       <div class="col s12">
         <div class="blog-img-wrap">
           <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
-            <img loading="lazy" class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}">
+            <img class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}">
           </a>
         </div>
 
