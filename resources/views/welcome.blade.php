@@ -18,7 +18,7 @@
     </div>
   </div>
   @if(isset($urlimg))
-  <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Fusagasugá"></div>
+  <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Fusagasugá" style="transform: translate3d(-50%, 493.082px, 0px); opacity: 1;"></div>
   @endif
 </div>
 <div class="prueba">

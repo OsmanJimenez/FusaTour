@@ -481,4 +481,5 @@
     });
   </script>
 </div>
+
 @endsection

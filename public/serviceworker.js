@@ -2,6 +2,7 @@ var staticCacheName = "pwa-v";
 var filesToCache = [
     '/',
     '/offline',
+    '/blog/mural-raices',
     '/images/icons/icon-72x72.png',
     '/images/icons/icon-96x96.png',
     '/images/icons/icon-128x128.png',
@@ -132,15 +133,16 @@ self.addEventListener('activate', event => {
 
 
   // Serve from Cache
-  self.addEventListener("fetch", event => {
+  self.addEventListener('fetch', function(event) {
     event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                return response || fetch(event.request);
-            })
-            .catch(() => {
-                return caches.match('offline');
-            })
-    )
-});
-
+      caches.open('mysite-dynamic').then(function(cache) {
+        return cache.match(event.request).then(function(response) {
+          var fetchPromise = fetch(event.request).then(function(networkResponse) {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          })
+          return response || fetchPromise;
+        })
+      })
+    );
+  });
