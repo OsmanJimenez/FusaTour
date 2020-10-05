@@ -358,6 +358,7 @@
     </div>
   </div>
 
+
   @if (Auth::user())
   <div class="row ">
     <div class="col s12 pad-0">
