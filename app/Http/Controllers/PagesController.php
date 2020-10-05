@@ -14,8 +14,8 @@ class PagesController extends Controller
     {
         $posts = Post::latest('published_at')->get();
         return view('welcome', compact('posts'), [
-            'title' => "Fusagasuga",
-            'phrase' => "La ciudad jardin de Colombia",
+            'title' => "Fusagasugá",
+            'phrase' => "La ciudad jardín de Colombia",
             'urlimg' => "Fondo.jpg"
         ]);
     }

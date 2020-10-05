@@ -132,17 +132,15 @@ self.addEventListener('activate', event => {
 });
 
 
-  // Serve from Cache
-  self.addEventListener('fetch', function(event) {
-    event.respondWith(
-      caches.open('mysite-dynamic').then(function(cache) {
-        return cache.match(event.request).then(function(response) {
-          var fetchPromise = fetch(event.request).then(function(networkResponse) {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
+ // Serve from Cache
+ self.addEventListener("fetch", event => {
+  event.respondWith(
+      caches.match(event.request)
+          .then(response => {
+              return response || fetch(event.request);
           })
-          return response || fetchPromise;
-        })
-      })
-    );
-  });
+          .catch(() => {
+              return caches.match('offline');
+          })
+  )
+});
