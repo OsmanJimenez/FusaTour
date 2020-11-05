@@ -28,7 +28,7 @@
                 <ul class="collection contacts z-depth-1">
                     <li class="collection-item avatar">
                         <a class='chatlink waves-effect'>
-                            <img src="/images/{{ $comment->post->urlimg }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->post->urlimg }}" title="/images/{{ $comment->user->avatar }}" class="circle">
+                            <img src="/images/{{ $comment->post->urlimg }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->post->title }}" title="/images/{{ $comment->user->avatar }}" class="circle">
                             <span class="title">{{ $comment->post->title }}</span>
                             <p>{{ $comment->text }}</p>
                         </a>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="blog-img-wrap">
                             <a class="img-wrap" data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
-                                <img loading="lazy" style="border-radius: 0px" class="z-depth-1 img_banner" src="/images/{{ $comment->img_comment }}" onerror="this.style.display='none';" alt="">
+                                <img loading="lazy" style="border-radius: 0px" class="z-depth-1 img_banner" src="/images/{{ $comment->img_comment }}" onerror="this.style.display='none';" alt="FusaTour una nueva manera de conocer a Fusagasugá">
                             </a>
                         </div>
                     </li>

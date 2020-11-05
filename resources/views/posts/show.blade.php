@@ -5,7 +5,7 @@
 
 @section('content')
 
-<img class="img_presentation" src="/images/{{ $post->urlimg }}">
+<img class="img_presentation" src="/images/{{ $post->urlimg }}" alt="FusaTour {{ $post->urlimg }}" >
 
 <div class="redondeado"></div>
 
@@ -35,7 +35,7 @@
         <h5 class="title">Actividades a practicar:</h5>
             @foreach ($post->tags as $tag )
             <a class="small" href="/actividades/{{ $tag->name }}">
-              <img src="/images/{{ $tag->urlimg }}" alt="FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
+              <img src="/images/{{ $tag->urlimg }}" alt="FusaTour FusaTour {{ $tag->name }}" title="FusaTour {{ $tag->name }}" class="circle responsive-img min">
             </a>
             @endforeach
       </div>
@@ -259,11 +259,11 @@
           <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
           <a-scene background="color: #ECECEC" style="height: 300px; width: 100%;" embedded>
             <a-assets>
-              <img id="point1" src="/images/{{ $post->vrimg_1 }}" />
-              <img id="point2" src="/images/{{ $post->vrimg_2 }}" />
-              <img id="point3" src="/images/{{ $post->vrimg_3 }}" />
-              <img id="point4" src="/images/{{ $post->vrimg_4 }}" />
-              <img id="hotspot" src="/images/flecha.png" />
+              <img id="point1" src="/images/{{ $post->vrimg_1 }}" alt="FusaTour {{ $post->vrimg_1 }}" />
+              <img id="point2" src="/images/{{ $post->vrimg_2 }}" alt="FusaTour {{ $post->vrimg_2 }}"/>
+              <img id="point3" src="/images/{{ $post->vrimg_3 }}" alt="FusaTour {{ $post->vrimg_3 }}"/>
+              <img id="point4" src="/images/{{ $post->vrimg_4 }}" alt="FusaTour {{ $post->vrimg_4 }}"/>
+              <img id="hotspot" src="/images/flecha.png" alt="FusaTour Flecha"/>
 
             </a-assets>
 
@@ -308,14 +308,14 @@
           <h5 class="bot-20 sec-tit  ">Realidad Virtual </h5>
           <a-scene background="color: #ECECEC" style="height: 300px; width: 100%;" embedded>
             <a-assets>
-              <img id="point1" src="/images/{{ $post->vrimg_1 }}" />
-              <img id="point2" src="/images/{{ $post->vrimg_2 }}" />
-              <img id="point3" src="/images/{{ $post->vrimg_3 }}" />
-              <img id="point4" src="/images/{{ $post->vrimg_4 }}" />
-              <img id="point5" src="/images/{{ $post->vrimg_5 }}" />
-              <img id="point6" src="/images/{{ $post->vrimg_6 }}" />
+              <img id="point1" src="/images/{{ $post->vrimg_1 }}" alt="FusaTour {{ $post->vrimg_1 }}"/>
+              <img id="point2" src="/images/{{ $post->vrimg_2 }}" alt="FusaTour {{ $post->vrimg_2 }}"/>
+              <img id="point3" src="/images/{{ $post->vrimg_3 }}" alt="FusaTour {{ $post->vrimg_3 }}"/>
+              <img id="point4" src="/images/{{ $post->vrimg_4 }}" alt="FusaTour {{ $post->vrimg_4 }}"/>
+              <img id="point5" src="/images/{{ $post->vrimg_5 }}" alt="FusaTour {{ $post->vrimg_5 }}"/>
+              <img id="point6" src="/images/{{ $post->vrimg_6 }}" alt="FusaTour {{ $post->vrimg_6 }}" />
 
-              <img id="hotspot" src="/images/flecha.png" />
+              <img id="hotspot" src="/images/flecha.png" alt="FusaTour Flecha"/>
             </a-assets>
 
             <a-entity id="spots" hotspots>
@@ -435,7 +435,7 @@
             unicode-bidi: bidi-override;
           }
           .estrella2 label {
-            font-size: 25vw;
+            font-size: 15vw;
           }
         </style>
         <div class="input-field col s12 estrella2 center-align">
@@ -448,7 +448,7 @@
           @foreach ($post->comments as $comment)
           <li class="collection-item avatar">
             <a href="/perfil/{{$comment->user->id}}" class='chatlink waves-effect'>
-              <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="/images/{{ $comment->user->avatar }}" title="/images/{{ $comment->user->avatar }}" class="circle">
+              <img src="/images/{{ $comment->user->avatar }}" onerror="this.src='/images/user.png';" alt="FusaTour /images/{{ $comment->user->avatar }}" title="/images/{{ $comment->user->avatar }}" class="circle">
               <span class="title">{{ $comment->user->name }}</span>
               <p>{{ $comment->text }}</p>  
             </a>
@@ -460,7 +460,7 @@
             </div>
             <div class="blog-img-wrap" style="padding-left: 20px; padding-right: 20px;">
                 <a class="img-wrap"  data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
-                  <img loading="lazy" class="z-depth-1 img_banner" src="/images/{{ $comment->img_comment }}" onerror="this.style.display='none';" alt="">
+                  <img loading="lazy" class="z-depth-1 img_banner" src="/images/{{ $comment->img_comment }}" onerror="this.style.display='none';" alt="FusaTour {{ $comment->img_comment }}">
                 </a>
               </div>
           </li>

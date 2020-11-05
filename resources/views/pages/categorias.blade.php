@@ -10,7 +10,7 @@
         <div class="col s12 pad-0">
           <div class="z-depth-3 card">
             <div class="card-image">
-              <img loading="lazy" class="img_tall" src="/images/{{ $category->urlimg }}">
+              <img loading="lazy" class="img_tall" src="/images/{{ $category->urlimg }}" alt="FusaTour {{ $category->name }}">
               <span class="card-title">{{ $category->name }}</span>
               <a href="/categorias/{{ $category->name }}" class="btn-floating halfway-fab waves-effect waves-light primary-bg">
                 <i class="mdi mdi-plus">Ver</i>

@@ -18,7 +18,9 @@
     </div>
   </div>
   @if(isset($urlimg))
-  <div class="parallax img-wrap"><img src="/images/{{ $urlimg }}" alt="Fusagasugá" style="transform: translate3d(-50%, 493.082px, 0px); opacity: 1;"></div>
+  <div class="parallax img-wrap">
+    <img src="/images/{{ $urlimg }}" alt="FusaTour Fusagasugá" style="transform: translate3d(-50%, 493.082px, 0px); opacity: 1;">
+  </div>
   @endif
 </div>
 <div class="prueba">
@@ -33,7 +35,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal1">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Datos.webp" alt="">
+            <img class="z-depth-1" src="/images/historias/Datos.webp" alt="FusaTour Datos Fusagasugá">
           </h2>
         </a>
       </div>
@@ -43,7 +45,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal2">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Eventos.webp" alt="">
+            <img class="z-depth-1" src="/images/historias/Eventos.webp" alt="FusaTour Eventos Fusagasugá">
           </h2>
         </a>
       </div>
@@ -53,7 +55,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal3">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Simbolos.webp" alt="">
+            <img class="z-depth-1" src="/images/historias/Simbolos.webp" alt="FusaTour Simbolos Fusagasugá">
           </h2>
         </a>
       </div>
@@ -63,7 +65,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal4">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Comida.webp" alt="">
+            <img class="z-depth-1" src="/images/historias/Comida.webp" alt="FusaTour Comida Fusagasugá">
           </h2>
         </a>
       </div>
@@ -73,7 +75,7 @@
       <div class="icon-block circular">
         <a class="modal-trigger" href="#modal5">
           <h2 class="cero">
-            <img class="z-depth-1" src="/images/historias/Clima.webp" alt="">
+            <img class="z-depth-1" src="/images/historias/Clima.webp" alt="FusaTour Clima Fusagasugá">
           </h2>
         </a>
       </div>
@@ -105,42 +107,42 @@
           <div class="row ui-mediabox blogs bot-0">
               <div class="col s12">
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Desfile_Caballos.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Desfile_Caballos.webp" alt="FusaTour Desfile Caballos Fusagasugá">
                   </a>
                   <h5 class="title">DESFILE CABALLÍSTICO</h5>
                   <span class="small date">25 May 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Expofusa.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Expofusa.webp" alt="FusaTour Expofusa Fusagasugá">
                   </a>
                   <h5 class="title">EXPOFUSA</h5>
                   <span class="small date">1 Jun 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Rumba_Criolla.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Rumba_Criolla.webp" alt="FusaTour Rumba Criolla Fusagasugá">
                   </a>
                   <h5 class="title">Festival de la Rumba Criolla</h5>
                   <span class="small date">5 Sep 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/interpretes.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/interpretes.webp" alt="FusaTour Interpretes Fusagasugá">
                   </a>
                   <h5 class="title">Festival Nacional de Interpretes</h5>
                   <span class="small date">10 Sep 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Agroindustrial.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Agroindustrial.webp" alt="FusaTour Agroindustria Fusagasugá">
                   </a>
                   <h5 class="title">Festival Floral y Agroindustrial</h5>
                   <span class="small date">7 Nov 2020</span>
                   <div class="spacer"></div>
 
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Navidad.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Navidad.webp" alt="FusaTour Navidad Fusagasugá">
                   </a>
                   <h5 class="title">Feria Navideña</h5>
                   <span class="small date">15 Dic 2020</span>
@@ -164,14 +166,14 @@
           <div class="row center">
             <div class="col s6 m6 l2">
               <div class="icon-block">
-                <img class="z-depth-1" src="/images/historias/Escudo.webp" alt="">
+                <img class="z-depth-1" src="/images/historias/Escudo.webp" alt="FusaTour Escudo Fusagasugá">
                 <h6 class="center">Escudo</h6>
               </div>
             </div>
 
             <div class="col s6 m6 l2">
               <div class="icon-block">
-                <img class="z-depth-1" src="/images/historias/Bandera.webp" alt="">
+                <img class="z-depth-1" src="/images/historias/Bandera.webp" alt="FusaTour Bandera Fusagasugá">
                 <h6 class="center">Bandera</h6>
               </div>
             </div>
@@ -190,7 +192,7 @@
           <div class="row ui-mediabox blogs bot-0">
               <div class="col s12">
                   <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
-                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Comida_Tipica.webp">
+                  <img class="z-depth-1" style="width: 100%;" src="/images/historias/Comida_Tipica.webp" alt="FusaTour Comida Tipica Fusagasugá">
                   </a>
                   <h5 class="title center">LA VARA</h5>
                   <div class="spacer"></div>                 
@@ -225,7 +227,7 @@
       <div class="col s12">
         <div class="blog-img-wrap">
           <a class="img-wrap" href="/blog/{{ $post->url }}" data-fancybox="images" data-caption="FusaTour una nueva manera de conocer a Fusagasugá">
-            <img class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}">
+            <img class="z-depth-1 img_banner" src="/images/{{ $post->urlimg }}" alt="FusaTour {{ $post->title }}">
           </a>
         </div>
 
