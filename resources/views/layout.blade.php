@@ -13,10 +13,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- CORE CSS FRAMEWORK - START -->
-    <link href="/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="all" />
-    <link href="/assets/fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="all" />
-    <link href="/assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="all" />
+    
     <link href="/assets/css/style.css" type="text/css" rel="stylesheet" media="all" id="main-style" />
+    <link href="/assets/css/Estilos.min.css"  type="text/css" rel="stylesheet" media="all" />
     <link id="theme" href="/assets/css/style-2.css" type="text/css" rel="stylesheet" media="all" id="main-style" />
     <link href="/assets/css/styles.css" type="text/css" rel="stylesheet" media="all" />
     <!-- CORE CSS TEMPLATE - END  -->
@@ -33,28 +32,21 @@
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="/" class=" brand-logo ">FUSATOUR</a>
-            <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
+            <a aria-label="FusaTour" id="logo-container" href="/" class=" brand-logo ">FUSATOUR</a>
+            <div href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
                 <i class="mdi mdi-chevron-left" data-page=""></i>
-            </a>
-            <a href="{{ route('pages.escaner') }}" data-target=""
+            </div>
+            <a href="{{ route('pages.escaner') }}" aria-label="Escaner" data-target="Escaner" data-caption="Escaner FusaTour"
                 class="waves-effect waves-circle navicon right sidenav-trigger show-on-large pulse">
                 <i class="mdi mdi-camera"></i>
             </a>
-            <a href="#" data-target="" id="theme-toggle"
+            <div href="#" data-target="" id="theme-toggle"
                 class="waves-effect waves-circle navicon right nav-site-mode show-on-large">
                 <i class="mdi mdi-brightness-6 mdi-transition1"></i>
-            </a>
+            </div>
         </div>
     </nav>
     <!-- END navigation -->
-
-    <ul id="slide-settings" class="sidenav sidesettings right fixed">
-        <li class="menulinks">
-            <ul class="collapsible">
-            </ul>
-        </li>
-    </ul>
 
     <!-- CONTENT - START -->
     @yield('content')
@@ -73,14 +65,14 @@
         <ul>
 
             <li>
-                <a href="{{ route('pages.inicio') }}" class=" {{ request()->routeIs('pages.inicio') ? 'active' : '' }}">
+                <a href="{{ route('pages.inicio') }}" aria-label="Inicio" class=" {{ request()->routeIs('pages.inicio') ? 'active' : '' }}" data-caption="Fusatour Inicio">
                     <i class="mdi mdi-home"></i>
                     <span>Inicio</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('pages.categorias') }}"
+                <a aria-label="Categorias" href="{{ route('pages.categorias') }}"
                     class=" {{ request()->routeIs('pages.categorias') ? 'active' : '' }}">
                     <i class="mdi mdi-cards"></i>
                     <span>Categorias</span>
@@ -88,7 +80,7 @@
             </li>
 
             <li>
-                <a href="{{ route('pages.descubrir') }}"
+                <a aria-label="Descubrir" href="{{ route('pages.descubrir') }}"
                     class=" {{ request()->routeIs('pages.descubrir') ? 'active' : '' }}">
                     <i class="mdi mdi-trophy"></i>
                     <span>Ranking</span>
@@ -96,7 +88,7 @@
             </li>
 
             <li>
-                <a href="{{ route('pages.actividades') }}"
+                <a aria-label="Actividades" href="{{ route('pages.actividades') }}"
                     class=" {{ request()->routeIs('pages.actividades') ? 'active' : '' }}">
                     <i class="mdi mdi-airballoon"></i>
                     <span>Actividades</span>
@@ -104,7 +96,7 @@
             </li>
 
             <li>
-                <a href="{{ route('pages.perfil') }}" class=" {{ request()->routeIs('pages.perfil') ? 'active' : '' }}">
+                <a aria-label="Perfil" href="{{ route('pages.perfil') }}" class=" {{ request()->routeIs('pages.perfil') ? 'active' : '' }}">
                     <i class="mdi mdi-account-circle"></i>
                     <span>Perfil</span>
                 </a>

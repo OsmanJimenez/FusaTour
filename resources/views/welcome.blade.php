@@ -11,7 +11,7 @@
       @endif
       <div class="row center">
         @if(isset($phrase))
-        <h5 class="col s12 light">{{ $phrase }}</h5>
+        <h2 class="col s12 light">{{ $phrase }}</h2>
         @endif
       </div>
       <br><br>
@@ -106,42 +106,42 @@
         <div class="section">
           <div class="row ui-mediabox blogs bot-0">
               <div class="col s12">
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/Desfile_Caballos.webp" alt="FusaTour Desfile Caballos Fusagasugá">
                   </a>
                   <h5 class="title">DESFILE CABALLÍSTICO</h5>
                   <span class="small date">25 May 2020</span>
                   <div class="spacer"></div>
 
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/Expofusa.webp" alt="FusaTour Expofusa Fusagasugá">
                   </a>
                   <h5 class="title">EXPOFUSA</h5>
                   <span class="small date">1 Jun 2020</span>
                   <div class="spacer"></div>
 
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/Rumba_Criolla.webp" alt="FusaTour Rumba Criolla Fusagasugá">
                   </a>
                   <h5 class="title">Festival de la Rumba Criolla</h5>
                   <span class="small date">5 Sep 2020</span>
                   <div class="spacer"></div>
 
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/interpretes.webp" alt="FusaTour Interpretes Fusagasugá">
                   </a>
                   <h5 class="title">Festival Nacional de Interpretes</h5>
                   <span class="small date">10 Sep 2020</span>
                   <div class="spacer"></div>
 
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/Agroindustrial.webp" alt="FusaTour Agroindustria Fusagasugá">
                   </a>
                   <h5 class="title">Festival Floral y Agroindustrial</h5>
                   <span class="small date">7 Nov 2020</span>
                   <div class="spacer"></div>
 
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/Navidad.webp" alt="FusaTour Navidad Fusagasugá">
                   </a>
                   <h5 class="title">Feria Navideña</h5>
@@ -191,7 +191,7 @@
         <div class="section">
           <div class="row ui-mediabox blogs bot-0">
               <div class="col s12">
-                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="How to move with your career">
+                  <a class="img-wrap" href="#" data-fancybox="images" data-caption="Fusatour Fusagasugá">
                   <img loading="lazy" class="z-depth-1" style="width: 100%;" src="/images/historias/Comida_Tipica.webp" alt="FusaTour Comida Tipica Fusagasugá">
                   </a>
                   <h5 class="title center">LA VARA</h5>
@@ -217,7 +217,7 @@
 <!-- Fin Modals -->    
 
   <div class="section">
-    <h5 class="pagetitle">Lugares</h5>
+    <h3 class="pagetitle">Lugares</h3>
   </div>
 
   <div class="section">
@@ -233,7 +233,7 @@
 
         <div class="blog-info">
           <a href="/blog/{{ $post->url }}">
-            <h5 class="title">{{ $post->title }}</h5>
+            <h4 class="title">{{ $post->title }}</h4>
           </a>
 
           <span class="small date">{{ $post->published_at->format('M d') }}</span>
