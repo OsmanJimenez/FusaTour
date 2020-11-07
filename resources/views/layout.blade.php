@@ -5,13 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title> @yield('meta-title', config('app.name')) FusaTour</title>
-    <meta content="@yield ('meta-description','Aplicación turistica sobre fusagasuga 150-160 caracteres maximo')"
-        name="description" />
-    <meta content="Osman Jimenez" name="author" />
+    <meta name="description" content="Fusatour es una Aplicación turística sobre Fusagasugá la cual ofrece un catálogo de lugares de esparcimiento y entretenimiento con información relevante." />
+    <meta name="author" content="Osman Armando Jimenez Cortes"/>
+    <meta name="keywords" content="Fusagasugá, fusagasuga clima, viajar a fusagasuga, fusagasuga"/>
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    
     <!-- CORE CSS FRAMEWORK - START -->
     
     <link href="/assets/css/style.css" type="text/css" rel="stylesheet" media="all" id="main-style" />

@@ -90,7 +90,10 @@
             <i class="fas fa-sliders-h"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-header">Configuración</span>
+            <span class="dropdown-header">Menu</span>
+            <a href="{{ route('admin.configuracion.index') }}" class="dropdown-item">
+            <i class="fas fa-server"></i> Configuración
+            </a>
             <a href="{{url('logout')}}" class="dropdown-item">
               <i class="fas fa-window-close mr-2"></i> Cerrar Sesión
             </a>

@@ -90,6 +90,15 @@ function(){
 
 });
 
+Route::group([
+    'prefix' => 'admin', 
+    'namespace' => 'Admin', 
+    'middleware' => 'role:Admin'], 
+function(){
+    Route::get('/', 'AdminController@index')->name('dashboard');
+    Route::get('configuracion', 'ConfiguracionController@index' )->name('admin.configuracion.index');
+});
+
 Route::get('/logout', 'Auth\LoginController@logout');
 
 
