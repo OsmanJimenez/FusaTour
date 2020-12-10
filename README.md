@@ -1,3 +1,4 @@
+
 ![FusaTour Aplicación móvil sobre los principales lugares turísticos de Fusagasugá](https://i.pinimg.com/564x/3b/98/d0/3b98d05374d0a56a3d50fb94a96193c6.jpg)
 
 # FusaTour PWA
@@ -12,6 +13,21 @@ PWA sobre los principales sitios turísticos de Fusagasugá exponiéndolos media
 
  - [Trailer](https://www.youtube.com/watch?v=ry2wvMyzsEE)
  - [Demostración Gestor de Contenido](https://www.youtube.com/watch?v=n7AUJGpg780&)
+
+## Objetivo General
+ - Desarrollar una aplicación móvil para la promoción de lugares
+   turísticos y culturales de Fusagasugá empleando realidad virtual.
+
+## Objetivos Específicos
+
+ - Identificar los lugares turísticos según su infraestructura, tipo,
+   ubicación y tamaño.
+ - Seleccionar los sitios que se ajusten según sus atributos a una
+   categoría de monumentos o espacios culturales.
+ - Diseñar una aplicación móvil que implemente las mejores prácticas de
+   calidad de software para el desarrollo de aplicaciones móviles.
+ - Mostrar mediante realidad virtual imágenes en 360° sobre los
+   principales lugares turísticos de Fusagasugá.
 
 ## Características
 
