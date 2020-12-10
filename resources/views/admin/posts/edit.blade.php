@@ -42,10 +42,8 @@
                 @foreach ($categories as $category)
                 <option value="{{ $category->id}}" {{ $category->id === $post->category_id ? ' selected' : '' }}>{{$category->name}} </option>
                 @endforeach
-
               </select>
             </div>
-
             <div class="form-group">
               <label>Información</label>
               <div class="card-body pad">
@@ -54,16 +52,10 @@
                   {{ old('body', $post->body) }}
                   </textarea>
                 </div>
-
-    
-
               </div>
             </div>
-            
           </div>
-
           <div class="col-md-4">
-
             <div class="form-group">
               <label>Fecha de Publicación:</label>
               <div class="input-group">
@@ -76,7 +68,6 @@
                     null) }}" type="date" class="form-control float-right" required>
               </div>
             </div>
-
             <div class="form-group">
               <label>Ubicación</label>
               <input name="ubicacion" value="{{ old('ubicacion', $post->ubicacion) }}" class="form-control" placeholder="Ingresa aqui la ubicación del sitio" required>
