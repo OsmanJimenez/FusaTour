@@ -82,3 +82,6 @@ PWA sobre los principales sitios turísticos de Fusagasugá exponiéndolos media
  - DirHunt.
  - SQLMap.
  - Web Dev Measure.
+ 
+ ## Licencia
+[MIT](https://choosealicense.com/licenses/mit/)
