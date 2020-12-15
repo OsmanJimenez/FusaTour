@@ -1,4 +1,5 @@
 
+
 ![FusaTour Aplicación móvil sobre los principales lugares turísticos de Fusagasugá](https://i.pinimg.com/564x/3b/98/d0/3b98d05374d0a56a3d50fb94a96193c6.jpg)
 
 # FusaTour PWA
@@ -44,6 +45,20 @@ PWA sobre los principales sitios turísticos de Fusagasugá exponiéndolos media
  - [x] Funcionalidades propias de una App nativa.
  - [x] Modo Offline.
  - [x] Modo Oscuro.
+
+## Documentación
+
+| Documento |Enlace  |
+|--|--|
+| Informe Final |[Descargar](https://drive.google.com/file/d/11lgbg0dNPMMJOl4s2rCDhtbwGSNMuTlm/view?usp=sharing)  |
+| Articulo | [Descargar](https://drive.google.com/file/d/1d3d0KBfi5Z8vEI_7C9Fd0_fpM3vGKANd/view?usp=sharing) |
+| Manual Técnico | [Descargar](https://drive.google.com/file/d/1DaVVDYGZM8QDbEs5tDvcd3gbSaa48uNY/view?usp=sharing) |
+| Manual de Usuario | [Descargar](https://drive.google.com/file/d/1KIhejsZu5WmXab2XcW1UHAamr_SAw0M8/view?usp=sharing) |
+| Apk| [Descargar](https://drive.google.com/file/d/14x8TIfcdfllrWWImyMy2TdMY2ITqLSNB/view?usp=sharing) |
+| Poster | [Descargar](https://drive.google.com/file/d/1PmbBKCYNIZISF3fe7K_Vp_xPZpX8iMTu/view?usp=sharing) |
+| Aplicación ISO 25010 | [Descargar](https://drive.google.com/file/d/1w1zbC_cuzgAejnUd5HielAaf_ojVIIJh/view?usp=sharing) |
+| Aplicación ISO 25040 | [Descargar](https://drive.google.com/file/d/1-kG36S1dIhJTGxcCPlmKDvqDzgXKXpHy/view?usp=sharing) |
+
 
 ## Herramientas de Desarrollo
 
